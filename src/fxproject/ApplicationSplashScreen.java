@@ -2,21 +2,20 @@ package fxproject;/*
  * Written by Tin Van on 2/15/16.
  */
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+import javafx.animation.PauseTransition;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import java.time.Duration;
+
+import javafx.util.Duration;
 
 public class ApplicationSplashScreen extends Application
 {
+    Stage window;
     public static void main(String args[])
     {
         launch(args);
@@ -24,36 +23,20 @@ public class ApplicationSplashScreen extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        Stage window = primaryStage;
+        window = primaryStage;
         window.setScene(loadView());
         window.initStyle(StageStyle.UNDECORATED);
         window.sizeToScene();
         window.show();
 
+        PauseTransition pause = new PauseTransition(Duration.millis(2000));
+        pause.setOnFinished(e -> {
+            new RootStageContainer();
+            window.close();
+        });
+        pause.playFromStart();
 
 
-        new Thread()
-        {
-            public void run()
-            {
-
-                Platform.runLater(new Runnable()
-                {
-                    public void run()
-                    {
-                        try
-                        {
-                            sleep(2000);
-                            loadMainScreen();
-                        }
-                        catch(Exception e)
-                        {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-            }
-        }.start();
 
 
 
@@ -61,7 +44,7 @@ public class ApplicationSplashScreen extends Application
     private Scene loadView()
     {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../main/resources/SplashScreen.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../main/resources/splashscreen.fxml"));
             Scene scene = new Scene(root);
             return scene;
         }
@@ -77,7 +60,7 @@ public class ApplicationSplashScreen extends Application
     }
     private void loadMainScreen()
     {
-
+        new MainSystem();
     }
 
 

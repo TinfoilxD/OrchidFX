@@ -21,7 +21,7 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Client">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#loadNewScene" text="New Client" />
+                    <MenuItem mnemonicParsing="false" text="New Client" />
                       <MenuItem mnemonicParsing="false" text="Edit Client" />
                   </items>
                 </Menu>
