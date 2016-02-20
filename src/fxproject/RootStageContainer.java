@@ -2,14 +2,19 @@ package fxproject;/*
  * Written by Tin Van on 2/15/16.
  */
 
+import com.sun.deploy.util.SessionState;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.HashMap;
+
 public class RootStageContainer
 {
+
+    HashMap<String, Object> Controllermap;
     Stage mainStage;
     public RootStageContainer()
     {
@@ -34,5 +39,13 @@ public class RootStageContainer
 
         }
         return null;
+    }
+    private void initiateFileMap()
+    {
+        Controllermap.put(ClientController.VIEWCONTROLLER_TITLE, new ClientController());
+    }
+    public void changeView()
+    {
+
     }
 }
