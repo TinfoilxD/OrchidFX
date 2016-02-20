@@ -33,7 +33,8 @@ public class ApplicationSplashScreen extends Application
 
 
         new Thread()
-        {
+
+{
             public void run()
             {
 
@@ -54,7 +55,6 @@ public class ApplicationSplashScreen extends Application
                 });
             }
         }.start();
-
 
 
     }
