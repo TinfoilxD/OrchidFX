@@ -7,6 +7,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.HashMap;
@@ -16,21 +19,38 @@ public class RootStageContainer
 
     HashMap<String, Object> Controllermap;
     Stage mainStage;
+
+    private Pane topContainer;
+    private Pane bottomContainer;
+
     public RootStageContainer()
     {
         mainStage = new Stage();
-        mainStage.setScene(loadView());
+        mainStage.setScene(getSceneStructure());
         mainStage.sizeToScene();
         mainStage.show();
 
     }
-    private Scene loadView()
+    private Scene getSceneStructure()
     {
+        VBox viewComponents = new VBox();
+        topContainer = loadTopView();
+        bottomContainer = loadBottomView();
+        viewComponents.getChildren().addAll(topContainer, bottomContainer);
+        Scene mainView = new Scene(viewComponents, 500, 400);
+        return mainView;
+
+    }
+    private Pane loadTopView()
+    {
+        Pane topContainer;
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("../main/resources/menuscreen.fxml"));
-            Scene scene = new Scene(root);
-            return scene;
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../main/resources/menuscreen.fxml"));
+            topContainer = loader.load();
+            topContainer.layout();
+            return topContainer;
+
         }
         catch(Exception e)
         {
@@ -39,6 +59,14 @@ public class RootStageContainer
 
         }
         return null;
+
+    }
+    private Pane loadBottomView()
+    {
+        Pane bottomContainer = new StackPane();
+        return bottomContainer;
+
+
     }
     private void initiateFileMap()
     {
