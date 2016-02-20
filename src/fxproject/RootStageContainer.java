@@ -21,7 +21,8 @@ public class RootStageContainer
     }
     private Scene loadView()
     {
-        try {
+        try
+        {
             Parent root = FXMLLoader.load(getClass().getResource("../main/resources/menuscreen.fxml"));
             Scene scene = new Scene(root);
             return scene;

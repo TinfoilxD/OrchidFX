@@ -31,7 +31,7 @@ public class ApplicationSplashScreen extends Application
 
         PauseTransition pause = new PauseTransition(Duration.millis(2000));
         pause.setOnFinished(e -> {
-            new RootStageContainer();
+            new MainSystem();
             window.close();
         });
         pause.playFromStart();
