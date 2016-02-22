@@ -3,7 +3,10 @@ package fxproject;/*
  */
 
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
@@ -13,19 +16,19 @@ public class ClientController
 
     public ClientController()
     {
-        loadView();
+
     }
 
-    public Scene loadView()
+    public Node loadView()
     {
         try
         {
 
-            Parent root = FXMLLoader.load(getClass().getResource("../main/resources/Client.fxml"));
-            Scene scene = new Scene(root);
+            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/Client.fxml"));
 
 
-            return scene;
+
+            return node;
         }
         catch(Exception e)
         {
@@ -35,6 +38,7 @@ public class ClientController
         }
         return null;
     }
+
 
 
 }
