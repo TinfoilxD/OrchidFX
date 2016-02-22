@@ -2,7 +2,6 @@ package fxproject;/*
  * Written by Tin Van on 2/15/16.
  */
 
-import com.sun.tools.hat.internal.model.Root;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
