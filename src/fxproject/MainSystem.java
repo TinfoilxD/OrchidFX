@@ -12,10 +12,26 @@ public class MainSystem
     RootStage is the super container for the view classes/controllers. This will also instantiate the various system methods.
     Class.forName will also be called here.
      */
+    private static MainSystem currentSystem;
+
     RootStageContainer rootStageContainer;
     public MainSystem()
     {
+        setCurrentSystem(this);
         rootStageContainer = new RootStageContainer();
 
+    }
+    public void handleApplicationCloseEvent()
+    {
+        rootStageContainer.deleteAllChildren();
+        System.exit(0);
+    }
+    private static void setCurrentSystem(MainSystem newCurrentSystem)
+    {
+        currentSystem = newCurrentSystem;
+    }
+    public static MainSystem getCurrentSystem()
+    {
+        return currentSystem;
     }
 }

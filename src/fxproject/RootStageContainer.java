@@ -70,10 +70,15 @@ public class RootStageContainer
     }
     private void initiateFileMap()
     {
-        Controllermap.put(ClientController.VIEWCONTROLLER_TITLE, new ClientController());
+        Controllermap.put(ClientController.VIEWCONTROLLER_TITLE, new ClientController().loadView());
     }
     public void changeView()
     {
+
+    }
+    public void deleteAllChildren()
+    {
+        mainStage.close();
 
     }
 }

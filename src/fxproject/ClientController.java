@@ -16,7 +16,7 @@ public class ClientController
         loadView();
     }
 
-    private Scene loadView()
+    public Scene loadView()
     {
         try
         {
@@ -35,5 +35,6 @@ public class ClientController
         }
         return null;
     }
+
 
 }
