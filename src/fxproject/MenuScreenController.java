@@ -9,9 +9,16 @@ public class MenuScreenController
 {
 
     @FXML
-    protected void handleSubmitButtonAction(ActionEvent event)
+    protected void handleFileCloseButtonAction(ActionEvent event)
     {
         MainSystem.getCurrentSystem().handleApplicationCloseEvent();
+    }
+    @FXML
+    protected void handleClientNewClientAction(ActionEvent event)
+    {
+
+            RootStageContainer.getCurrentRootStageContainer().changeView(ClientController.VIEWCONTROLLER_TITLE);
+
     }
 
 }
