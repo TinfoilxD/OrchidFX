@@ -73,6 +73,7 @@ public class RootStageContainer
     private void initiateFileMap()
     {
         controllermap.put(ClientController.VIEWCONTROLLER_TITLE, new ClientController().loadView());
+        controllermap.put(TradeShowController.VIEWCONTROLLER_TITLE, new TradeShowController().loadView());
     }
     public void changeView(String viewControllerTitle)
     {

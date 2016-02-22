@@ -18,7 +18,12 @@ public class MenuScreenController
     {
 
             RootStageContainer.getCurrentRootStageContainer().changeView(ClientController.VIEWCONTROLLER_TITLE);
-
     }
+    @FXML
+    protected void handleProjectTradeShowNewTradeShowAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(TradeShowController.VIEWCONTROLLER_TITLE);
+    }
+
 
 }
