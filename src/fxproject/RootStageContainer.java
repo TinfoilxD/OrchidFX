@@ -77,7 +77,7 @@ public class RootStageContainer
     }
     public void changeView(String viewControllerTitle)
     {
-        bottomContainer.getChildren().removeAll();
+        bottomContainer.getChildren();
         bottomContainer.getChildren().add(controllermap.get(viewControllerTitle));
 
 
