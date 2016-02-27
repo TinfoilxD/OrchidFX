@@ -40,31 +40,173 @@
                   <Menu mnemonicParsing="false" text="Developer">
                       <items>
                           <Menu mnemonicParsing="false" text="A-C">
-                                <Menu text="Client">
-                                    <MenuItem text="New"/>
-                                    <MenuItem text="Edit"/>
-                                </Menu>
-                                <Menu text="Client_Contact">
-                                    <MenuItem text="New"/>
-                                    <MenuItem text="Edit"/>
-                                </Menu>
+                              <Menu text="Client">
+                                  <MenuItem text="New"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Client_Contact">
+                                  <MenuItem text="New"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Client_Contact_Type">
+                                  <MenuItem text="New"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Client_Status">
+                                  <MenuItem text="New"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="CMV_Status">
+                                  <MenuItem text="New"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Contractor">
+                                  <MenuItem text="New"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Contractor_Contact">
+                                  <MenuItem text="New"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Contractor_Contact_Type">
+                                  <MenuItem text="New"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
                           </Menu>
                           <Menu mnemonicParsing="false" text="D-H">
                               <items>
-                                  <MenuItem mnemonicParsing="false" text="">
-                                  </MenuItem>
+                                  <Menu text="Department">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Employee">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Employee_History">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Employee_Status">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Hotel_Approver">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Hotel_Approver_Type">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Hotel_Brand">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Hotel_Property">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Hotel_Property_Status">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
                               </items>
                           </Menu>
                           <Menu mnemonicParsing="false" text="I-R">
                               <items>
-                                  <MenuItem mnemonicParsing="false" text="">
-                                  </MenuItem>
+                                  <Menu text="Manufacturer">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Manufacturer_Contact">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Manufacturer_Contact_Type">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Office_Location">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Parent_Brand">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Phase">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Phase_Lookup">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Phase_Status">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Project">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Project_Adjustment">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Project_Type">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Referrer">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Referrer_Type">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
                               </items>
                           </Menu>
                           <Menu mnemonicParsing="false" text="S-Z">
                               <items>
-                                  <MenuItem mnemonicParsing="false" text="">
-                                  </MenuItem>
+                                  <Menu text="Subtask">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Subtask_List">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Task">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Task_List">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Task_Status">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Trade_Show">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Vendor">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Vendor_Contact">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
+                                  <Menu text="Vendor_Contact_Type">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
                               </items>
                           </Menu>
 
