@@ -7,11 +7,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 
-public class ClientController
+public class EmployeeController
 {
-    public static final String VIEWCONTROLLER_TITLE= "Client Input";
+    public static final String VIEWCONTROLLER_TITLE= "Employee Input";
 
-    public ClientController()
+    public EmployeeController()
     {
 
     }
@@ -21,7 +21,7 @@ public class ClientController
         try
         {
 
-            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/newClient.fxml"));
+            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/newEmployee.fxml"));
 
 
 

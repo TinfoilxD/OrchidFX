@@ -24,6 +24,15 @@ public class MenuScreenController
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(TradeShowController.VIEWCONTROLLER_TITLE);
     }
-
+    @FXML
+    protected void handleEmployeeNewEmployeeAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(EmployeeController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleEmployeeEditEmployeeAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(EditEmployeeController.VIEWCONTROLLER_TITLE);
+    }
 
 }

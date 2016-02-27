@@ -19,6 +19,12 @@
                     <MenuItem mnemonicParsing="false" onAction="#handleFileCloseButtonAction" text="Close" />
                   </items>
                 </Menu>
+                  <Menu mnemonicParsing="false" text="Employee">
+                    <items>
+                      <MenuItem onAction="#handleEmployeeNewEmployeeAction" mnemonicParsing="false" text="New Employee" />
+                        <MenuItem onAction="#handleEmployeeEditEmployeeAction" mnemonicParsing="false" text="Edit Employee" />
+                    </items>
+                  </Menu>
                 <Menu mnemonicParsing="false" text="Client">
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#handleClientNewClientAction" text="New Client" />
@@ -31,7 +37,7 @@
                       <MenuItem mnemonicParsing="false" text="Edit Project" />
                         <Menu mnemonicParsing="false" text="Trade Show">
                           <items>
-                            <MenuItem onAction="#handleProjectTradeShowNewTradeShowAction" mnemonicParsing="false" text="New Trade Show" />
+                            <MenuItem mnemonicParsing="false" onAction="#handleProjectTradeShowNewTradeShowAction" text="New Trade Show" />
                               <MenuItem mnemonicParsing="false" text="Edit Trade Show" />
                           </items>
                         </Menu>
