@@ -74,6 +74,8 @@ public class RootStageContainer
     {
         controllermap.put(ClientController.VIEWCONTROLLER_TITLE, new ClientController().loadView());
         controllermap.put(TradeShowController.VIEWCONTROLLER_TITLE, new TradeShowController().loadView());
+        controllermap.put(EmployeeController.VIEWCONTROLLER_TITLE, new EmployeeController().loadView());
+        controllermap.put(EditEmployeeController.VIEWCONTROLLER_TITLE, new EditEmployeeController().loadView());
     }
     public void changeView(String viewControllerTitle)
     {
