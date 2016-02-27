@@ -37,6 +37,39 @@
                         </Menu>
                   </items>
                 </Menu>
+                  <Menu mnemonicParsing="false" text="Developer">
+                      <items>
+                          <Menu mnemonicParsing="false" text="A-C">
+                                <Menu text="Client">
+                                    <MenuItem text="New"/>
+                                    <MenuItem text="Edit"/>
+                                </Menu>
+                                <Menu text="Client_Contact">
+                                    <MenuItem text="New"/>
+                                    <MenuItem text="Edit"/>
+                                </Menu>
+                          </Menu>
+                          <Menu mnemonicParsing="false" text="D-H">
+                              <items>
+                                  <MenuItem mnemonicParsing="false" text="">
+                                  </MenuItem>
+                              </items>
+                          </Menu>
+                          <Menu mnemonicParsing="false" text="I-R">
+                              <items>
+                                  <MenuItem mnemonicParsing="false" text="">
+                                  </MenuItem>
+                              </items>
+                          </Menu>
+                          <Menu mnemonicParsing="false" text="S-Z">
+                              <items>
+                                  <MenuItem mnemonicParsing="false" text="">
+                                  </MenuItem>
+                              </items>
+                          </Menu>
+
+                      </items>
+                  </Menu>
               </menus>
             </MenuBar>
          </children>
