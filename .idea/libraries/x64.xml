@@ -1,6 +1,8 @@
 <component name="libraryTable">
   <library name="x64">
-    <CLASSES />
+    <CLASSES>
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/lib/sqljdbc4.jar!/microsoft/sql" />
+    </CLASSES>
     <JAVADOC />
     <NATIVE>
       <root url="file://$USER_HOME$/Desktop/Microsoft JDBC Driver 4.0 for SQL Server/sqljdbc_4.0/enu/auth/x64" />
