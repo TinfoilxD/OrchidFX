@@ -4,30 +4,30 @@ package fxproject;/*
 
 import java.sql.*;
 import com.microsoft.sqlserver.jdbc.*;
-public class DatabaseConnection
+
+public class OrchidDataSource
 {
     private final String driverType = "jdbc";
     private final String dbmsType = "sqlserver";
-    private final String hostname = "//192.168.1.66"; //192.168.1.75  192.168.1.66
+    private final String hostname = "192.168.1.66"; //192.168.1.75  192.168.1.66
     private final int portNumber = 1433;
-    private final String databaseName = "databaseName=OrchidDB"; //ANDREWSURFACE TestDB1
+    private final String databaseName = "OrchidDB"; //ANDREWSURFACE TestDB1
     private final String propertyValue = "user=Geralyn;password=testtest"; // integratedSecurity=true;   user=Geralyn;password=testtest
     private final String userName = "Tin";
-    private final String password = "test";
+    private final String password = "DeveloperTestKey";
     private final String connectionString = String.format("%s:%s:%s:%s;%s;%s", driverType, dbmsType, hostname, portNumber, databaseName, propertyValue);
 
 
     private SQLServerDataSource dataSource;
-    private Connection connection;
+    private static OrchidDataSource orchidDataSource;
 
-    private static DatabaseConnection databaseConnection;
-
-    public DatabaseConnection()
+    public OrchidDataSource()
     {
-        setDataSource();
+        setDataSourceSettings();
+        setCurrentDataSource(this);
     }
 
-    private void setDataSource()
+    private void setDataSourceSettings()
     {
         dataSource = new SQLServerDataSource();
         dataSource.setUser(userName);
@@ -37,16 +37,23 @@ public class DatabaseConnection
         dataSource.setDatabaseName(databaseName);
 
     }
+    /*
     public Connection getSingleConnection() throws ClassNotFoundException, SQLException
     {
-        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        connection = DriverManager.getConnection(connectionString);
-        return connection;
+        return DriverManager.getConnection(connectionString);
+    }
+    */
+    public void setCurrentDataSource(OrchidDataSource orchidDataSource)
+    {
+        this.orchidDataSource = orchidDataSource;
+    }
+    public static OrchidDataSource getCurrentDataSource()
+    {
+        return orchidDataSource;
     }
     public Connection getConnection() throws SQLException
     {
-        connection = dataSource.getConnection();
-        return connection;
+        return dataSource.getConnection();
     }
 
 }

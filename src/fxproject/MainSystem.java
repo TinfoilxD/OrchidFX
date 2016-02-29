@@ -14,12 +14,13 @@ public class MainSystem
      */
     private static MainSystem currentSystem;
 
-    RootStageContainer rootStageContainer;
+    private OrchidDataSource databaseConnection;
+    private RootStageContainer rootStageContainer;
     public MainSystem()
     {
         setCurrentSystem(this);
         rootStageContainer = new RootStageContainer();
-
+        databaseConnection = new OrchidDataSource();
     }
     public void handleApplicationCloseEvent()
     {
