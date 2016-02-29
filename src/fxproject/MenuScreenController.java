@@ -50,7 +50,7 @@ public class MenuScreenController
         RootStageContainer.getCurrentRootStageContainer().changeView(ClientController.VIEWCONTROLLER_TITLE);
     }
     @FXML
-    protected void handleClientContactNewClientContactAction(ActionEvent event)
+    protected void handleDeveloperClientContactNewClientContactAction(ActionEvent event)
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(ClientContactController.VIEWCONTROLLER_TITLE);
     }

@@ -50,7 +50,7 @@
                                   <MenuItem text="New" onAction="#handleClientNewClientAction"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
-                              <Menu text="Client_Contact" onAction="#handleClientContactNewClientContactAction">
+                              <Menu text="Client_Contact" onAction="#handleDeveloperClientContactNewClientContactAction">
                                   <MenuItem text="New"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
