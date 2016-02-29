@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ClientContactController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ContractorContactController">
    <children>
       <VBox prefHeight="600.0" prefWidth="800.0">
          <children>
@@ -14,7 +14,7 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #9FC131;">
                      <children>
-                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="250.0" text="New Client Contact">
+                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="344.0" text="New Contractor Contact">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -136,7 +136,7 @@
                                           <TextField prefHeight="25.0" prefWidth="326.0" promptText="Email" />
                                        </children>
                                     </FlowPane>
-                                    <Label text="Client">
+                                    <Label text="Contractor">
                                        <GridPane.margin>
                                           <Insets left="12.0" />
                                        </GridPane.margin>

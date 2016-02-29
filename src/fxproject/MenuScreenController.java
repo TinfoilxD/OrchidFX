@@ -54,6 +54,36 @@ public class MenuScreenController
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(ClientContactController.VIEWCONTROLLER_TITLE);
     }
+    @FXML
+    protected void handleDeveloperClientContactTypeNewClientContactTypeAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ClientContactTypeController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperClientStatusNewClientStatusAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ClientStatusController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperCMVStatusNewClientStatusAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(CMVStatusController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperContractorNewContractorAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ContractorController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperContractorContactNewContractorContactAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ContractorContactController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperContractorContactTypeNewContractorContactTypeAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ContractorContactTypeController.VIEWCONTROLLER_TITLE);
+    }
 
 
 

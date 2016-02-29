@@ -18,6 +18,7 @@ public class RootStageContainer
 {
     private final int SCREEN_HEIGHT = 800;
     private final int SCREEN_WIDTH = 600;
+
     HashMap<String, Node> controllermap;
     Stage mainStage;
 
@@ -80,6 +81,12 @@ public class RootStageContainer
         controllermap.put(EmployeeController.VIEWCONTROLLER_TITLE, new EmployeeController().loadView());
         controllermap.put(EditEmployeeController.VIEWCONTROLLER_TITLE, new EditEmployeeController().loadView());
         controllermap.put(ClientContactController.VIEWCONTROLLER_TITLE, new ClientContactController().loadView());
+        controllermap.put(ClientContactTypeController.VIEWCONTROLLER_TITLE, new ClientContactTypeController().loadView());
+        controllermap.put(ClientStatusController.VIEWCONTROLLER_TITLE, new ClientStatusController().loadView());
+        controllermap.put(CMVStatusController.VIEWCONTROLLER_TITLE, new CMVStatusController().loadView());
+        controllermap.put(ContractorController.VIEWCONTROLLER_TITLE, new ContractorController().loadView());
+        controllermap.put(ContractorContactController.VIEWCONTROLLER_TITLE, new ContractorContactController().loadView());
+        controllermap.put(ContractorContactTypeController.VIEWCONTROLLER_TITLE, new ContractorContactTypeController().loadView());
     }
     public void changeView(String viewControllerTitle)
     {

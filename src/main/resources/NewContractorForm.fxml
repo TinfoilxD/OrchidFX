@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ClientContactController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ContractorController">
    <children>
       <VBox prefHeight="600.0" prefWidth="800.0">
          <children>
@@ -14,7 +14,7 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #9FC131;">
                      <children>
-                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="250.0" text="New Client Contact">
+                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="250.0" text="New Contractor">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -23,24 +23,26 @@
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <ScrollPane prefHeight="526.0" prefWidth="798.0">
+                        <ScrollPane prefHeight="526.0" prefWidth="817.0">
                            <content>
-                              <GridPane prefHeight="523.0" prefWidth="788.0">
+                              <GridPane prefHeight="677.0" prefWidth="787.0">
                                 <columnConstraints>
                                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="126.0" />
                                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="674.0" />
                                 </columnConstraints>
                                 <rowConstraints>
-                                    <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
                                   <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
                                     <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
                                     <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
                                     <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
                                     <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Label text="First Name*: " GridPane.rowIndex="1">
+                                    <Label text="Name*: ">
                                        <GridPane.margin>
                                           <Insets left="12.0" />
                                        </GridPane.margin>
@@ -48,7 +50,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Primary Phone:" GridPane.rowIndex="2">
+                                    <Label text="Address 1:" GridPane.rowIndex="1">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -56,32 +58,98 @@
                                           <Insets left="12.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <Label text="Address 2:" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="12.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="City:" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="12.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Zip Code:" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="12.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Primary Phone:" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="12.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <TextField id="fieldStreetAddress" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Street Address, P.O. Box, etc" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Apt, Suite, etc." GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="Zip Code" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                        <children>
                                           <TextField id="fieldFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </TextField>
-                                          <Label text="Last Name*:">
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <TextField prefHeight="30.0" prefWidth="200.0" promptText="City">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
+                                          </TextField>
+                                          <Label text="Country:">
                                              <padding>
-                                                <Insets left="20.0" />
+                                                <Insets left="40.0" />
                                              </padding>
-                                          </Label>
-                                          <TextField id="fieldLastName" prefHeight="25.0" prefWidth="250.0" promptText="Last Name">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
+                                          </Label>
+                                          <ChoiceBox prefWidth="150.0">
                                              <FlowPane.margin>
                                                 <Insets left="10.0" />
                                              </FlowPane.margin>
-                                          </TextField>
+                                          </ChoiceBox>
+                                          <Label text="State:">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox prefHeight="25.0" prefWidth="88.0">
+                                             <FlowPane.margin>
+                                                <Insets left="10.0" />
+                                             </FlowPane.margin>
+                                          </ComboBox>
                                        </children>
                                     </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <children>
                                           <TextField prefHeight="25.0" prefWidth="250.0" promptText="ex: Office">
                                              <font>
@@ -106,7 +174,7 @@
                                           </TextField>
                                        </children>
                                     </FlowPane>
-                                    <Button mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Button mnemonicParsing="false" text="Submit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -114,7 +182,7 @@
                                           <Insets bottom="10.0" right="125.0" />
                                        </GridPane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <Button mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -122,8 +190,8 @@
                                           <Insets bottom="10.0" right="20.0" />
                                        </GridPane.margin>
                                     </Button>
-                                    <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Email:" GridPane.rowIndex="3">
+                                    <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Email:" GridPane.rowIndex="6">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -131,30 +199,11 @@
                                           <Insets left="12.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                        <children>
                                           <TextField prefHeight="25.0" prefWidth="326.0" promptText="Email" />
                                        </children>
                                     </FlowPane>
-                                    <Label text="Client">
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" />
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                                       <children>
-                                          <CheckBox mnemonicParsing="false" text="Sample Type (Loaded Programatically)" />
-                                       </children>
-                                    </FlowPane>
-                                    <Label text="Contact Type" GridPane.rowIndex="4">
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
                                  </children>
                               </GridPane>
                            </content>

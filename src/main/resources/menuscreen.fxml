@@ -50,32 +50,32 @@
                                   <MenuItem text="New" onAction="#handleClientNewClientAction"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
-                              <Menu text="Client_Contact" onAction="#handleDeveloperClientContactNewClientContactAction">
-                                  <MenuItem text="New"/>
+                              <Menu text="Client_Contact" >
+                                  <MenuItem text="New" onAction="#handleDeveloperClientContactNewClientContactAction"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
-                              <Menu text="Client_Contact_Type">
-                                  <MenuItem text="New"/>
+                              <Menu text="Client_Contact_Type" >
+                                  <MenuItem text="New" onAction="#handleDeveloperClientContactTypeNewClientContactTypeAction"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
-                              <Menu text="Client_Status">
-                                  <MenuItem text="New"/>
+                              <Menu text="Client_Status" >
+                                  <MenuItem text="New" onAction="#handleDeveloperClientStatusNewClientStatusAction"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
-                              <Menu text="CMV_Status">
-                                  <MenuItem text="New"/>
+                              <Menu text="CMV_Status" >
+                                  <MenuItem text="New" onAction="#handleDeveloperCMVStatusNewClientStatusAction"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
                               <Menu text="Contractor">
-                                  <MenuItem text="New"/>
+                                  <MenuItem text="New"  onAction="#handleDeveloperContractorNewContractorAction"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
-                              <Menu text="Contractor_Contact">
-                                  <MenuItem text="New"/>
+                              <Menu text="Contractor_Contact" >
+                                  <MenuItem text="New" onAction="#handleDeveloperContractorContactNewContractorContactAction"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
                               <Menu text="Contractor_Contact_Type">
-                                  <MenuItem text="New"/>
+                                  <MenuItem text="New" onAction="#handleDeveloperContractorContactTypeNewContractorContactTypeAction"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
                           </Menu>
