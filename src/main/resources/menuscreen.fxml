@@ -8,9 +8,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.MenuScreenController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.MenuScreenController">
    <top>
-      <VBox prefHeight="21.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="21.0" prefWidth="799.0" BorderPane.alignment="CENTER">
          <children>
             <MenuBar>
               <menus>
@@ -47,10 +47,10 @@
                       <items>
                           <Menu mnemonicParsing="false" text="A-C">
                               <Menu text="Client">
-                                  <MenuItem text="New"/>
+                                  <MenuItem text="New" onAction="#handleClientNewClientAction"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
-                              <Menu text="Client_Contact">
+                              <Menu text="Client_Contact" onAction="#handleClientContactNewClientContactAction">
                                   <MenuItem text="New"/>
                                   <MenuItem text="Edit"/>
                               </Menu>

@@ -12,9 +12,12 @@ import javafx.stage.Stage;
 
 import java.util.HashMap;
 
+
+
 public class RootStageContainer
 {
-
+    private final int SCREEN_HEIGHT = 800;
+    private final int SCREEN_WIDTH = 600;
     HashMap<String, Node> controllermap;
     Stage mainStage;
 
@@ -39,7 +42,7 @@ public class RootStageContainer
         topContainer = loadTopView();
         bottomContainer = loadBottomView();
         viewComponents.getChildren().addAll(topContainer, bottomContainer);
-        Scene mainView = new Scene(viewComponents, 600, 500);
+        Scene mainView = new Scene(viewComponents, SCREEN_HEIGHT, SCREEN_WIDTH);
         return mainView;
 
     }
@@ -76,6 +79,7 @@ public class RootStageContainer
         controllermap.put(TradeShowController.VIEWCONTROLLER_TITLE, new TradeShowController().loadView());
         controllermap.put(EmployeeController.VIEWCONTROLLER_TITLE, new EmployeeController().loadView());
         controllermap.put(EditEmployeeController.VIEWCONTROLLER_TITLE, new EditEmployeeController().loadView());
+        controllermap.put(ClientContactController.VIEWCONTROLLER_TITLE, new ClientContactController().loadView());
     }
     public void changeView(String viewControllerTitle)
     {

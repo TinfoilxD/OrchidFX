@@ -35,4 +35,26 @@ public class MenuScreenController
         RootStageContainer.getCurrentRootStageContainer().changeView(EditEmployeeController.VIEWCONTROLLER_TITLE);
     }
 
+
+
+
+
+
+    /*
+    DEVELOPER TAB ACTIONS GO HERE
+     */
+
+    @FXML
+    protected void handleDeveloperClientNewAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ClientController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleClientContactNewClientContactAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ClientContactController.VIEWCONTROLLER_TITLE);
+    }
+
+
+
 }
