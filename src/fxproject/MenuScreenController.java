@@ -17,7 +17,7 @@ public class MenuScreenController
     protected void handleClientNewClientAction(ActionEvent event)
     {
 
-            RootStageContainer.getCurrentRootStageContainer().changeView(ClientController.VIEWCONTROLLER_TITLE);
+        RootStageContainer.getCurrentRootStageContainer().changeView(ClientController.VIEWCONTROLLER_TITLE);
     }
     @FXML
     protected void handleProjectTradeShowNewTradeShowAction(ActionEvent event)
