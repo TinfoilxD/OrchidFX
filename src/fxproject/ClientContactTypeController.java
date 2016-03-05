@@ -18,7 +18,6 @@ import java.util.ResourceBundle;
 
 public class ClientContactTypeController
 {
-
     @FXML private TextField fxFieldContactType;
     @FXML private Button fxButtonAdd;
     @FXML private Button fxButtonCancel;

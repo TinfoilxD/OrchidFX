@@ -46,7 +46,7 @@
                                     </Label>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                        <children>
-                                          <TextField id="fieldFirstName" prefHeight="25.0" prefWidth="250.0" promptText="CMV Status">
+                                          <TextField id="fxFieldCMVStatus" prefHeight="25.0" prefWidth="250.0" promptText="CMV Status">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
