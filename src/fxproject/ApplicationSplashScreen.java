@@ -15,6 +15,12 @@ import javafx.util.Duration;
 
 public class ApplicationSplashScreen extends Application
 {
+
+    /*
+
+
+     */
+
     Stage window;
     public static void main(String args[])
     {

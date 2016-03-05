@@ -27,7 +27,6 @@ public class ClientContactTypeProcedureSet
             cstm.close();
         if(connection != null)
             connection.close();
-
     }
 
 }
