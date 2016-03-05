@@ -77,7 +77,6 @@ public class RootStageContainer
     private void initiateFileMap()
     {
         controllermap.put(ClientController.VIEWCONTROLLER_TITLE, new ClientController().loadView());
-        controllermap.put(TradeShowController.VIEWCONTROLLER_TITLE, new TradeShowController().loadView());
         controllermap.put(EmployeeController.VIEWCONTROLLER_TITLE, new EmployeeController().loadView());
         controllermap.put(EditEmployeeController.VIEWCONTROLLER_TITLE, new EditEmployeeController().loadView());
         controllermap.put(ClientContactController.VIEWCONTROLLER_TITLE, new ClientContactController().loadView());
@@ -87,6 +86,19 @@ public class RootStageContainer
         controllermap.put(ContractorController.VIEWCONTROLLER_TITLE, new ContractorController().loadView());
         controllermap.put(ContractorContactController.VIEWCONTROLLER_TITLE, new ContractorContactController().loadView());
         controllermap.put(ContractorContactTypeController.VIEWCONTROLLER_TITLE, new ContractorContactTypeController().loadView());
+        controllermap.put(ManufacturerController.VIEWCONTROLLER_TITLE, new ManufacturerController().loadView());
+        controllermap.put(ManufacturerContactController.VIEWCONTROLLER_TITLE, new ManufacturerContactController().loadView());
+        controllermap.put(ManufacturerContactTypeController.VIEWCONTROLLER_TITLE, new ManufacturerContactTypeController().loadView());
+        controllermap.put(ProjectStatusController.VIEWCONTROLLER_TITLE, new ProjectStatusController().loadView());
+        controllermap.put(ProjectTypeController.VIEWCONTROLLER_TITLE, new ProjectTypeController().loadView());
+        controllermap.put(ReferrerController.VIEWCONTROLLER_TITLE, new ReferrerController().loadView());
+        controllermap.put(ReferrerTypeController.VIEWCONTROLLER_TITLE, new ReferrerTypeController().loadView());
+        controllermap.put(TaskListController.VIEWCONTROLLER_TITLE, new TaskListController().loadView());
+        controllermap.put(TradeShowController.VIEWCONTROLLER_TITLE, new TradeShowController().loadView());
+        controllermap.put(VendorController.VIEWCONTROLLER_TITLE, new VendorController().loadView());
+        controllermap.put(VendorContactController.VIEWCONTROLLER_TITLE, new VendorContactController().loadView());
+        controllermap.put(VendorContactTypeController.VIEWCONTROLLER_TITLE, new VendorContactTypeController().loadView());
+
     }
     public void changeView(String viewControllerTitle)
     {

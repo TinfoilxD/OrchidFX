@@ -35,12 +35,6 @@
                   <items>
                     <MenuItem mnemonicParsing="false" text="New Project" />
                       <MenuItem mnemonicParsing="false" text="Edit Project" />
-                        <Menu mnemonicParsing="false" text="Trade Show">
-                          <items>
-                            <MenuItem mnemonicParsing="false" onAction="#handleProjectTradeShowNewTradeShowAction" text="New Trade Show" />
-                              <MenuItem mnemonicParsing="false" text="Edit Trade Show" />
-                          </items>
-                        </Menu>
                   </items>
                 </Menu>
                   <Menu mnemonicParsing="false" text="Developer">
@@ -122,15 +116,15 @@
                           <Menu mnemonicParsing="false" text="I-R">
                               <items>
                                   <Menu text="Manufacturer">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperManufacturerNewManufacturerAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Manufacturer_Contact">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperManufacturerContactNewManufacturerContactAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Manufacturer_Contact_Type">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperManufacturerContactTypeNewManufacturerTypeContactAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Office_Location">
@@ -161,16 +155,20 @@
                                       <MenuItem text="New"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
+                                  <Menu text="Project_Status">
+                                      <MenuItem text="New" onAction="#handleDeveloperProjectStatusNewProjectStatusAction"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
                                   <Menu text="Project_Type">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperProjectTypeNewProjectTypeAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Referrer">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperReferrerNewReferrerAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Referrer_Type">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperReferrerTypeNewReferrerTypeAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                               </items>
@@ -190,7 +188,7 @@
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Task_List">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperTaskListNewTaskListAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Task_Status">
@@ -198,19 +196,19 @@
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Trade_Show">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperTradeShowNewTradeShowAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Vendor">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperVendorNewVendorAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Vendor_Contact">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperVendorContactNewVendorContactAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Vendor_Contact_Type">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperVendorContactTypeNewVendorContactTypeAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                               </items>

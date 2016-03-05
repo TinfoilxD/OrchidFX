@@ -20,11 +20,6 @@ public class MenuScreenController
         RootStageContainer.getCurrentRootStageContainer().changeView(ClientController.VIEWCONTROLLER_TITLE);
     }
     @FXML
-    protected void handleProjectTradeShowNewTradeShowAction(ActionEvent event)
-    {
-        RootStageContainer.getCurrentRootStageContainer().changeView(TradeShowController.VIEWCONTROLLER_TITLE);
-    }
-    @FXML
     protected void handleEmployeeNewEmployeeAction(ActionEvent event)
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(EmployeeController.VIEWCONTROLLER_TITLE);
@@ -84,7 +79,64 @@ public class MenuScreenController
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(ContractorContactTypeController.VIEWCONTROLLER_TITLE);
     }
-
-
-
+    @FXML
+    protected void handleDeveloperManufacturerNewManufacturerAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ManufacturerController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperManufacturerContactNewManufacturerContactAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ManufacturerContactController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperManufacturerContactTypeNewManufacturerTypeContactAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ManufacturerContactTypeController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperProjectStatusNewProjectStatusAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ProjectStatusController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperProjectTypeNewProjectTypeAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ProjectTypeController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperReferrerNewReferrerAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ReferrerController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperReferrerTypeNewReferrerTypeAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ReferrerTypeController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperTaskListNewTaskListAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(TaskListController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperTradeShowNewTradeShowAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(TradeShowController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperVendorNewVendorAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(VendorController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperVendorContactNewVendorContactAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(VendorContactController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperVendorContactTypeNewVendorContactTypeAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(VendorContactTypeController.VIEWCONTROLLER_TITLE);
+    }
 }

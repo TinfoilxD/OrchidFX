@@ -7,11 +7,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 
-public class TradeShowController
+public class ProjectStatusController
 {
-    public static final String VIEWCONTROLLER_TITLE= "Trade Show Input";
+    public static final String VIEWCONTROLLER_TITLE= "Project Status Input";
 
-    public TradeShowController()
+    public ProjectStatusController()
     {
 
     }
@@ -21,7 +21,7 @@ public class TradeShowController
         try
         {
 
-            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/NewTradeShowForm.fxml"));
+            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/NewProjectStatusForm.fxml"));
 
 
 

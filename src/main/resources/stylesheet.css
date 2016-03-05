@@ -7,12 +7,12 @@ Created by Vendula Angerova
 /*
 Scene
 */
-#root {
+.root {
     -fx-font-family: "System";
     -fx-font-size: 13.0px;
     -fx-base: #D0D0D0;
-    -fx-background-color: #A1C42C;
-    -fx-focus-color: #A1C42C;
+    -fx-background: #A1C42C;
+    -fx-focus-color: #CF2F2F;
     -fx-control-inner-background: #FFFFFF;
     -fx-inner-border: linear-gradient(to bottom, derive(-fx-color,73.6%) 0%, derive(-fx-color,29.200000000000003%) 100%);
     -fx-body-color: linear-gradient( to bottom, derive(-fx-color, 34.0%) 0%, derive(-fx-color, -18.0%) 100%);
@@ -32,7 +32,7 @@ Dropdown menu, navigation panel
 .menu-button {
     -fx-background-radius: 5, 5, 4, 3;
 }
-.menu-button #labelTitle {
+.menu-button .label {
     -fx-padding: 3px 18px 3px 10px;
 }
 .menu-button .arrow-button {
