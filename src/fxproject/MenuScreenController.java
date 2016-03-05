@@ -80,6 +80,11 @@ public class MenuScreenController
         RootStageContainer.getCurrentRootStageContainer().changeView(ContractorContactTypeController.VIEWCONTROLLER_TITLE);
     }
     @FXML
+    protected void handleDeveloperDepartmentNewDepartmentAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(DepartmentController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
     protected void handleDeveloperManufacturerNewManufacturerAction(ActionEvent event)
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(ManufacturerController.VIEWCONTROLLER_TITLE);

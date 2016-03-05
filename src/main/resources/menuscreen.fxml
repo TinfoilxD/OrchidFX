@@ -76,7 +76,7 @@
                           <Menu mnemonicParsing="false" text="D-H">
                               <items>
                                   <Menu text="Department">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperDepartmentNewDepartmentAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Employee">

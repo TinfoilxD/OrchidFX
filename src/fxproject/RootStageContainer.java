@@ -97,6 +97,7 @@ public class RootStageContainer
         controllermap.put(ProjectTypeController.VIEWCONTROLLER_TITLE, new ProjectTypeController().loadView());
         controllermap.put(ReferrerController.VIEWCONTROLLER_TITLE, new ReferrerController().loadView());
         controllermap.put(ReferrerTypeController.VIEWCONTROLLER_TITLE, new ReferrerTypeController().loadView());
+        controllermap.put(DepartmentController.VIEWCONTROLLER_TITLE, new DepartmentController().loadView());
         controllermap.put(TaskListController.VIEWCONTROLLER_TITLE, new TaskListController().loadView());
         controllermap.put(TradeShowController.VIEWCONTROLLER_TITLE, new TradeShowController().loadView());
         controllermap.put(VendorController.VIEWCONTROLLER_TITLE, new VendorController().loadView());

@@ -10,19 +10,19 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class CMVStatusController
+public class DepartmentController
 {
-    @FXML private TextField fxFieldCMVStatus;
+    @FXML private TextField fxFieldDepartment;
     @FXML private Button fxButtonAdd;
     @FXML private Button fxButtonCancel;
 
-    public static final String VIEWCONTROLLER_TITLE = "CMVStatus Input";
+    public static final String VIEWCONTROLLER_TITLE = "Department Input";
 
-    CMVStatusProcedureSet procedureSet;
+    DepartmentProcedureSet procedureSet;
 
-    public CMVStatusController()
+    public DepartmentController()
     {
-        procedureSet = new CMVStatusProcedureSet();
+        procedureSet = new DepartmentProcedureSet();
     }
 
     @FXML
@@ -30,9 +30,9 @@ public class CMVStatusController
     {
         try
         {
-            String CMVStatusText = fxFieldCMVStatus.getText();
-            procedureSet.procInsertCMVStatus(CMVStatusText);
-            System.out.println("Success");
+            String departmentText = fxFieldDepartment.getText();
+            procedureSet.procInsertDepartment(departmentText);
+            System.out.println(departmentText);
         }
         catch (Exception e)
         {
@@ -45,7 +45,7 @@ public class CMVStatusController
     {
         try {
 
-            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/NewCMVStatusForm.fxml"));
+            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/NewDepartmentForm.fxml"));
 
 
             return node;
