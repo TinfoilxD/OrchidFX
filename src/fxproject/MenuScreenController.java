@@ -95,6 +95,26 @@ public class MenuScreenController
         RootStageContainer.getCurrentRootStageContainer().changeView(ManufacturerContactTypeController.VIEWCONTROLLER_TITLE);
     }
     @FXML
+    protected void handleDeveloperOfficeLocationNewOfficeLocationTypeAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(OfficeLocationController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperParentBrandNewParentBrandTypeAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ParentBrandController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperPhaseLookupNewPhaseLookupTypeAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(PhaseLookupController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
+    protected void handleDeveloperPhaseStatusNewPhaseStatusTypeAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(PhaseStatusController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
     protected void handleDeveloperProjectStatusNewProjectStatusAction(ActionEvent event)
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(ProjectStatusController.VIEWCONTROLLER_TITLE);

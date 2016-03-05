@@ -40,7 +40,7 @@
                                     <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Label text="First Name*: " GridPane.rowIndex="1">
+                                    <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="102.0" text="First Name*: " GridPane.rowIndex="1">
                                        <GridPane.margin>
                                           <Insets left="12.0" />
                                        </GridPane.margin>
@@ -48,7 +48,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Primary Phone:" GridPane.rowIndex="2">
+                                    <Label alignment="CENTER_RIGHT" text="Primary Phone:" GridPane.rowIndex="2">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -58,7 +58,7 @@
                                     </Label>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <children>
-                                          <TextField id="fieldFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name">
+                                          <TextField id="fieldFirstName" prefHeight="30.0" prefWidth="288.0" promptText="First Name">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -83,12 +83,12 @@
                                     </FlowPane>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <children>
-                                          <TextField prefHeight="25.0" prefWidth="250.0" promptText="ex: Office">
+                                          <TextField prefHeight="30.0" prefWidth="288.0" promptText="ex: Office">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </TextField>
-                                          <Label text="Ext.">
+                                          <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="96.0" text="Ext.">
                                              <padding>
                                                 <Insets left="20.0" />
                                              </padding>
@@ -96,7 +96,7 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField prefHeight="30.0" prefWidth="93.0" promptText="Ext.">
+                                          <TextField prefHeight="30.0" prefWidth="249.0" promptText="Ext.">
                                              <FlowPane.margin>
                                                 <Insets left="10.0" />
                                              </FlowPane.margin>
@@ -123,7 +123,7 @@
                                        </GridPane.margin>
                                     </Button>
                                     <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Email:" GridPane.rowIndex="3">
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="20.0" prefWidth="98.0" text="Email:" GridPane.rowIndex="3">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -133,10 +133,10 @@
                                     </Label>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                        <children>
-                                          <TextField prefHeight="25.0" prefWidth="326.0" promptText="Email" />
+                                          <TextField prefHeight="31.0" prefWidth="289.0" promptText="Email" />
                                        </children>
                                     </FlowPane>
-                                    <Label text="Manufacturer">
+                                    <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="100.0" text="Manufacturer">
                                        <GridPane.margin>
                                           <Insets left="12.0" />
                                        </GridPane.margin>
@@ -144,7 +144,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" />
+                                    <ChoiceBox prefHeight="31.0" prefWidth="288.0" GridPane.columnIndex="1" />
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <children>
                                           <CheckBox mnemonicParsing="false" text="Sample Type (Loaded Programatically)" />

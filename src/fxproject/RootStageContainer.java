@@ -89,6 +89,10 @@ public class RootStageContainer
         controllermap.put(ManufacturerController.VIEWCONTROLLER_TITLE, new ManufacturerController().loadView());
         controllermap.put(ManufacturerContactController.VIEWCONTROLLER_TITLE, new ManufacturerContactController().loadView());
         controllermap.put(ManufacturerContactTypeController.VIEWCONTROLLER_TITLE, new ManufacturerContactTypeController().loadView());
+        controllermap.put(OfficeLocationController.VIEWCONTROLLER_TITLE, new OfficeLocationController().loadView());
+        controllermap.put(ParentBrandController.VIEWCONTROLLER_TITLE, new ParentBrandController().loadView());
+        controllermap.put(PhaseLookupController.VIEWCONTROLLER_TITLE, new PhaseLookupController().loadView());
+        controllermap.put(PhaseStatusController.VIEWCONTROLLER_TITLE, new PhaseStatusController().loadView());
         controllermap.put(ProjectStatusController.VIEWCONTROLLER_TITLE, new ProjectStatusController().loadView());
         controllermap.put(ProjectTypeController.VIEWCONTROLLER_TITLE, new ProjectTypeController().loadView());
         controllermap.put(ReferrerController.VIEWCONTROLLER_TITLE, new ReferrerController().loadView());

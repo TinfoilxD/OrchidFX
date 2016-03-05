@@ -128,11 +128,11 @@
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Office_Location">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperOfficeLocationNewOfficeLocationTypeAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Parent_Brand">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperParentBrandNewParentBrandTypeAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Phase">
@@ -140,11 +140,11 @@
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Phase_Lookup">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperPhaseLookupNewPhaseLookupTypeAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Phase_Status">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperPhaseStatusNewPhaseStatusTypeAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Project">
