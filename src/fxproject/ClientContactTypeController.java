@@ -30,7 +30,6 @@ public class ClientContactTypeController
     public ClientContactTypeController()
     {
         procedureSet = new ClientContactTypeProcedureSet();
-
     }
 
     @FXML
