@@ -21,17 +21,6 @@ public class ContractorProcedureSet
         return OrchidDataSource.getCurrentDataSource().getConnection();
     }
 
-    public SQLServerResultSet procSelectCountries(String typeName) throws SQLException
-    {
-        Connection connection = getConnection();
-        CallableStatement cstm = connection.prepareCall("{call SelectCountry()}");
-        cstm.execute();
 
-        if(cstm != null)
-            cstm.close();
-        if(connection != null)
-            connection.close();
-        return null;
-    }
 
 }

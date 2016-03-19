@@ -16,16 +16,16 @@ public class ClientContactController
 
     }
 
-    public Node loadView()
+    public NodeBundle loadView()
     {
         try
         {
 
-            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/NewClientContactForm.fxml"));
+            FXMLLoader loader = new FXMLLoader();
+            Parent node = loader.load(getClass().getResource("../main/resources/NewClientContactForm.fxml").openStream());
+            Object controller = loader.getController();
 
-
-
-            return node;
+            return new NodeBundle(node, controller);
         }
         catch(Exception e)
         {

@@ -2,15 +2,22 @@ package fxproject;/*
  * Written by Tin Van on 2/28/16.
  */
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.ChoiceBox;
+import orchidmodel.CountryModel;
+
+import java.net.URL;
 import java.sql.*;
+import java.util.ResourceBundle;
 
 
-public class ContractorController
+public class ContractorController implements Initializable
 {
     public static final String VIEWCONTROLLER_TITLE = "Contractor Input";
     @FXML
@@ -19,27 +26,53 @@ public class ContractorController
     {
 
     }
-    private void loadDataSets()
+    public void loadDataSets()
     {
 
     }
-    private void loadDataSetsWithParameters()
+    public void loadDataSetsWithParameters()
     {
 
     }
-    public Node loadView()
+    public NodeBundle loadView()
     {
-        try {
+        try
+        {
 
-            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/NewContractorForm.fxml"));
+            FXMLLoader loader = new FXMLLoader();
+            Parent node = loader.load(getClass().getResource("../main/resources/NewContractorForm.fxml").openStream());
+            Object controller = loader.getController();
 
-
-            return node;
-        } catch (Exception e) {
+            return new NodeBundle(node, controller);
+        }
+        catch(Exception e)
+        {
 
             e.printStackTrace();
 
         }
         return null;
     }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources)
+    {
+
+        try
+        {
+            ObservableList<CountryModel> countryList = new CountryController().procSelectCountries();
+            ObservableList<String> countryNameList = FXCollections.observableArrayList();
+            for(CountryModel m : countryList)
+            {
+                countryNameList.add(m.getCountryName());
+            }
+            //fxSelectCountry.setItems(countryNameList);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
+    }
+
 }

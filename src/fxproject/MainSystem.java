@@ -19,8 +19,8 @@ public class MainSystem
     public MainSystem()
     {
         setCurrentSystem(this);
-        rootStageContainer = new RootStageContainer();
         databaseConnection = new OrchidDataSource();
+        rootStageContainer = new RootStageContainer();
     }
     public void handleApplicationCloseEvent()
     {
