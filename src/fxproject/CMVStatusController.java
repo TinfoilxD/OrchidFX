@@ -41,14 +41,15 @@ public class CMVStatusController
 
     }
 
-    public Node loadView()
+    public NodeBundle loadBundle()
     {
         try {
 
-            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/NewCMVStatusForm.fxml"));
+            FXMLLoader loader = new FXMLLoader();
+            Parent node = loader.load(getClass().getResource("../main/resources/NewCMVStatusForm.fxml").openStream());
+            Object controller = loader.getController();
 
-
-            return node;
+            return new NodeBundle(node, controller);
         } catch (Exception e) {
 
             e.printStackTrace();

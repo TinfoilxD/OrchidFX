@@ -19,7 +19,7 @@ public class RootStageContainer
     private final int SCREEN_HEIGHT = 800;
     private final int SCREEN_WIDTH = 600;
 
-    HashMap<String, Node> controllermap;
+    HashMap<String, NodeBundle> controllermap;
     Stage mainStage;
 
     private Pane topContainer;
@@ -28,7 +28,7 @@ public class RootStageContainer
     public RootStageContainer()
     {
         setCurrentRootStageContainer(this);
-        controllermap = new HashMap<String, Node>();
+        controllermap = new HashMap<String, NodeBundle>();
         mainStage = new Stage();
         mainStage.setOnCloseRequest(event -> MainSystem.getCurrentSystem().handleApplicationCloseEvent());
         mainStage.setScene(getSceneStructure());
@@ -76,44 +76,40 @@ public class RootStageContainer
     }
     private void initiateFileMap()
     {
-
-        NodeBundle bundleClientContact = new ClientContactController().loadView();
-        NodeBundle bundleContractor = new ContractorController().loadView();
-
-        controllermap.put(ClientController.VIEWCONTROLLER_TITLE, new ClientController().loadView());
-        controllermap.put(EmployeeController.VIEWCONTROLLER_TITLE, new EmployeeController().loadView());
-        controllermap.put(EditEmployeeController.VIEWCONTROLLER_TITLE, new EditEmployeeController().loadView());
-        controllermap.put(ClientContactController.VIEWCONTROLLER_TITLE, bundleClientContact.getNode());
-        controllermap.put(ClientContactTypeController.VIEWCONTROLLER_TITLE, new ClientContactTypeController().loadView());
-        controllermap.put(ClientStatusController.VIEWCONTROLLER_TITLE, new ClientStatusController().loadView());
-        controllermap.put(CMVStatusController.VIEWCONTROLLER_TITLE, new CMVStatusController().loadView());
-        controllermap.put(ContractorController.VIEWCONTROLLER_TITLE, bundleContractor.getNode());
-        controllermap.put(ContractorContactController.VIEWCONTROLLER_TITLE, new ContractorContactController().loadView());
-        controllermap.put(ContractorContactTypeController.VIEWCONTROLLER_TITLE, new ContractorContactTypeController().loadView());
-        controllermap.put(ManufacturerController.VIEWCONTROLLER_TITLE, new ManufacturerController().loadView());
-        controllermap.put(ManufacturerContactController.VIEWCONTROLLER_TITLE, new ManufacturerContactController().loadView());
-        controllermap.put(ManufacturerContactTypeController.VIEWCONTROLLER_TITLE, new ManufacturerContactTypeController().loadView());
-        controllermap.put(OfficeLocationController.VIEWCONTROLLER_TITLE, new OfficeLocationController().loadView());
-        controllermap.put(ParentBrandController.VIEWCONTROLLER_TITLE, new ParentBrandController().loadView());
-        controllermap.put(PhaseLookupController.VIEWCONTROLLER_TITLE, new PhaseLookupController().loadView());
-        controllermap.put(PhaseStatusController.VIEWCONTROLLER_TITLE, new PhaseStatusController().loadView());
-        controllermap.put(ProjectStatusController.VIEWCONTROLLER_TITLE, new ProjectStatusController().loadView());
-        controllermap.put(ProjectTypeController.VIEWCONTROLLER_TITLE, new ProjectTypeController().loadView());
-        controllermap.put(ReferrerController.VIEWCONTROLLER_TITLE, new ReferrerController().loadView());
-        controllermap.put(ReferrerTypeController.VIEWCONTROLLER_TITLE, new ReferrerTypeController().loadView());
-        controllermap.put(DepartmentController.VIEWCONTROLLER_TITLE, new DepartmentController().loadView());
-        controllermap.put(TaskListController.VIEWCONTROLLER_TITLE, new TaskListController().loadView());
-        controllermap.put(TradeShowController.VIEWCONTROLLER_TITLE, new TradeShowController().loadView());
-        controllermap.put(VendorController.VIEWCONTROLLER_TITLE, new VendorController().loadView());
-        controllermap.put(VendorContactController.VIEWCONTROLLER_TITLE, new VendorContactController().loadView());
-        controllermap.put(VendorContactTypeController.VIEWCONTROLLER_TITLE, new VendorContactTypeController().loadView());
+        controllermap.put(ClientController.VIEWCONTROLLER_TITLE, new ClientController().loadBundle());
+        controllermap.put(EmployeeController.VIEWCONTROLLER_TITLE, new EmployeeController().loadBundle());
+        controllermap.put(EditEmployeeController.VIEWCONTROLLER_TITLE, new EditEmployeeController().loadBundle());
+        controllermap.put(ClientContactController.VIEWCONTROLLER_TITLE, new ClientContactController().loadBundle());
+        controllermap.put(ClientContactTypeController.VIEWCONTROLLER_TITLE, new ClientContactTypeController().loadBundle());
+        controllermap.put(ClientStatusController.VIEWCONTROLLER_TITLE, new ClientStatusController().loadBundle());
+        controllermap.put(CMVStatusController.VIEWCONTROLLER_TITLE, new CMVStatusController().loadBundle());
+        controllermap.put(ContractorController.VIEWCONTROLLER_TITLE, new ContractorController().loadBundle());
+        controllermap.put(ContractorContactController.VIEWCONTROLLER_TITLE, new ContractorContactController().loadBundle());
+        controllermap.put(ContractorContactTypeController.VIEWCONTROLLER_TITLE, new ContractorContactTypeController().loadBundle());
+        controllermap.put(ManufacturerController.VIEWCONTROLLER_TITLE, new ManufacturerController().loadBundle());
+        controllermap.put(ManufacturerContactController.VIEWCONTROLLER_TITLE, new ManufacturerContactController().loadBundle());
+        controllermap.put(ManufacturerContactTypeController.VIEWCONTROLLER_TITLE, new ManufacturerContactTypeController().loadBundle());
+        controllermap.put(OfficeLocationController.VIEWCONTROLLER_TITLE, new OfficeLocationController().loadBundle());
+        controllermap.put(ParentBrandController.VIEWCONTROLLER_TITLE, new ParentBrandController().loadBundle());
+        controllermap.put(PhaseLookupController.VIEWCONTROLLER_TITLE, new PhaseLookupController().loadBundle());
+        controllermap.put(PhaseStatusController.VIEWCONTROLLER_TITLE, new PhaseStatusController().loadBundle());
+        controllermap.put(ProjectStatusController.VIEWCONTROLLER_TITLE, new ProjectStatusController().loadBundle());
+        controllermap.put(ProjectTypeController.VIEWCONTROLLER_TITLE, new ProjectTypeController().loadBundle());
+        controllermap.put(ReferrerController.VIEWCONTROLLER_TITLE, new ReferrerController().loadBundle());
+        controllermap.put(ReferrerTypeController.VIEWCONTROLLER_TITLE, new ReferrerTypeController().loadBundle());
+        controllermap.put(DepartmentController.VIEWCONTROLLER_TITLE, new DepartmentController().loadBundle());
+        controllermap.put(TaskListController.VIEWCONTROLLER_TITLE, new TaskListController().loadBundle());
+        controllermap.put(TradeShowController.VIEWCONTROLLER_TITLE, new TradeShowController().loadBundle());
+        controllermap.put(VendorController.VIEWCONTROLLER_TITLE, new VendorController().loadBundle());
+        controllermap.put(VendorContactController.VIEWCONTROLLER_TITLE, new VendorContactController().loadBundle());
+        controllermap.put(VendorContactTypeController.VIEWCONTROLLER_TITLE, new VendorContactTypeController().loadBundle());
 
     }
 
     public void changeView(String viewControllerTitle)
     {
         bottomContainer.getChildren().clear();
-        bottomContainer.getChildren().add(controllermap.get(viewControllerTitle));
+        bottomContainer.getChildren().add(controllermap.get(viewControllerTitle).getNode());
 
     }
     public void deleteAllChildren()
@@ -129,5 +125,8 @@ public class RootStageContainer
     {
         return currentRootStageContainer;
     }
-
+    public NodeBundle getBundle(String viewControllerTitle)
+    {
+        return controllermap.get(viewControllerTitle);
+    }
 }

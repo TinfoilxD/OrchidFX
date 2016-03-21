@@ -40,16 +40,16 @@ public class ClientStatusController
 
     }
 
-    public Node loadView()
+    public NodeBundle loadBundle()
     {
         try
         {
+            FXMLLoader loader = new FXMLLoader();
+            Parent node = loader.load(getClass().getResource("../main/resources/NewClientStatusForm.fxml").openStream());
+            Object controller = loader.getController();
 
-            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/NewClientStatusForm.fxml"));
+            return new NodeBundle(node, controller);
 
-
-
-            return node;
         }
         catch(Exception e)
         {

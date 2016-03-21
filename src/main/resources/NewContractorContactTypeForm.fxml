@@ -53,7 +53,7 @@
                                           </TextField>
                                        </children>
                                     </FlowPane>
-                                    <Button id="buttonAdd" fx:id="fxButtonAdd" onAction="#handleButtonAddAction" mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="buttonAdd" fx:id="fxButtonAdd" mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>

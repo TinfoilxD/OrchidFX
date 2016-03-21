@@ -16,7 +16,7 @@ public class ClientContactController
 
     }
 
-    public NodeBundle loadView()
+    public NodeBundle loadBundle()
     {
         try
         {

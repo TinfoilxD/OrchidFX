@@ -35,7 +35,7 @@ public class ContractorController
     {
 
     }
-    public NodeBundle loadView()
+    public NodeBundle loadBundle()
     {
         try
         {

@@ -16,16 +16,15 @@ public class OfficeLocationController
 
     }
 
-    public Node loadView()
+    public NodeBundle loadBundle()
     {
         try
         {
+            FXMLLoader loader = new FXMLLoader();
+            Parent node = loader.load(getClass().getResource("../main/resources/NewOfficeLocationForm.fxml").openStream());
+            Object controller = loader.getController();
 
-            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/NewOfficeLocationForm.fxml"));
-
-
-
-            return node;
+            return new NodeBundle(node, controller);
         }
         catch(Exception e)
         {
