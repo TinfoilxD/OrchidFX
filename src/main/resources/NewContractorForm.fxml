@@ -129,11 +129,11 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
-                                          <ChoiceBox fx:id="fxSelectCountry" prefWidth="150.0">
+                                          <ComboBox fx:id="fxSelectCountry" prefWidth="150.0">
                                              <FlowPane.margin>
                                                 <Insets left="10.0" />
                                              </FlowPane.margin>
-                                          </ChoiceBox>
+                                          </ComboBox>
                                           <Label text="State:">
                                              <padding>
                                                 <Insets left="20.0" />

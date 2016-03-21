@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import orchidmodel.CountryModel;
 
 import java.net.URL;
@@ -17,11 +18,11 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 
-public class ContractorController implements Initializable
+public class ContractorController
 {
     public static final String VIEWCONTROLLER_TITLE = "Contractor Input";
     @FXML
-    ChoiceBox<String> fxSelectCountry;
+    ComboBox<String> fxSelectCountry;
     public ContractorController()
     {
 
@@ -54,25 +55,35 @@ public class ContractorController implements Initializable
         return null;
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources)
+    @FXML
+    public void initialize()
     {
-
+       setFxSelectCountry();
+    }
+    public void setFxSelectCountry()
+    {
         try
         {
             ObservableList<CountryModel> countryList = new CountryController().procSelectCountries();
             ObservableList<String> countryNameList = FXCollections.observableArrayList();
-            for(CountryModel m : countryList)
+            int defaultIndex = 0;
+            for(int i = 0; i < countryList.size(); i++)
             {
+                CountryModel m = countryList.get(i);
+                String countryAbbreviation = m.getCountryAbbreviation();
+                if(countryAbbreviation.equals("USA"))
+                    defaultIndex = i;
                 countryNameList.add(m.getCountryName());
             }
-            //fxSelectCountry.setItems(countryNameList);
+            fxSelectCountry.setItems(countryNameList);
+            fxSelectCountry.getSelectionModel().select(defaultIndex);
         }
         catch(Exception e)
         {
-            e.printStackTrace();
+            System.out.println("An error has occured that doesn't actually do anything.");
         }
 
     }
+
 
 }
