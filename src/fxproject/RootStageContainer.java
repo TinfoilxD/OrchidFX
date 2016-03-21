@@ -86,6 +86,7 @@ public class RootStageContainer
         controllermap.put(ContractorController.VIEWCONTROLLER_TITLE, new ContractorController().loadBundle());
         controllermap.put(ContractorContactController.VIEWCONTROLLER_TITLE, new ContractorContactController().loadBundle());
         controllermap.put(ContractorContactTypeController.VIEWCONTROLLER_TITLE, new ContractorContactTypeController().loadBundle());
+        controllermap.put(CountryController.VIEWCONTROLLER_TITLE, new CountryController().loadBundle());
         controllermap.put(ManufacturerController.VIEWCONTROLLER_TITLE, new ManufacturerController().loadBundle());
         controllermap.put(ManufacturerContactController.VIEWCONTROLLER_TITLE, new ManufacturerContactController().loadBundle());
         controllermap.put(ManufacturerContactTypeController.VIEWCONTROLLER_TITLE, new ManufacturerContactTypeController().loadBundle());
@@ -98,6 +99,7 @@ public class RootStageContainer
         controllermap.put(ReferrerController.VIEWCONTROLLER_TITLE, new ReferrerController().loadBundle());
         controllermap.put(ReferrerTypeController.VIEWCONTROLLER_TITLE, new ReferrerTypeController().loadBundle());
         controllermap.put(DepartmentController.VIEWCONTROLLER_TITLE, new DepartmentController().loadBundle());
+        controllermap.put(StateController.VIEWCONTROLLER_TITLE, new StateController().loadBundle());
         controllermap.put(TaskListController.VIEWCONTROLLER_TITLE, new TaskListController().loadBundle());
         controllermap.put(TradeShowController.VIEWCONTROLLER_TITLE, new TradeShowController().loadBundle());
         controllermap.put(VendorController.VIEWCONTROLLER_TITLE, new VendorController().loadBundle());

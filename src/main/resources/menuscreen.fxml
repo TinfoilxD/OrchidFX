@@ -175,6 +175,10 @@
                           </Menu>
                           <Menu mnemonicParsing="false" text="S-Z">
                               <items>
+                                  <Menu text="State" onAction="#handleDeveloperStateNewStateAction">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
                                   <Menu text="Subtask">
                                       <MenuItem text="New"/>
                                       <MenuItem text="Edit"/>

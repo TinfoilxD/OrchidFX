@@ -64,7 +64,7 @@ public class ContractorController
     {
         try
         {
-            ObservableList<CountryModel> countryList = new CountryController().procSelectCountries();
+            ObservableList<CountryModel> countryList = new CountryProcedureSet().procSelectCountries();
             ObservableList<String> countryNameList = FXCollections.observableArrayList();
             int defaultIndex = 0;
             for(int i = 0; i < countryList.size(); i++)

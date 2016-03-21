@@ -140,6 +140,11 @@ public class MenuScreenController
         RootStageContainer.getCurrentRootStageContainer().changeView(ReferrerTypeController.VIEWCONTROLLER_TITLE);
     }
     @FXML
+    protected void handleDeveloperStateNewStateAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(StateController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
     protected void handleDeveloperTaskListNewTaskListAction(ActionEvent event)
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(TaskListController.VIEWCONTROLLER_TITLE);
