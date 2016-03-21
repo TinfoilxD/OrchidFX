@@ -35,7 +35,7 @@ public class ApplicationSplashScreen extends Application
         window.sizeToScene();
         window.show();
 
-        PauseTransition pause = new PauseTransition(Duration.millis(2000));
+        PauseTransition pause = new PauseTransition(Duration.millis(500));
         pause.setOnFinished(e -> {
             new MainSystem();
             window.close();

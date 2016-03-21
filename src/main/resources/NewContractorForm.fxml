@@ -90,24 +90,24 @@
                                           <Insets left="12.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <TextField id="fieldStreetAddress" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Street Address, P.O. Box, etc" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <TextField fx:id = "fxFieldAddress1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Street Address, P.O. Box, etc" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </TextField>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Apt, Suite, etc." GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <TextField fx:id = "fxFieldAddress2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Apt, Suite, etc." GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </TextField>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="Zip Code" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <TextField fx:id = "fxZipCode" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="Zip Code" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </TextField>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                        <children>
-                                          <TextField id="fieldFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name">
+                                          <TextField fx:id="fxFieldFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -116,7 +116,7 @@
                                     </FlowPane>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                        <children>
-                                          <TextField prefHeight="30.0" prefWidth="200.0" promptText="City">
+                                          <TextField fx:id="fxFieldCity" prefHeight="30.0" prefWidth="200.0" promptText="City">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -129,11 +129,11 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
-                                          <ChoiceBox prefWidth="150.0">
+                                          <ComboBox fx:id="fxSelectCountry" prefWidth="150.0">
                                              <FlowPane.margin>
                                                 <Insets left="10.0" />
                                              </FlowPane.margin>
-                                          </ChoiceBox>
+                                          </ComboBox>
                                           <Label text="State:">
                                              <padding>
                                                 <Insets left="20.0" />
@@ -142,7 +142,7 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox prefHeight="25.0" prefWidth="88.0">
+                                          <ComboBox fx:id="fxSelectState" prefHeight="25.0" prefWidth="88.0">
                                              <FlowPane.margin>
                                                 <Insets left="10.0" />
                                              </FlowPane.margin>
@@ -151,7 +151,7 @@
                                     </FlowPane>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <children>
-                                          <TextField prefHeight="25.0" prefWidth="250.0" promptText="ex: Office">
+                                          <TextField fx:id="fxFieldOffice" prefHeight="25.0" prefWidth="250.0" promptText="ex: Office">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -164,7 +164,7 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
-                                          <TextField prefHeight="30.0" prefWidth="93.0" promptText="Ext.">
+                                          <TextField fx:id="fxFieldExt" prefHeight="30.0" prefWidth="93.0" promptText="Ext.">
                                              <FlowPane.margin>
                                                 <Insets left="10.0" />
                                              </FlowPane.margin>
@@ -201,7 +201,7 @@
                                     </Label>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                        <children>
-                                          <TextField prefHeight="25.0" prefWidth="326.0" promptText="Email" />
+                                          <TextField fx:id="fxFieldEmail" prefHeight="25.0" prefWidth="326.0" promptText="Email" />
                                        </children>
                                     </FlowPane>
                                  </children>
