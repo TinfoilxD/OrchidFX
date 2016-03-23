@@ -26,10 +26,11 @@ public class StateProcedureSet
         return OrchidDataSource.getCurrentDataSource().getConnection();
     }
 
-    public ObservableList<StateModel> procSelectState() throws SQLException
+    public ObservableList<StateModel> procSelectState(int countryId) throws SQLException
     {
         Connection connection = getConnection();
-        CallableStatement cstm = connection.prepareCall("{call SelectState()}");
+        CallableStatement cstm = connection.prepareCall("{call SelectState(?)}");
+        cstm.setInt(1, countryId);
 
         ResultSet resultSet = cstm.executeQuery();
 

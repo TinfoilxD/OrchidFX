@@ -28,6 +28,8 @@ public class ContractorController
     public static final String VIEWCONTROLLER_TITLE = "Contractor Input";
     @FXML
     ComboBox<String> fxSelectCountry;
+    @FXML
+    ComboBox<String> fxSelectState;
     ObservableList<CountryModel> countryList;
     public ContractorController()
     {
@@ -63,9 +65,10 @@ public class ContractorController
 
     @FXML
     public void initialize()
-    {
-       setFxSelectCountry();
-    }
+{
+    setFxSelectCountry();
+    setFxSelectState();
+}
 
 
     public void setFxSelectCountry()
@@ -83,6 +86,7 @@ public class ContractorController
                     defaultIndex = i;
                 countryNameList.add(m.getCountryName());
             }
+
             fxSelectCountry.setItems(countryNameList);
             fxSelectCountry.getSelectionModel().select(defaultIndex);
         }
@@ -105,17 +109,28 @@ public class ContractorController
         //get selected country id
         //pass id into procedure
         //get list from procedure
-        //create list of just state names
+        //create list of just state names ->
+        // for loop that runs through all items in stateList, for each state, get the name and add it to the list.
         //set combobox list
-
 
         try
         {
             int countryIdx = fxSelectCountry.getSelectionModel().getSelectedIndex();
             int countryId = countryList.get(countryIdx).getCountryID();
+            ObservableList<String> stateNameList = FXCollections.observableArrayList();
             ObservableList<StateModel> stateList = new StateProcedureSet().procSelectState(countryId);
-
-
+            if(stateList == null)
+            {
+                fxSelectState.setItems(null);
+                return;
+            }
+            for(int i = 0; i < stateList.size(); i++)
+            {
+                StateModel sm = stateList.get(i);
+                stateNameList.add(sm.getStateName());
+            }
+            fxSelectState.setItems(stateNameList);
+            fxSelectState.getSelectionModel().select(0);
 
             ObservableList<String> countryNameList = FXCollections.observableArrayList();
             int defaultIndex = 0;
@@ -132,7 +147,8 @@ public class ContractorController
         }
         catch(Exception e)
         {
-            System.out.println("An error has occured that doesn't actually do anything.");
+           // e.printStackTrace();
+            //System.out.println("An error has occured that doesn't actually do anything.");
         }
 
     }
