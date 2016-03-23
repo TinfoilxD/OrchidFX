@@ -39,7 +39,10 @@
                 </Menu>
                   <Menu mnemonicParsing="false" text="Admin">
                       <items>
-                          <MenuItem mnemonicParsing="false" text="New User" />
+                          <Menu mnemonicParsing="false" text="User">
+                              <MenuItem text="New User" onAction="#handleAdminUserNewUserAction"/>
+                              <MenuItem text="Edit User"/>
+                          </Menu>
                       </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Developer">

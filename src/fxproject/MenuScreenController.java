@@ -155,6 +155,11 @@ public class MenuScreenController
         RootStageContainer.getCurrentRootStageContainer().changeView(TradeShowController.VIEWCONTROLLER_TITLE);
     }
     @FXML
+    protected void handleAdminUserNewUserAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(UserController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
     protected void handleDeveloperVendorNewVendorAction(ActionEvent event)
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(VendorController.VIEWCONTROLLER_TITLE);

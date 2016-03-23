@@ -102,6 +102,7 @@ public class RootStageContainer
         controllermap.put(StateController.VIEWCONTROLLER_TITLE, new StateController().loadBundle());
         controllermap.put(TaskListController.VIEWCONTROLLER_TITLE, new TaskListController().loadBundle());
         controllermap.put(TradeShowController.VIEWCONTROLLER_TITLE, new TradeShowController().loadBundle());
+        controllermap.put(UserController.VIEWCONTROLLER_TITLE, new UserController().loadBundle());
         controllermap.put(VendorController.VIEWCONTROLLER_TITLE, new VendorController().loadBundle());
         controllermap.put(VendorContactController.VIEWCONTROLLER_TITLE, new VendorContactController().loadBundle());
         controllermap.put(VendorContactTypeController.VIEWCONTROLLER_TITLE, new VendorContactTypeController().loadBundle());
