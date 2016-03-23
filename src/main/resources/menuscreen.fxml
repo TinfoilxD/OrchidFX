@@ -37,6 +37,11 @@
                       <MenuItem mnemonicParsing="false" text="Edit Project" />
                   </items>
                 </Menu>
+                  <Menu mnemonicParsing="false" text="Admin">
+                      <items>
+                          <MenuItem mnemonicParsing="false" text="New User" />
+                      </items>
+                  </Menu>
                   <Menu mnemonicParsing="false" text="Developer">
                       <items>
                           <Menu mnemonicParsing="false" text="A-C">
