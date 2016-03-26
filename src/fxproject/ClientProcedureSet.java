@@ -2,11 +2,14 @@ package fxproject;/*
  * Written by Tin Van on 2/29/16.
  */
 
-import java.sql.*;
-public class ClientContactTypeProcedureSet
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class ClientProcedureSet
 {
     Connection connection;
-    public ClientContactTypeProcedureSet()
+    public ClientProcedureSet()
     {
 
     }
@@ -16,11 +19,11 @@ public class ClientContactTypeProcedureSet
         return OrchidDataSource.getCurrentDataSource().getConnection();
     }
 
-    public void procInsertClientContactType(String typeName) throws SQLException
+    public void procInsertClient(String typeName) throws SQLException
     {
         Connection connection = getConnection();
-        CallableStatement cstm = connection.prepareCall("{call InsertClientContactType(?)}");
-        cstm.setString("@ClientContactType", typeName);
+        CallableStatement cstm = connection.prepareCall("{call InsertClient(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+        cstm.setString("", typeName);
         cstm.execute();
 
         if(cstm != null)

@@ -58,8 +58,8 @@
                                                 </Label>
                                                 <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                                     <children>
-                                                        <Button mnemonicParsing="false" text="Choose Client" onAction="#handleButtonChooseClientAction"/>
-                                                        <Button mnemonicParsing="false" text="Add Client" onAction="#handleButtonNewClientAction">
+                                                        <Button mnemonicParsing="false" onAction="#handleButtonChooseClientAction" text="Choose Client" />
+                                                        <Button mnemonicParsing="false" onAction="#handleButtonNewClientAction" text="Add Client">
                                                             <FlowPane.margin>
                                                                 <Insets />
                                                             </FlowPane.margin>
@@ -82,7 +82,6 @@
                                                         <Insets bottom="10.0" right="20.0" />
                                                     </GridPane.margin>
                                                 </Button>
-                                                <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                                                 <Label text="Hotel*:" GridPane.rowIndex="2">
                                                     <font>
                                                         <Font size="14.0" />
@@ -93,8 +92,8 @@
                                                 </Label>
                                                 <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                     <children>
-                                                        <Button mnemonicParsing="false" text="Choose Hotel" onAction="#handleButtonChooseHotelAction"/>
-                                                        <Button mnemonicParsing="false" text="Add Hotel" onAction="#handleButtonAddHotelAction" />
+                                                        <Button mnemonicParsing="false" onAction="#handleButtonChooseHotelAction" text="Choose Hotel" />
+                                                        <Button mnemonicParsing="false" onAction="#handleButtonAddHotelAction" text="Add Hotel" />
                                                     </children>
                                                 </FlowPane>
                                                 <Label GridPane.columnIndex="1" GridPane.rowIndex="1" />

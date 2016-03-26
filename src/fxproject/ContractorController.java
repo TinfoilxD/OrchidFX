@@ -92,7 +92,6 @@ public class ContractorController
         }
         catch(Exception e)
         {
-            //e.printStackTrace();
             //System.out.println("An error has occured that doesn't actually do anything.");
         }
 
@@ -148,7 +147,6 @@ public class ContractorController
         }
         catch(Exception e)
         {
-           //e.printStackTrace();
             //System.out.println("An error has occured that doesn't actually do anything.");
         }
 
