@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.CMVStatusController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.DepartmentController">
    <children>
       <VBox prefHeight="600.0" prefWidth="800.0">
          <children>
@@ -14,7 +14,7 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #9FC131;">
                      <children>
-                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="320.0" text="New CMV Status">
+                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="320.0" text="New Department">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -36,7 +36,7 @@
                                     <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Label text="CMV Status*: ">
+                                    <Label text="*Department Name: ">
                                        <GridPane.margin>
                                           <Insets left="12.0" />
                                        </GridPane.margin>
@@ -46,14 +46,14 @@
                                     </Label>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                        <children>
-                                          <TextField fx:id="fxFieldCMVStatus" prefHeight="25.0" prefWidth="250.0" promptText="CMV Status">
+                                          <TextField fx:id="fxFieldDepartment" prefHeight="25.0" prefWidth="250.0" promptText="Department Name">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </TextField>
                                        </children>
                                     </FlowPane>
-                                    <Button id="buttonAdd" fx:id="fxButtonAdd" onAction="#handleButtonAddAction" mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="buttonAdd" fx:id="fxButtonAdd" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>

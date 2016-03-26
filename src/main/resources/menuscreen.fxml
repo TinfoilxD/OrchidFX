@@ -33,10 +33,18 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Project">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="New Project" />
+                    <MenuItem mnemonicParsing="false" text="New Project" onAction="#handleProjectNewProjectAction" />
                       <MenuItem mnemonicParsing="false" text="Edit Project" />
                   </items>
                 </Menu>
+                  <Menu mnemonicParsing="false" text="Admin">
+                      <items>
+                          <Menu mnemonicParsing="false" text="User">
+                              <MenuItem text="New User" onAction="#handleAdminUserNewUserAction"/>
+                              <MenuItem text="Edit User"/>
+                          </Menu>
+                      </items>
+                  </Menu>
                   <Menu mnemonicParsing="false" text="Developer">
                       <items>
                           <Menu mnemonicParsing="false" text="A-C">
@@ -76,7 +84,7 @@
                           <Menu mnemonicParsing="false" text="D-H">
                               <items>
                                   <Menu text="Department">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperDepartmentNewDepartmentAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Employee">
@@ -128,11 +136,11 @@
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Office_Location">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperOfficeLocationNewOfficeLocationTypeAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Parent_Brand">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperParentBrandNewParentBrandTypeAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Phase">
@@ -140,11 +148,11 @@
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Phase_Lookup">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperPhaseLookupNewPhaseLookupTypeAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Phase_Status">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperPhaseStatusNewPhaseStatusTypeAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Project">
@@ -175,6 +183,10 @@
                           </Menu>
                           <Menu mnemonicParsing="false" text="S-Z">
                               <items>
+                                  <Menu text="State" onAction="#handleDeveloperStateNewStateAction">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
+                                  </Menu>
                                   <Menu text="Subtask">
                                       <MenuItem text="New"/>
                                       <MenuItem text="Edit"/>

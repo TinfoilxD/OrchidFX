@@ -1,0 +1,78 @@
+package fxproject;/*
+ * Written by Tin Van on 2/20/16.
+ */
+
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.stage.Stage;
+import orchidmodel.ClientModel;
+
+public class ClientChildController
+{
+    ClientChildTarget target;
+
+    public static final String VIEWCONTROLLER_TITLE= "Client Child Input";
+
+    public ClientChildController()
+    {
+
+    }
+
+    public NodeBundle loadBundle()
+    {
+        try
+        {
+            FXMLLoader loader = new FXMLLoader();
+            Parent node = loader.load(getClass().getResource("../main/resources/NewClientChildForm.fxml").openStream());
+            Object controller = loader.getController();
+
+            return new NodeBundle(node, controller);
+        }
+        catch(Exception e)
+        {
+
+            e.printStackTrace();
+
+        }
+        return null;
+    }
+
+    public void setTarget(ClientChildTarget target)
+    {
+        this.target = target;
+    }
+
+    @FXML
+    protected void handleButtonCancelAction(ActionEvent e)
+    {
+        Node source = (Node) e.getSource();
+        Stage stage = (Stage)source.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    protected void handleButtonAddAction(ActionEvent e)
+    {
+       if(target != null)
+       {
+           target.setResultAndClose(new ClientModel());
+           Node source = (Node) e.getSource();
+           Stage stage = (Stage)source.getScene().getWindow();
+           stage.close();
+       }
+       else
+       {
+           new OrchidAlertBox("Error", "Detached Child Form");
+       }
+    }
+
+}
+
+interface ClientChildTarget
+{
+    public void setResultAndClose(ClientModel model);
+}

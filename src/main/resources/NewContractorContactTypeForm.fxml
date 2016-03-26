@@ -46,14 +46,14 @@
                                     </Label>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                        <children>
-                                          <TextField id="fieldFirstName" prefHeight="25.0" prefWidth="250.0" promptText="Contact Type">
+                                          <TextField fx:id="fxFieldContractorContactType" prefHeight="25.0" prefWidth="250.0" promptText="Contact Type">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </TextField>
                                        </children>
                                     </FlowPane>
-                                    <Button mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="buttonAdd" fx:id="fxButtonAdd" mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -61,7 +61,7 @@
                                           <Insets bottom="10.0" right="125.0" />
                                        </GridPane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button id="buttonCancel" fx:id="fxButtonCancel" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>

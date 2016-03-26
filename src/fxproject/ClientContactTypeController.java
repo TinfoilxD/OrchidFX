@@ -18,7 +18,6 @@ import java.util.ResourceBundle;
 
 public class ClientContactTypeController
 {
-
     @FXML private TextField fxFieldContactType;
     @FXML private Button fxButtonAdd;
     @FXML private Button fxButtonCancel;
@@ -48,14 +47,15 @@ public class ClientContactTypeController
     }
 
 
-
-
-    public Node loadView()
+    public NodeBundle loadBundle()
     {
         try
         {
-            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/NewClientContactTypeForm.fxml"));
-            return node;
+            FXMLLoader loader = new FXMLLoader();
+            Parent node = loader.load(getClass().getResource("../main/resources/NewClientContactTypeForm.fxml").openStream());
+            Object controller = loader.getController();
+
+            return new NodeBundle(node, controller);
         }
         catch(Exception e)
         {
@@ -65,5 +65,6 @@ public class ClientContactTypeController
         }
         return null;
     }
+
 
 }

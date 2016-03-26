@@ -1,5 +1,5 @@
 package orchidmodel;/*
- * Written by Tin Van on 3/19/16.
+ * Written by Tin Van on 3/12/16.
  */
 
 public class StateModel
@@ -9,11 +9,11 @@ public class StateModel
     private String stateName;
     private String stateAbbreviation;
 
+
     public StateModel()
     {
 
     }
-
 
     public StateModel(int stateID, int countryID, String stateName, String stateAbbreviation)
     {
@@ -63,5 +63,15 @@ public class StateModel
         this.stateAbbreviation = stateAbbreviation;
     }
 
-
+    public String toString()
+    {
+        if(stateName != null)
+        {
+            return stateName;
+        }
+        else
+        {
+            return "N/A";
+        }
+    }
 }

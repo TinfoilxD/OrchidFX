@@ -28,49 +28,23 @@ public class CountryController
 
     }
 
-    private Connection getConnection() throws SQLException
+    public NodeBundle loadBundle()
     {
-        return OrchidDataSource.getCurrentDataSource().getConnection();
-    }
-
-
-    public ObservableList<CountryModel> procSelectCountries() throws SQLException
-    {
-        Connection connection = getConnection();
-        CallableStatement cstm = connection.prepareCall("{call SelectCountry()}");
-
-        ResultSet resultSet = cstm.executeQuery();
-
-        if(!resultSet.isBeforeFirst())
+        try
         {
-            return null;
+            FXMLLoader loader = new FXMLLoader();
+            Parent node = loader.load(getClass().getResource("../main/resources/NewCountryForm.fxml").openStream());
+            Object controller = loader.getController();
+
+            return new NodeBundle(node, controller);
         }
-        if(resultSet == null)
+        catch(Exception e)
         {
-            return null;
+
+            e.printStackTrace();
+
         }
-
-        ObservableList<CountryModel> countryList = FXCollections.observableArrayList();
-
-        while(resultSet.next())
-        {
-            int countryID = resultSet.getInt("CountryID");
-            String countryName = resultSet.getString("CountryName");
-            String countryAbbreviation = resultSet.getString("CountryAbbreviation");
-
-            countryList.add(new CountryModel(countryID,countryName,countryAbbreviation));
-        }
-
-
-        if(resultSet != null)
-            resultSet.close();
-        if(cstm != null)
-            cstm.close();
-        if(connection != null)
-            connection.close();
-
-
-        return countryList;
+        return null;
     }
 
 }

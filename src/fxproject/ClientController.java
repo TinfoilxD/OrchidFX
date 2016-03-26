@@ -3,9 +3,12 @@ package fxproject;/*
  */
 
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.stage.Stage;
 
 public class ClientController
 {
@@ -16,16 +19,15 @@ public class ClientController
 
     }
 
-    public Node loadView()
+    public NodeBundle loadBundle()
     {
         try
         {
+            FXMLLoader loader = new FXMLLoader();
+            Parent node = loader.load(getClass().getResource("../main/resources/NewClientForm.fxml").openStream());
+            Object controller = loader.getController();
 
-            Parent node = FXMLLoader.load(getClass().getResource("../main/resources/NewClientForm.fxml"));
-
-
-
-            return node;
+            return new NodeBundle(node, controller);
         }
         catch(Exception e)
         {
@@ -36,6 +38,11 @@ public class ClientController
         return null;
     }
 
+    @FXML
+    protected void handleButtonCancelAction(ActionEvent e)
+    {
+
+    }
 
 
 }
