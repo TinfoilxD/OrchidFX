@@ -57,6 +57,22 @@ public class ClientChildController
     @FXML
     protected void handleButtonAddAction(ActionEvent e)
     {
+        /*
+        try
+        {
+            ClientModel clientModel = new ClientModel();
+            clientModel.setClientStatusID();
+            clientModel.setTradeShowID(1);
+            clientModel.setReferrerI...
+
+            new ClientProcedureSet().procInsertClient(clientModel);
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Error", e.toString());
+        }
+        */
+
        if(target != null)
        {
            ClientModel clientModel = new ClientModel();

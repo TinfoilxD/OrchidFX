@@ -20,7 +20,6 @@ public class ClientProcedureSet
     {
         return OrchidDataSource.getCurrentDataSource().getConnection();
     }
-
     public void procInsertClient(ClientModel clientModel) throws SQLException
     {
         Connection connection = getConnection();
