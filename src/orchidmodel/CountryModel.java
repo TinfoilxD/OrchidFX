@@ -9,11 +9,6 @@ public class CountryModel
     private String countryAbbreviation;
 
 
-    public CountryModel()
-    {
-
-    }
-
     public CountryModel(int countryID, String countryName, String countryAbbreviation)
     {
         this.countryID = countryID;
