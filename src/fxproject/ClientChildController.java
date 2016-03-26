@@ -1,5 +1,5 @@
 package fxproject;/*
- * Written by Tin Van on 2/20/16.
+ * Written by Tin Van on 3/26/16.
  */
 
 
@@ -60,14 +60,14 @@ public class ClientChildController
        if(target != null)
        {
            target.setResultAndClose(new ClientModel());
-           Node source = (Node) e.getSource();
-           Stage stage = (Stage)source.getScene().getWindow();
-           stage.close();
        }
        else
        {
            new OrchidAlertBox("Error", "Detached Child Form");
        }
+        Node source = (Node) e.getSource();
+        Stage stage = (Stage)source.getScene().getWindow();
+        stage.close();
     }
 
 }

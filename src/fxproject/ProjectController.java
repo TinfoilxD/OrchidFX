@@ -15,6 +15,8 @@ import orchidmodel.ClientModel;
 
 public class ProjectController implements ClientChildTarget
 {
+    ClientModel clientModel;
+
     public static final String VIEWCONTROLLER_TITLE= "Project Input";
 
     public ProjectController()
@@ -78,8 +80,8 @@ public class ProjectController implements ClientChildTarget
     }
 
     @Override
-    public void setResultAndClose(ClientModel model)
+    public void setResultAndClose(ClientModel clientModel)
     {
-
+        this.clientModel = clientModel;
     }
 }
