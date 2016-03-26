@@ -7,6 +7,12 @@
     <NATIVE>
       <root url="file://$USER_HOME$/Desktop/Microsoft JDBC Driver 4.0 for SQL Server/sqljdbc_4.0/enu/auth/x64" />
     </NATIVE>
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Documents/UH/SPRING2016/CIS 3365/Microsoft JDBC Driver 4.0 for SQL Server/sqljdbc_4.0/enu/help/samples/adaptive" />
+      <root url="file://$USER_HOME$/Documents/UH/SPRING2016/CIS 3365/Microsoft JDBC Driver 4.0 for SQL Server/sqljdbc_4.0/enu/help/samples/connections" />
+      <root url="file://$USER_HOME$/Documents/UH/SPRING2016/CIS 3365/Microsoft JDBC Driver 4.0 for SQL Server/sqljdbc_4.0/enu/help/samples/datatypes" />
+      <root url="file://$USER_HOME$/Documents/UH/SPRING2016/CIS 3365/Microsoft JDBC Driver 4.0 for SQL Server/sqljdbc_4.0/enu/help/samples/resultsets" />
+      <root url="file://$USER_HOME$/Documents/UH/SPRING2016/CIS 3365/Microsoft JDBC Driver 4.0 for SQL Server/sqljdbc_4.0/enu/help/samples/sparse" />
+    </SOURCES>
   </library>
 </component>
