@@ -112,7 +112,7 @@
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Hotel_Property">
-                                      <MenuItem text="New"/>
+                                      <MenuItem text="New" onAction="#handleDeveloperHotelPropertyNewHotelPropertyAction"/>
                                       <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Hotel_Property_Status">

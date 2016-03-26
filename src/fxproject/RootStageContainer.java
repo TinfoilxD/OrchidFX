@@ -87,6 +87,7 @@ public class RootStageContainer
         controllermap.put(ContractorContactController.VIEWCONTROLLER_TITLE, new ContractorContactController().loadBundle());
         controllermap.put(ContractorContactTypeController.VIEWCONTROLLER_TITLE, new ContractorContactTypeController().loadBundle());
         controllermap.put(CountryController.VIEWCONTROLLER_TITLE, new CountryController().loadBundle());
+        controllermap.put(HotelPropertyController.VIEWCONTROLLER_TITLE, new HotelPropertyController().loadBundle());
         controllermap.put(ManufacturerController.VIEWCONTROLLER_TITLE, new ManufacturerController().loadBundle());
         controllermap.put(ManufacturerContactController.VIEWCONTROLLER_TITLE, new ManufacturerContactController().loadBundle());
         controllermap.put(ManufacturerContactTypeController.VIEWCONTROLLER_TITLE, new ManufacturerContactTypeController().loadBundle());
