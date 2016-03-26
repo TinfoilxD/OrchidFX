@@ -41,7 +41,8 @@ public class ClientContactTypeController
         }
         catch (Exception e)
         {
-            e.printStackTrace();
+            new OrchidAlertBox("Error",e.toString());
+
         }
 
     }
