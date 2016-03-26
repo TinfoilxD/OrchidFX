@@ -7,6 +7,11 @@ public class Project_StatusModel {
     private String projectStatus;
     private boolean isDeleted;
 
+    public Project_StatusModel()
+    {
+
+    }
+
     public Project_StatusModel(int statusID, String projectStatus, boolean isDeleted)
     {
         this.statusID = statusID;

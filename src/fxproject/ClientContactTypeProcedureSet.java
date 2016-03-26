@@ -20,7 +20,7 @@ public class ClientContactTypeProcedureSet
     {
         Connection connection = getConnection();
         CallableStatement cstm = connection.prepareCall("{call InsertClientContactType(?)}");
-        cstm.setString("@ClientContactType", typeName);
+        cstm.setString("ClientContactType", typeName);
         cstm.execute();
 
         if(cstm != null)

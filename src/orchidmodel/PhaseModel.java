@@ -9,6 +9,11 @@ public class PhaseModel {
     private int phaseStatusID;
     private boolean isDeleted;
 
+    public PhaseModel()
+    {
+
+    }
+
     public PhaseModel(int phaseID, int projectID, int phaseLookupID,
                       int phaseStatusID, boolean isDeleted)
     {

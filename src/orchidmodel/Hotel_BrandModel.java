@@ -19,6 +19,11 @@ public class Hotel_BrandModel
     private String hotelBrandEmail;
     private boolean isDeleted;
 
+    public Hotel_BrandModel()
+    {
+
+    }
+
     public Hotel_BrandModel(int hotelBrandID, int parentBrandID, String hotelBrandName,
                             String hotelBrandAddress1, String hotelBrandAddress2,
                             String hotelBrandAddress3, String hotelBrandCity, int stateID,

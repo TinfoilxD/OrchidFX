@@ -16,7 +16,7 @@
     <RowConstraints maxHeight="344.0" minHeight="10.0" prefHeight="305.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Edit Employee" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Edit Client" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <font>
             <Font size="24.0" />
          </font>
@@ -37,7 +37,7 @@
                   <Insets left="20.0" top="10.0" />
                </FlowPane.margin>
             </Label>
-            <TextField prefHeight="25.0" prefWidth="495.0" promptText="Name, Department, Location, etc.">
+            <TextField prefHeight="25.0" prefWidth="495.0" promptText="Name, Company, State, etc.">
                <FlowPane.margin>
                   <Insets left="10.0" top="10.0" />
                </FlowPane.margin>

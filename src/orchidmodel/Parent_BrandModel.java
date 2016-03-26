@@ -17,6 +17,11 @@ public class Parent_BrandModel
     private String parentWebsite;
     private boolean isDeleted;
 
+    public Parent_BrandModel()
+    {
+
+    }
+
     public Parent_BrandModel(int parentBrandID, String parentBrandName, String parentBrandAddress1,
                              String parentBrandAddress2, String parentBrandAddress3, String parentBrandCity,
                              int stateID, String parentBrandZipCode, int countryID, String parentPhone,

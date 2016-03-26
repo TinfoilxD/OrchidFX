@@ -25,6 +25,11 @@ public class ManufacturerModel
     private String manufacturerWebsite;
     private boolean isDeleted;
 
+    public ManufacturerModel()
+    {
+
+    }
+
     public ManufacturerModel(int manufacturerID, int cmvStatusID, String manufacturerName,
                              String manufacturerBillingAddress1, String manufacturerBillingAddress2,
                              String manufacturerBillingAddress3, String manufacturerBillingCity,

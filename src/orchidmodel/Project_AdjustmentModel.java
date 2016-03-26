@@ -9,6 +9,11 @@ public class Project_AdjustmentModel {
     private String noteCreationDate;
     private boolean isDeleted;
 
+    public Project_AdjustmentModel()
+    {
+
+    }
+
     public Project_AdjustmentModel(int projectAdjustmentID, int projectID, String note,
                                    String noteCreationDate, boolean isDeleted)
     {

@@ -17,6 +17,11 @@ public class ProjectModel
     private int projectStatusID;
     private boolean isDeleted;
 
+    public ProjectModel()
+    {
+
+    }
+
     public ProjectModel(int projectID, int clientID, int hotelID,
                         String projectProjectedStartDate, String projectProjectedDeadlineDate,
                         String projectProcurementStartDate, String projectProcurementDeadlineDate,

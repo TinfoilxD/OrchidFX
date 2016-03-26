@@ -16,7 +16,7 @@ public class ClientModel
     private String clientMailingAddress3;
     private String clientMailingCity;
     private int    mailingStateID;
-    private String clientMailingZipCodeID;
+    private String clientMailingZipCode;
     private int    mailingCountryID;
     private String clientBillingAddress1;
     private String clientBillingAddress2;
@@ -55,7 +55,7 @@ public class ClientModel
         this.clientMailingAddress3 = clientMailingAddress3;
         this.clientMailingCity = clientMailingCity;
         this.mailingStateID = mailingStateID;
-        this.clientMailingZipCodeID = clientMailingZipCodeID;
+        this.clientMailingZipCode = clientMailingZipCodeID;
         this.mailingCountryID = mailingCountryID;
         this.clientBillingAddress1 = clientBillingAddress1;
         this.clientBillingAddress2 = clientBillingAddress2;
@@ -166,12 +166,12 @@ public class ClientModel
         this.mailingStateID = mailingStateID;
     }
 
-    public String getClientMailingZipCodeID() {
-        return clientMailingZipCodeID;
+    public String getClientMailingZipCode() {
+        return clientMailingZipCode;
     }
 
-    public void setClientMailingZipCodeID(String clientMailingZipCodeID) {
-        this.clientMailingZipCodeID = clientMailingZipCodeID;
+    public void setClientMailingZipCode(String clientMailingZipCode) {
+        this.clientMailingZipCode = clientMailingZipCode;
     }
 
     public int getMailingCountryID() {

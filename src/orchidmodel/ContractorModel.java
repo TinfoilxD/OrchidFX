@@ -25,6 +25,11 @@ public class ContractorModel
     private String contractorEmail;
     private boolean isDeleted;
 
+    public ContractorModel()
+    {
+
+    }
+
     public ContractorModel(int contractorID, int cmvStatusID, String contractorName,
                            String contractorBillingAddress1, String contractorBillingAddress2,
                            String contractorBillingAddress3, String contractorBillingCity,

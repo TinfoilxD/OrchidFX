@@ -7,6 +7,11 @@ public class Hotel_Approver_TypeModel {
     private String hotelApproverType;
     private boolean isDeleted;
 
+    public Hotel_Approver_TypeModel()
+    {
+
+    }
+
     public Hotel_Approver_TypeModel(int hotelApproverTypeID, String hotelApproverType, boolean isDeleted)
     {
         this.hotelApproverTypeID = hotelApproverTypeID;

@@ -7,6 +7,11 @@ public class Project_TypeModel {
     private String projectType;
     private boolean isDeleted;
 
+    public Project_TypeModel()
+    {
+
+    }
+
     public Project_TypeModel(int projectTypeID, String projectType, boolean isDeleted)
     {
         this.projectTypeID = projectTypeID;

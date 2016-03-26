@@ -12,6 +12,12 @@ public class Client_ContactModel {
     private String clientContactEmail;
     private boolean isDeleted;
 
+    public Client_ContactModel()
+    {
+
+
+    }
+
     public Client_ContactModel(int clientContactID, int clientID, String clientContactFirstName,
                                String clientContactLastName, String clientContactPhone,
                                String clientContactExtension, String clientContactEmail, boolean isDeleted)

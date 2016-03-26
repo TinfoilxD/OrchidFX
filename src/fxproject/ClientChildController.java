@@ -59,7 +59,9 @@ public class ClientChildController
     {
        if(target != null)
        {
-           target.setResultAndClose(new ClientModel());
+           ClientModel clientModel = new ClientModel();
+
+           target.setResultAndClose(clientModel);
        }
        else
        {

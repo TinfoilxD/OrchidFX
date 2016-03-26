@@ -12,6 +12,11 @@ public class Vendor_ContactModel {
     private String vendorContactEmail;
     private boolean isDeleted;
 
+    public Vendor_ContactModel()
+    {
+
+    }
+
     public Vendor_ContactModel(int vendorContactID, int vendorID, String vendorContactFirstName,
                                String vendorContactLastName, String vendorContactPhone,
                                String vendorContactExtension, String vendorContactEmail, boolean isDeleted)

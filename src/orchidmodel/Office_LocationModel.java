@@ -15,6 +15,11 @@ public class Office_LocationModel {
     private String officePhone;
     private boolean isDeleted;
 
+    public Office_LocationModel()
+    {
+
+    }
+
     public Office_LocationModel(int officeID, String officeName, String officeAddress1,
                                 String officeAddress2, String officeAddress3, String officeCity,
                                 int stateID, String officeZipCode, int countryID, String officePhone,
