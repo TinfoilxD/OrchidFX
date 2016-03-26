@@ -57,21 +57,39 @@ public class ClientChildController
     @FXML
     protected void handleButtonAddAction(ActionEvent e)
     {
-        /*
         try
         {
             ClientModel clientModel = new ClientModel();
-            clientModel.setClientStatusID();
+            clientModel.setClientStatusID(1);
             clientModel.setTradeShowID(1);
-            clientModel.setReferrerI...
+            clientModel.setReferrerID(1);
+            clientModel.setClientCompanyName("ClientCompanyName");
+            clientModel.setClientFirstName("ClientFirstName");
+            clientModel.setClientLastName("ClientLastName");
+            clientModel.setClientMailingAddress1("ClientMailingAddress1");
+            clientModel.setClientMailingAddress2("ClientMailingAddress2");
+            clientModel.setClientMailingAddress3("ClientMailingAddress3");
+            clientModel.setClientMailingCity("ClientMailingCity");
+            clientModel.setMailingStateID(43);
+            clientModel.setClientMailingZipCode("ClientMailingZipCode");
+            clientModel.setMailingCountryID(236);
+            clientModel.setClientBillingAddress1("ClientBillingAddress1");
+            clientModel.setClientBillingAddress2("ClientBillingAddress2");
+            clientModel.setClientBillingAddress3("ClientBillingAddress3");
+            clientModel.setClientBillingCity("ClientBillingCity");
+            clientModel.setBillingStateID(43);
+            clientModel.setClientBillingZipCode("ClientBillingZipCode");
+            clientModel.setBillingCountryID(236);
+            clientModel.setClientPhone("281-345-6789");
+            clientModel.setClientExtension("3928");
+            clientModel.setClientEmail("clientemail@email.com");
 
             new ClientProcedureSet().procInsertClient(clientModel);
         }
-        catch(Exception e)
+        catch(Exception ae)
         {
-            new OrchidAlertBox("Error", e.toString());
+            new OrchidAlertBox("Error", ae.toString());
         }
-        */
 
        if(target != null)
        {

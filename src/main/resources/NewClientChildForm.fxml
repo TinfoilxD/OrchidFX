@@ -147,7 +147,7 @@
                                           </TextField>
                                        </children>
                                     </FlowPane>
-                                    <Button mnemonicParsing="false" text="Submit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+                                    <Button mnemonicParsing="false" onAction="#handleButtonAddAction" text="Submit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="17" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>

@@ -23,7 +23,7 @@ public class ClientProcedureSet
     public void procInsertClient(ClientModel clientModel) throws SQLException
     {
         Connection connection = getConnection();
-        CallableStatement cstm = connection.prepareCall("{call InsertClient(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+        CallableStatement cstm = connection.prepareCall("{call InsertClient(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
         cstm.setInt("ClientStatusID", clientModel.getClientStatusID());
         cstm.setInt("TradeShowID", clientModel.getTradeShowID());
         cstm.setInt("ReferrerID", clientModel.getReferrerID());
