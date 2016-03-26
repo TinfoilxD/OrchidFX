@@ -9,6 +9,11 @@ public class Task_ListModel
     private String task;
     private boolean isDeleted;
 
+    public Task_ListModel()
+    {
+
+    }
+
     public Task_ListModel(int taskListID, int phaseLookupID, String task, boolean isDeleted)
     {
         this.taskListID = taskListID;

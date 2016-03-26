@@ -7,6 +7,11 @@ public class Vendor_Contact_TypeModel {
     private String vendorContactType;
     private boolean isDeleted;
 
+    public Vendor_Contact_TypeModel()
+    {
+
+    }
+
     public Vendor_Contact_TypeModel(int vendorContactTypeID, String vendorContactType, boolean isDeleted)
     {
         this.vendorContactTypeID = vendorContactTypeID;

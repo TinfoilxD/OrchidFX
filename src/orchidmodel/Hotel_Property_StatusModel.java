@@ -7,6 +7,11 @@ public class Hotel_Property_StatusModel {
     private String hotelPropertyStatus;
     private boolean isDeleted;
 
+    public Hotel_Property_StatusModel()
+    {
+
+    }
+
     public Hotel_Property_StatusModel(int hotelPropertyStatusID, String hotelPropertyStatus, boolean isDeleted)
     {
         this.hotelPropertyStatusID = hotelPropertyStatusID;

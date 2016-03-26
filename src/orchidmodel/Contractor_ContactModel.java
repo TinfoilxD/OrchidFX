@@ -12,6 +12,11 @@ public class Contractor_ContactModel {
     private String contractorContactEmail;
     private boolean isDeleted;
 
+    public Contractor_ContactModel()
+    {
+
+    }
+
     public Contractor_ContactModel(int contractorContactID, int contractorID,
                                    String contractorContactFirstName, String contractorContactLastName,
                                    String contractorContactPhone, String contractorContactExtension,

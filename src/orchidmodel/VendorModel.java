@@ -25,6 +25,11 @@ public class VendorModel
     private String vendorWebsite;
     private boolean isDeleted;
 
+    public VendorModel()
+    {
+
+    }
+
     public VendorModel(int vendorID, int cmvStatusID, String vendorName,
                        String vendorBillingAddress1, String vendorBillingAddress2,
                        String vendorBillingAddress3, String vendorBillingCity,

@@ -7,6 +7,11 @@ public class Employee_StatusModel {
     private String employeeStatus;
     private boolean isDeleted;
 
+    public Employee_StatusModel()
+    {
+
+    }
+
     public Employee_StatusModel(int employeeStatusID, String employeeStatus, boolean isDeleted)
     {
         this.employeeStatusID = employeeStatusID;

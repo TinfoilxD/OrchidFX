@@ -7,6 +7,11 @@ public class Subtask_ListModel {
     private String subTaskName;
     private boolean isDeleted;
 
+    public Subtask_ListModel()
+    {
+
+    }
+
     public Subtask_ListModel(int subTaskListID, String subTaskName, boolean isDeleted)
     {
         this.subTaskListID = subTaskListID;

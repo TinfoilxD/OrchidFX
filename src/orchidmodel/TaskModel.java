@@ -10,6 +10,11 @@ public class TaskModel
     private int taskStatusID;
     private boolean isDeleted;
 
+    public TaskModel()
+    {
+
+    }
+
     public TaskModel(int taskID, int phaseID, int taskListID, int taskStatusID, boolean isDeleted)
     {
         this.taskID = taskID;

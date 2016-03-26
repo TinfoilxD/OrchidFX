@@ -7,6 +7,11 @@ public class Task_StatusModel {
     private String taskStatus;
     private boolean isDeleted;
 
+    public Task_StatusModel()
+    {
+
+    }
+
     public Task_StatusModel(int taskStatusID, String taskStatus, boolean isDeleted)
     {
         this.taskStatusID = taskStatusID;

@@ -7,6 +7,11 @@ public class Manufacturer_Contact_TypeModel {
     private String manufacturerContactType;
     private boolean isDeleted;
 
+    public Manufacturer_Contact_TypeModel()
+    {
+
+    }
+
     public Manufacturer_Contact_TypeModel(int manufacturerContactTypeID, String manufacturerContactType, boolean isDeleted)
     {
         this.manufacturerContactTypeID = manufacturerContactTypeID;
