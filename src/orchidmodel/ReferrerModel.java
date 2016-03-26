@@ -20,6 +20,11 @@ public class ReferrerModel
     private String referrerEmail;
     private boolean isDeleted;
 
+    public ReferrerModel()
+    {
+
+    }
+
     public ReferrerModel(int referrerID, int referrerTypeID, String referrerFirstName,
                          String referrerLastName, String referrerAddress1, String referrerAddress2,
                          String referrerAddress3, String referrerCity, int stateID,

@@ -10,6 +10,11 @@ public class Employee_HistoryModel {
     private String positionStartDate;
     private boolean isDeleted;
 
+    public Employee_HistoryModel()
+    {
+        
+    }
+
     public Employee_HistoryModel(int employeeHistoryID, int employeeID, String position,
                                  int officeID, String positionStartDate, boolean isDeleted)
     {

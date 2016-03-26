@@ -8,6 +8,11 @@ public class CountryModel
     private String countryName;
     private String countryAbbreviation;
 
+    public CountryModel()
+    {
+
+    }
+
 
     public CountryModel(int countryID, String countryName, String countryAbbreviation)
     {

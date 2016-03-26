@@ -7,6 +7,11 @@ public class DepartmentModel {
     private String departmentName;
     private boolean isDeleted;
 
+    public DepartmentModel()
+    {
+
+    }
+
     public DepartmentModel(int departmentID, String departmentName, boolean isDeleted)
     {
         this.departmentID = departmentID;

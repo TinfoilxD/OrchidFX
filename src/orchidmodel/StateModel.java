@@ -9,6 +9,11 @@ public class StateModel
     private String stateName;
     private String stateAbbreviation;
 
+    public StateModel()
+    {
+
+    }
+
 
     public StateModel(int stateID, int countryID, String stateName, String stateAbbreviation)
     {

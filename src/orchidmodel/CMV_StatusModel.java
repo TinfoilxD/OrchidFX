@@ -7,6 +7,12 @@ public class CMV_StatusModel {
     private String cmvStatus;
     private boolean isDeleted;
 
+    public CMV_StatusModel()
+    {
+
+    }
+
+
     public CMV_StatusModel(int cmvStatusID, String cmvStatus, boolean isDeleted)
     {
         this.cmvStatusID = cmvStatusID;

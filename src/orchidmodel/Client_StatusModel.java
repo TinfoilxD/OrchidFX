@@ -7,6 +7,11 @@ public class Client_StatusModel {
     private String clientStatus;
     private boolean isDeleted;
 
+    public Client_StatusModel()
+    {
+
+    }
+
     public Client_StatusModel(int clientStatusID, String clientStatus, boolean isDeleted)
     {
         this.clientStatusID = clientStatusID;

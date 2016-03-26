@@ -7,6 +7,11 @@ public class Phase_StatusModel {
     private String phaseStatus;
     private boolean isDeleted;
 
+    public Phase_StatusModel()
+    {
+
+    }
+
     public Phase_StatusModel(int phaseStatusID, String phaseStatus, boolean isDeleted)
     {
         this.phaseStatusID = phaseStatusID;

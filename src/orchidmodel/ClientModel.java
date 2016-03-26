@@ -30,6 +30,11 @@ public class ClientModel
     private String clientEmail;
     private boolean isDeleted;
 
+    public ClientModel()
+    {
+
+    }
+
 
     public ClientModel(int clientID, int clientStatusID, int tradeShowID, int referrerID,
                        String clientCompanyName, String clientFirstName, String clientLastName,

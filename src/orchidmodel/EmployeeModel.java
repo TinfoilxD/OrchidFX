@@ -14,6 +14,11 @@ public class EmployeeModel {
     private String employeeEmail;
     private boolean isDeleted;
 
+    public EmployeeModel()
+    {
+
+    }
+
     public EmployeeModel(int employeeID, int userID, String employeeFirstName,
                          String employeeLastName, int departmentID, int employeeStatusID,
                          String employeePhone, String employeeExtension, String employeeEmail,

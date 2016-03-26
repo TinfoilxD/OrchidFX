@@ -7,6 +7,11 @@ public class Phase_LookupModel {
     private String phase;
     private boolean isDeleted;
 
+    public Phase_LookupModel()
+    {
+
+    }
+
     public Phase_LookupModel(int phaseLookupID, String phase, boolean isDeleted)
     {
         this.phaseLookupID = phaseLookupID;

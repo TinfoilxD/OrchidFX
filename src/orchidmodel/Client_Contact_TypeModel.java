@@ -7,6 +7,11 @@ public class Client_Contact_TypeModel {
     private String clientContactType;
     private boolean isDeleted;
 
+    public Client_Contact_TypeModel()
+    {
+
+    }
+
     public Client_Contact_TypeModel(int clientContactTypeID, String clientContactType, boolean isDeleted)
     {
         this.clientContactTypeID = clientContactTypeID;

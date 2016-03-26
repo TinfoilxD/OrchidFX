@@ -17,6 +17,11 @@ public class Trade_ShowModel
     private String tradeShowDate;
     private boolean isDeleted;
 
+    public Trade_ShowModel()
+    {
+
+    }
+
     public Trade_ShowModel(int tradeShowID, String tradeShowName, String tradeShowAddress1,
                            String tradeShowAddress2, String tradeShowAddress3, String tradeShowCity,
                            int stateID, String tradeShowZipCode, int countryID, String tradeShowPhoneNumber,

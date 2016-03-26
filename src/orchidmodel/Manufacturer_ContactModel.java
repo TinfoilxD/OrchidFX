@@ -12,6 +12,11 @@ public class Manufacturer_ContactModel {
     private String manufacturerContactEmail;
     private boolean isDeleted;
 
+    public Manufacturer_ContactModel()
+    {
+
+    }
+
     public Manufacturer_ContactModel(int manufacturerContactID, int manufacturerID,
                                      String manufacturerContactFirstName, String manufacturerContactLastName,
                                      String manufacturerContactPhone, String manufacturerContactExtension,

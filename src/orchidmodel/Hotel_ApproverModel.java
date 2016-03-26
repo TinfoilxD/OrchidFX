@@ -21,6 +21,11 @@ public class Hotel_ApproverModel
     private String approverWebsite;
     private boolean isDeleted;
 
+    public Hotel_ApproverModel()
+    {
+
+    }
+
     public Hotel_ApproverModel(int hotelApproverID, int hotelBrandID, String approverFirstName,
                                String approverLastName, String approverAddress1, String approverAddress2,
                                String approverAddress3, String approverCity, int stateID,

@@ -7,6 +7,11 @@ public class Referrer_TypeModel {
     private String referrerType;
     private boolean isDeleted;
 
+    public Referrer_TypeModel()
+    {
+
+    }
+
     public Referrer_TypeModel(int referrerTypeID, String referrerType, boolean isDeleted)
     {
         this.referrerTypeID = referrerTypeID;

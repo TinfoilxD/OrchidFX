@@ -8,6 +8,11 @@ public class SubtaskModel {
     private int subTaskListID;
     private boolean isDeleted;
 
+    public SubtaskModel()
+    {
+
+    }
+
     public SubtaskModel(int subTaskID, int taskID, int subTaskListID, boolean isDeleted)
     {
         this.subTaskID = subTaskID;
