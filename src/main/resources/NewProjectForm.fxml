@@ -154,7 +154,7 @@
                                           <Insets left="12.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <ComboBox prefHeight="25.0" prefWidth="164.0" promptText="Choose a Project Type" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <ComboBox fx:id="fxComboBoxProjectType" prefHeight="25.0" prefWidth="164.0" promptText="Choose a Project Type" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                                             </children>
                                         </GridPane>
                                     </content>

@@ -54,7 +54,7 @@ public class ProjectController implements ClientChildTarget
         try
         {
             Stage clientStage = new Stage();
-            clientStage.initStyle(StageStyle.UNDECORATED);
+            //clientStage.initStyle(StageStyle.UNDECORATED);
             clientStage.initModality(Modality.APPLICATION_MODAL);
             FXMLLoader clientStageLoader = new FXMLLoader();
             Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewClientChildForm.fxml").openStream());
