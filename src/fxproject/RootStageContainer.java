@@ -33,6 +33,7 @@ public class RootStageContainer
         mainStage.setOnCloseRequest(event -> MainSystem.getCurrentSystem().handleApplicationCloseEvent());
         mainStage.setScene(getSceneStructure());
         mainStage.sizeToScene();
+        mainStage.setResizable(false);
         initiateFileMap();
         mainStage.show();
 

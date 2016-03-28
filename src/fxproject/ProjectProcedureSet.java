@@ -1,6 +1,8 @@
 package fxproject;/*
- * Written by Tin Van on 2/29/16.
+ * Written by Tin Van on 3/26/16.
  */
+
+import orchidmodel.ProjectModel;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -19,7 +21,7 @@ public class ProjectProcedureSet
         return OrchidDataSource.getCurrentDataSource().getConnection();
     }
 
-    public void procInsertManufacturerContactType(String typeName) throws SQLException
+    public void procInsertProject(ProjectModel projectModel) throws SQLException
     {
 
     }
