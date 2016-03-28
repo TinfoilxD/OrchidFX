@@ -68,6 +68,27 @@ public class ProjectController implements ClientChildTarget
             new OrchidAlertBox("Loading Error",e.toString());
         }
     }
+    @ FXML
+    protected void handleButtonSearchClientAction()
+    {
+        try
+        {
+            Stage clientStage = new Stage();
+            //clientStage.initStyle(StageStyle.UNDECORATED);
+            clientStage.initModality(Modality.APPLICATION_MODAL);
+            FXMLLoader clientStageLoader = new FXMLLoader();
+            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/SearchClientForm.fxml").openStream());
+           // ClientChildController childController = clientStageLoader.getController();
+           // childController.setTarget(this);
+            clientStage.setScene(new Scene(node));
+            clientStage.setResizable(false);
+            clientStage.show();
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Loading Error",e.toString());
+        }
+    }
     @FXML
     protected void handleButtonChooseHotelAction()
     {

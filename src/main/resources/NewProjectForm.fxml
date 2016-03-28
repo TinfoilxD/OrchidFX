@@ -61,7 +61,7 @@
                                                 <Font size="14.0" />
                                              </font>
                                                         </Button>
-                                          <Button id="fxLabelExistingClient" mnemonicParsing="false" onAction="#handleButtonNewClientAction" text="Existing Client">
+                                          <Button id="fxLabelExistingClient" mnemonicParsing="false" onAction="#handleButtonSearchClientAction" text="Existing Client">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
