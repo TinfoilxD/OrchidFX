@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/20/16.
  */
 
-public class Employee_StatusModel {
+public class EmployeeStatusModel
+{
     private int employeeStatusID;
     private String employeeStatus;
     private boolean isDeleted;
 
-    public Employee_StatusModel()
+    public EmployeeStatusModel()
     {
 
     }
 
-    public Employee_StatusModel(int employeeStatusID, String employeeStatus, boolean isDeleted)
+    public EmployeeStatusModel(int employeeStatusID, String employeeStatus, boolean isDeleted)
     {
         this.employeeStatusID = employeeStatusID;
         this.employeeStatus = employeeStatus;

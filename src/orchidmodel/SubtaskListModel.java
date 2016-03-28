@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/22/16.
  */
 
-public class Subtask_ListModel {
+public class SubtaskListModel
+{
     private int subTaskListID;
     private String subTaskName;
     private boolean isDeleted;
 
-    public Subtask_ListModel()
+    public SubtaskListModel()
     {
 
     }
 
-    public Subtask_ListModel(int subTaskListID, String subTaskName, boolean isDeleted)
+    public SubtaskListModel(int subTaskListID, String subTaskName, boolean isDeleted)
     {
         this.subTaskListID = subTaskListID;
         this.subTaskName = subTaskName;

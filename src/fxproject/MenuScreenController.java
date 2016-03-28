@@ -90,6 +90,11 @@ public class MenuScreenController
         RootStageContainer.getCurrentRootStageContainer().changeView(DepartmentController.VIEWCONTROLLER_TITLE);
     }
     @FXML
+    protected void handleDeveloperHotelPropertyNewHotelPropertyAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(HotelPropertyController.VIEWCONTROLLER_TITLE);
+    }
+    @FXML
     protected void handleDeveloperManufacturerNewManufacturerAction(ActionEvent event)
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(ManufacturerController.VIEWCONTROLLER_TITLE);

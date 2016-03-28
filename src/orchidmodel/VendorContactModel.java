@@ -2,7 +2,8 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/22/16.
  */
 
-public class Vendor_ContactModel {
+public class VendorContactModel
+{
     private int vendorContactID;
     private int vendorID;
     private String vendorContactFirstName;
@@ -12,14 +13,14 @@ public class Vendor_ContactModel {
     private String vendorContactEmail;
     private boolean isDeleted;
 
-    public Vendor_ContactModel()
+    public VendorContactModel()
     {
 
     }
 
-    public Vendor_ContactModel(int vendorContactID, int vendorID, String vendorContactFirstName,
-                               String vendorContactLastName, String vendorContactPhone,
-                               String vendorContactExtension, String vendorContactEmail, boolean isDeleted)
+    public VendorContactModel(int vendorContactID, int vendorID, String vendorContactFirstName,
+                              String vendorContactLastName, String vendorContactPhone,
+                              String vendorContactExtension, String vendorContactEmail, boolean isDeleted)
     {
         this.vendorContactID = vendorContactID;
         this.vendorID = vendorID;

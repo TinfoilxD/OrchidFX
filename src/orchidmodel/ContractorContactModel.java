@@ -2,7 +2,8 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/20/16.
  */
 
-public class Contractor_ContactModel {
+public class ContractorContactModel
+{
     private int contractorContactID;
     private int contractorID;
     private String contractorContactFirstName;
@@ -12,15 +13,15 @@ public class Contractor_ContactModel {
     private String contractorContactEmail;
     private boolean isDeleted;
 
-    public Contractor_ContactModel()
+    public ContractorContactModel()
     {
 
     }
 
-    public Contractor_ContactModel(int contractorContactID, int contractorID,
-                                   String contractorContactFirstName, String contractorContactLastName,
-                                   String contractorContactPhone, String contractorContactExtension,
-                                   String contractorContactEmail, boolean isDeleted)
+    public ContractorContactModel(int contractorContactID, int contractorID,
+                                  String contractorContactFirstName, String contractorContactLastName,
+                                  String contractorContactPhone, String contractorContactExtension,
+                                  String contractorContactEmail, boolean isDeleted)
     {
         this.contractorContactID = contractorContactID;
         this.contractorID = contractorID;

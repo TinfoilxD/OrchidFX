@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/20/16.
  */
 
-public class Client_StatusModel {
+public class ClientStatusModel
+{
     private int clientStatusID;
     private String clientStatus;
     private boolean isDeleted;
 
-    public Client_StatusModel()
+    public ClientStatusModel()
     {
 
     }
 
-    public Client_StatusModel(int clientStatusID, String clientStatus, boolean isDeleted)
+    public ClientStatusModel(int clientStatusID, String clientStatus, boolean isDeleted)
     {
         this.clientStatusID = clientStatusID;
         this.clientStatus = clientStatus;

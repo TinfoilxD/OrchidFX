@@ -2,19 +2,19 @@ package orchidmodel;/*
  * Written by Tin Van on 3/22/16.
  */
 
-public class Task_ListModel
+public class TaskListModel
 {
     private int taskListID;
     private int phaseLookupID;
     private String task;
     private boolean isDeleted;
 
-    public Task_ListModel()
+    public TaskListModel()
     {
 
     }
 
-    public Task_ListModel(int taskListID, int phaseLookupID, String task, boolean isDeleted)
+    public TaskListModel(int taskListID, int phaseLookupID, String task, boolean isDeleted)
     {
         this.taskListID = taskListID;
         this.phaseLookupID = phaseLookupID;

@@ -2,7 +2,7 @@ package orchidmodel;/*
  * Written Joshua Joseph on 3/21/16.
  */
 
-public class Hotel_ApproverModel
+public class HotelApproverModel
 {
     private int hotelApproverID;
     private int hotelBrandID;
@@ -21,17 +21,17 @@ public class Hotel_ApproverModel
     private String approverWebsite;
     private boolean isDeleted;
 
-    public Hotel_ApproverModel()
+    public HotelApproverModel()
     {
 
     }
 
-    public Hotel_ApproverModel(int hotelApproverID, int hotelBrandID, String approverFirstName,
-                               String approverLastName, String approverAddress1, String approverAddress2,
-                               String approverAddress3, String approverCity, int stateID,
-                               String approverZipCode, int countryID, String approverPhone,
-                               String approverExtension, String approverEmail, String approverWebsite,
-                               boolean isDeleted)
+    public HotelApproverModel(int hotelApproverID, int hotelBrandID, String approverFirstName,
+                              String approverLastName, String approverAddress1, String approverAddress2,
+                              String approverAddress3, String approverCity, int stateID,
+                              String approverZipCode, int countryID, String approverPhone,
+                              String approverExtension, String approverEmail, String approverWebsite,
+                              boolean isDeleted)
     {
         this.hotelApproverID = hotelApproverID;
         this.hotelBrandID = hotelBrandID;

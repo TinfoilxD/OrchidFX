@@ -2,7 +2,8 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/21/16.
  */
 
-public class Office_LocationModel {
+public class OfficeLocationModel
+{
     private int officeID;
     private String officeName;
     private String officeAddress1;
@@ -15,15 +16,15 @@ public class Office_LocationModel {
     private String officePhone;
     private boolean isDeleted;
 
-    public Office_LocationModel()
+    public OfficeLocationModel()
     {
 
     }
 
-    public Office_LocationModel(int officeID, String officeName, String officeAddress1,
-                                String officeAddress2, String officeAddress3, String officeCity,
-                                int stateID, String officeZipCode, int countryID, String officePhone,
-                                boolean isDeleted)
+    public OfficeLocationModel(int officeID, String officeName, String officeAddress1,
+                               String officeAddress2, String officeAddress3, String officeCity,
+                               int stateID, String officeZipCode, int countryID, String officePhone,
+                               boolean isDeleted)
     {
         this.officeID = officeID;
         this.officeName = officeName;

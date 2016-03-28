@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/22/16.
  */
 
-public class Task_StatusModel {
+public class TaskStatusModel
+{
     private int taskStatusID;
     private String taskStatus;
     private boolean isDeleted;
 
-    public Task_StatusModel()
+    public TaskStatusModel()
     {
 
     }
 
-    public Task_StatusModel(int taskStatusID, String taskStatus, boolean isDeleted)
+    public TaskStatusModel(int taskStatusID, String taskStatus, boolean isDeleted)
     {
         this.taskStatusID = taskStatusID;
         this.taskStatus = taskStatus;

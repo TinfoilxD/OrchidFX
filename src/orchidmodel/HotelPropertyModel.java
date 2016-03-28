@@ -2,7 +2,7 @@ package orchidmodel;/*
  * Written Joshua Joseph on 3/21/16.
  */
 
-public class Hotel_PropertyModel
+public class HotelPropertyModel
 {
     private int hotelPropertyID;
     private int hotelBrandID;
@@ -18,17 +18,17 @@ public class Hotel_PropertyModel
     private int countryID;
     private boolean isDeleted;
 
-    public Hotel_PropertyModel()
+    public HotelPropertyModel()
     {
 
     }
 
-    public Hotel_PropertyModel(int hotelPropertyID, int hotelBrandID, int clientID,
-                               String hotelPropertyName, int hotelPropertyStatusID,
-                               String hotelPropertyAddress1, String hotelPropertyAddress2,
-                               String hotelPropertyAddress3, String hotelPropertyCity,
-                               int stateID, String hotelPropertyZipCode, int countryID,
-                               boolean isDeleted)
+    public HotelPropertyModel(int hotelPropertyID, int hotelBrandID, int clientID,
+                              String hotelPropertyName, int hotelPropertyStatusID,
+                              String hotelPropertyAddress1, String hotelPropertyAddress2,
+                              String hotelPropertyAddress3, String hotelPropertyCity,
+                              int stateID, String hotelPropertyZipCode, int countryID,
+                              boolean isDeleted)
     {
         this.hotelPropertyID = hotelPropertyID;
         this.hotelBrandID = hotelBrandID;

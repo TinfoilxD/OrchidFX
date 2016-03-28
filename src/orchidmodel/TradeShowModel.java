@@ -2,7 +2,7 @@ package orchidmodel;/*
  * Written Joshua Joseph on 3/22/16.
  */
 
-public class Trade_ShowModel
+public class TradeShowModel
 {
     private int tradeShowID;
     private String tradeShowName;
@@ -17,15 +17,15 @@ public class Trade_ShowModel
     private String tradeShowDate;
     private boolean isDeleted;
 
-    public Trade_ShowModel()
+    public TradeShowModel()
     {
 
     }
 
-    public Trade_ShowModel(int tradeShowID, String tradeShowName, String tradeShowAddress1,
-                           String tradeShowAddress2, String tradeShowAddress3, String tradeShowCity,
-                           int stateID, String tradeShowZipCode, int countryID, String tradeShowPhoneNumber,
-                           String tradeShowDate, boolean isDeleted)
+    public TradeShowModel(int tradeShowID, String tradeShowName, String tradeShowAddress1,
+                          String tradeShowAddress2, String tradeShowAddress3, String tradeShowCity,
+                          int stateID, String tradeShowZipCode, int countryID, String tradeShowPhoneNumber,
+                          String tradeShowDate, boolean isDeleted)
     {
         this.tradeShowID = tradeShowID;
         this.tradeShowName = tradeShowName;

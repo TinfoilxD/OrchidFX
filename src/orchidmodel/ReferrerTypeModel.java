@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/22/16.
  */
 
-public class Referrer_TypeModel {
+public class ReferrerTypeModel
+{
     private int referrerTypeID;
     private String referrerType;
     private boolean isDeleted;
 
-    public Referrer_TypeModel()
+    public ReferrerTypeModel()
     {
 
     }
 
-    public Referrer_TypeModel(int referrerTypeID, String referrerType, boolean isDeleted)
+    public ReferrerTypeModel(int referrerTypeID, String referrerType, boolean isDeleted)
     {
         this.referrerTypeID = referrerTypeID;
         this.referrerType = referrerType;

@@ -12,7 +12,7 @@
    <top>
       <VBox prefHeight="21.0" prefWidth="799.0" BorderPane.alignment="CENTER">
          <children>
-            <MenuBar maxHeight="30.0" maxWidth="800.0" minHeight="30.0" minWidth="800.0" prefHeight="30.0" prefWidth="800.0">
+            <MenuBar>
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
@@ -21,8 +21,8 @@
                 </Menu>
                   <Menu mnemonicParsing="false" text="Employee">
                     <items>
-                      <MenuItem mnemonicParsing="false" onAction="#handleEmployeeNewEmployeeAction" text="New Employee" />
-                        <MenuItem mnemonicParsing="false" onAction="#handleEmployeeEditEmployeeAction" text="Edit Employee" />
+                      <MenuItem onAction="#handleEmployeeNewEmployeeAction" mnemonicParsing="false" text="New Employee" />
+                        <MenuItem onAction="#handleEmployeeEditEmployeeAction" mnemonicParsing="false" text="Edit Employee" />
                     </items>
                   </Menu>
                 <Menu mnemonicParsing="false" text="Client">
@@ -33,281 +33,195 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Project">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#handleProjectNewProjectAction" text="New Project" />
+                    <MenuItem mnemonicParsing="false" text="New Project" onAction="#handleProjectNewProjectAction" />
                       <MenuItem mnemonicParsing="false" text="Edit Project" />
                   </items>
                 </Menu>
                   <Menu mnemonicParsing="false" text="Admin">
                       <items>
                           <Menu mnemonicParsing="false" text="User">
-                             <items>
-                                 <MenuItem onAction="#handleAdminUserNewUserAction" text="New User" />
-                                 <MenuItem text="Edit User" />
-                             </items>
+                              <MenuItem text="New User" onAction="#handleAdminUserNewUserAction"/>
+                              <MenuItem text="Edit User"/>
                           </Menu>
                       </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Developer">
                       <items>
                           <Menu mnemonicParsing="false" text="A-C">
-                             <items>
-                                 <Menu text="Client">
-                                    <items>
-                                        <MenuItem onAction="#handleClientNewClientAction" text="New" />
-                                        <MenuItem text="Edit" />
-                                    </items>
-                                 </Menu>
-                                 <Menu text="Client_Contact">
-                                    <items>
-                                        <MenuItem onAction="#handleDeveloperClientContactNewClientContactAction" text="New" />
-                                        <MenuItem text="Edit" />
-                                    </items>
-                                 </Menu>
-                                 <Menu text="Client_Contact_Type">
-                                    <items>
-                                        <MenuItem onAction="#handleDeveloperClientContactTypeNewClientContactTypeAction" text="New" />
-                                        <MenuItem text="Edit" />
-                                    </items>
-                                 </Menu>
-                                 <Menu text="Client_Status">
-                                    <items>
-                                        <MenuItem onAction="#handleDeveloperClientStatusNewClientStatusAction" text="New" />
-                                        <MenuItem text="Edit" />
-                                    </items>
-                                 </Menu>
-                                 <Menu text="CMV_Status">
-                                    <items>
-                                        <MenuItem onAction="#handleDeveloperCMVStatusNewClientStatusAction" text="New" />
-                                        <MenuItem text="Edit" />
-                                    </items>
-                                 </Menu>
-                                 <Menu text="Contractor">
-                                    <items>
-                                        <MenuItem onAction="#handleDeveloperContractorNewContractorAction" text="New" />
-                                        <MenuItem text="Edit" />
-                                    </items>
-                                 </Menu>
-                                 <Menu text="Contractor_Contact">
-                                    <items>
-                                        <MenuItem onAction="#handleDeveloperContractorContactNewContractorContactAction" text="New" />
-                                        <MenuItem text="Edit" />
-                                    </items>
-                                 </Menu>
-                                 <Menu text="Contractor_Contact_Type">
-                                    <items>
-                                        <MenuItem onAction="#handleDeveloperContractorContactTypeNewContractorContactTypeAction" text="New" />
-                                        <MenuItem text="Edit" />
-                                    </items>
-                                 </Menu>
-                             </items>
+                              <Menu text="Client">
+                                  <MenuItem text="New" onAction="#handleClientNewClientAction"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Client_Contact" >
+                                  <MenuItem text="New" onAction="#handleDeveloperClientContactNewClientContactAction"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Client_Contact_Type" >
+                                  <MenuItem text="New" onAction="#handleDeveloperClientContactTypeNewClientContactTypeAction"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Client_Status" >
+                                  <MenuItem text="New" onAction="#handleDeveloperClientStatusNewClientStatusAction"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="CMV_Status" >
+                                  <MenuItem text="New" onAction="#handleDeveloperCMVStatusNewClientStatusAction"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Contractor">
+                                  <MenuItem text="New"  onAction="#handleDeveloperContractorNewContractorAction"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Contractor_Contact" >
+                                  <MenuItem text="New" onAction="#handleDeveloperContractorContactNewContractorContactAction"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
+                              <Menu text="Contractor_Contact_Type">
+                                  <MenuItem text="New" onAction="#handleDeveloperContractorContactTypeNewContractorContactTypeAction"/>
+                                  <MenuItem text="Edit"/>
+                              </Menu>
                           </Menu>
                           <Menu mnemonicParsing="false" text="D-H">
                               <items>
                                   <Menu text="Department">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperDepartmentNewDepartmentAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperDepartmentNewDepartmentAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Employee">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Employee_History">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Employee_Status">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Hotel_Approver">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Hotel_Approver_Type">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Hotel_Brand">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Hotel_Property">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperHotelPropertyNewHotelPropertyAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Hotel_Property_Status">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                               </items>
                           </Menu>
                           <Menu mnemonicParsing="false" text="I-R">
                               <items>
                                   <Menu text="Manufacturer">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperManufacturerNewManufacturerAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperManufacturerNewManufacturerAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Manufacturer_Contact">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperManufacturerContactNewManufacturerContactAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperManufacturerContactNewManufacturerContactAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Manufacturer_Contact_Type">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperManufacturerContactTypeNewManufacturerTypeContactAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperManufacturerContactTypeNewManufacturerTypeContactAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Office_Location">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperOfficeLocationNewOfficeLocationTypeAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperOfficeLocationNewOfficeLocationTypeAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Parent_Brand">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperParentBrandNewParentBrandTypeAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperParentBrandNewParentBrandTypeAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Phase">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Phase_Lookup">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperPhaseLookupNewPhaseLookupTypeAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperPhaseLookupNewPhaseLookupTypeAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Phase_Status">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperPhaseStatusNewPhaseStatusTypeAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperPhaseStatusNewPhaseStatusTypeAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Project">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Project_Adjustment">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Project_Status">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperProjectStatusNewProjectStatusAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperProjectStatusNewProjectStatusAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Project_Type">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperProjectTypeNewProjectTypeAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperProjectTypeNewProjectTypeAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Referrer">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperReferrerNewReferrerAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperReferrerNewReferrerAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Referrer_Type">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperReferrerTypeNewReferrerTypeAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperReferrerTypeNewReferrerTypeAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                               </items>
                           </Menu>
                           <Menu mnemonicParsing="false" text="S-Z">
                               <items>
-                                  <Menu onAction="#handleDeveloperStateNewStateAction" text="State">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                  <Menu text="State" onAction="#handleDeveloperStateNewStateAction">
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Subtask">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Subtask_List">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Task">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Task_List">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperTaskListNewTaskListAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperTaskListNewTaskListAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Task_Status">
-                                     <items>
-                                         <MenuItem text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Trade_Show">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperTradeShowNewTradeShowAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperTradeShowNewTradeShowAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Vendor">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperVendorNewVendorAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperVendorNewVendorAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Vendor_Contact">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperVendorContactNewVendorContactAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperVendorContactNewVendorContactAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                                   <Menu text="Vendor_Contact_Type">
-                                     <items>
-                                         <MenuItem onAction="#handleDeveloperVendorContactTypeNewVendorContactTypeAction" text="New" />
-                                         <MenuItem text="Edit" />
-                                     </items>
+                                      <MenuItem text="New" onAction="#handleDeveloperVendorContactTypeNewVendorContactTypeAction"/>
+                                      <MenuItem text="Edit"/>
                                   </Menu>
                               </items>
                           </Menu>

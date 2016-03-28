@@ -2,20 +2,21 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/22/16.
  */
 
-public class Project_AdjustmentModel {
+public class ProjectAdjustmentModel
+{
     private int projectAdjustmentID;
     private int projectID;
     private String note;
     private String noteCreationDate;
     private boolean isDeleted;
 
-    public Project_AdjustmentModel()
+    public ProjectAdjustmentModel()
     {
 
     }
 
-    public Project_AdjustmentModel(int projectAdjustmentID, int projectID, String note,
-                                   String noteCreationDate, boolean isDeleted)
+    public ProjectAdjustmentModel(int projectAdjustmentID, int projectID, String note,
+                                  String noteCreationDate, boolean isDeleted)
     {
         this.projectAdjustmentID = projectAdjustmentID;
         this.projectID = projectID;

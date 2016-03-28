@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/21/16.
  */
 
-public class Phase_LookupModel {
+public class PhaseLookupModel
+{
     private int phaseLookupID;
     private String phase;
     private boolean isDeleted;
 
-    public Phase_LookupModel()
+    public PhaseLookupModel()
     {
 
     }
 
-    public Phase_LookupModel(int phaseLookupID, String phase, boolean isDeleted)
+    public PhaseLookupModel(int phaseLookupID, String phase, boolean isDeleted)
     {
         this.phaseLookupID = phaseLookupID;
         this.phase = phase;

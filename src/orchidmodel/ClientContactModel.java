@@ -2,7 +2,8 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/19/16.
  */
 
-public class Client_ContactModel {
+public class ClientContactModel
+{
     private int clientContactID;
     private int clientID;
     private String clientContactFirstName;
@@ -12,15 +13,15 @@ public class Client_ContactModel {
     private String clientContactEmail;
     private boolean isDeleted;
 
-    public Client_ContactModel()
+    public ClientContactModel()
     {
 
 
     }
 
-    public Client_ContactModel(int clientContactID, int clientID, String clientContactFirstName,
-                               String clientContactLastName, String clientContactPhone,
-                               String clientContactExtension, String clientContactEmail, boolean isDeleted)
+    public ClientContactModel(int clientContactID, int clientID, String clientContactFirstName,
+                              String clientContactLastName, String clientContactPhone,
+                              String clientContactExtension, String clientContactEmail, boolean isDeleted)
     {
         this.clientContactID = clientContactID;
         this.clientID = clientID;

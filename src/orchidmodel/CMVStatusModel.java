@@ -2,18 +2,19 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/20/16.
  */
 
-public class CMV_StatusModel {
+public class CMVStatusModel
+{
     private int cmvStatusID;
     private String cmvStatus;
     private boolean isDeleted;
 
-    public CMV_StatusModel()
+    public CMVStatusModel()
     {
 
     }
 
 
-    public CMV_StatusModel(int cmvStatusID, String cmvStatus, boolean isDeleted)
+    public CMVStatusModel(int cmvStatusID, String cmvStatus, boolean isDeleted)
     {
         this.cmvStatusID = cmvStatusID;
         this.cmvStatus = cmvStatus;

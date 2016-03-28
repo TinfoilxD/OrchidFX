@@ -2,7 +2,7 @@ package orchidmodel;/*
  * Written Joshua Joseph on 3/21/16.
  */
 
-public class Hotel_BrandModel
+public class HotelBrandModel
 {
     private int hotelBrandID;
     private int parentBrandID;
@@ -19,16 +19,16 @@ public class Hotel_BrandModel
     private String hotelBrandEmail;
     private boolean isDeleted;
 
-    public Hotel_BrandModel()
+    public HotelBrandModel()
     {
 
     }
 
-    public Hotel_BrandModel(int hotelBrandID, int parentBrandID, String hotelBrandName,
-                            String hotelBrandAddress1, String hotelBrandAddress2,
-                            String hotelBrandAddress3, String hotelBrandCity, int stateID,
-                            String hotelBrandZipCode, int countryID, String hotelBrandPhone,
-                            String hotelBrandWebsite, String hotelBrandEmail, boolean isDeleted)
+    public HotelBrandModel(int hotelBrandID, int parentBrandID, String hotelBrandName,
+                           String hotelBrandAddress1, String hotelBrandAddress2,
+                           String hotelBrandAddress3, String hotelBrandCity, int stateID,
+                           String hotelBrandZipCode, int countryID, String hotelBrandPhone,
+                           String hotelBrandWebsite, String hotelBrandEmail, boolean isDeleted)
     {
         this.hotelBrandID = hotelBrandID;
         this.parentBrandID = parentBrandID;

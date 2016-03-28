@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/20/16.
  */
 
-public class Contractor_Contact_TypeModel {
+public class ContractorContactTypeModel
+{
     private int contractorContactTypeID;
     private String contractorContactType;
     private boolean isDeleted;
 
-    public Contractor_Contact_TypeModel()
+    public ContractorContactTypeModel()
     {
 
     }
 
-    public Contractor_Contact_TypeModel(int contractorContactTypeID, String contractorContactType, boolean isDeleted)
+    public ContractorContactTypeModel(int contractorContactTypeID, String contractorContactType, boolean isDeleted)
     {
         this.contractorContactTypeID = contractorContactTypeID;
         this.contractorContactType = contractorContactType;

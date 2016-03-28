@@ -2,7 +2,8 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/20/16.
  */
 
-public class Employee_HistoryModel {
+public class EmployeeHistoryModel
+{
     private int employeeHistoryID;
     private int employeeID;
     private String position;
@@ -10,13 +11,13 @@ public class Employee_HistoryModel {
     private String positionStartDate;
     private boolean isDeleted;
 
-    public Employee_HistoryModel()
+    public EmployeeHistoryModel()
     {
         
     }
 
-    public Employee_HistoryModel(int employeeHistoryID, int employeeID, String position,
-                                 int officeID, String positionStartDate, boolean isDeleted)
+    public EmployeeHistoryModel(int employeeHistoryID, int employeeID, String position,
+                                int officeID, String positionStartDate, boolean isDeleted)
     {
         this.employeeHistoryID = employeeHistoryID;
         this.employeeID = employeeID;

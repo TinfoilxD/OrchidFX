@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/21/16.
  */
 
-public class Hotel_Approver_TypeModel {
+public class HotelApproverTypeModel
+{
     private int hotelApproverTypeID;
     private String hotelApproverType;
     private boolean isDeleted;
 
-    public Hotel_Approver_TypeModel()
+    public HotelApproverTypeModel()
     {
 
     }
 
-    public Hotel_Approver_TypeModel(int hotelApproverTypeID, String hotelApproverType, boolean isDeleted)
+    public HotelApproverTypeModel(int hotelApproverTypeID, String hotelApproverType, boolean isDeleted)
     {
         this.hotelApproverTypeID = hotelApproverTypeID;
         this.hotelApproverType = hotelApproverType;

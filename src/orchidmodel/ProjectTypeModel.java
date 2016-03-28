@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/22/16.
  */
 
-public class Project_TypeModel {
+public class ProjectTypeModel
+{
     private int projectTypeID;
     private String projectType;
     private boolean isDeleted;
 
-    public Project_TypeModel()
+    public ProjectTypeModel()
     {
 
     }
 
-    public Project_TypeModel(int projectTypeID, String projectType, boolean isDeleted)
+    public ProjectTypeModel(int projectTypeID, String projectType, boolean isDeleted)
     {
         this.projectTypeID = projectTypeID;
         this.projectType = projectType;

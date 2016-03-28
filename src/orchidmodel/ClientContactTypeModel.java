@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/20/16.
  */
 
-public class Client_Contact_TypeModel {
+public class ClientContactTypeModel
+{
     private int clientContactTypeID;
     private String clientContactType;
     private boolean isDeleted;
 
-    public Client_Contact_TypeModel()
+    public ClientContactTypeModel()
     {
 
     }
 
-    public Client_Contact_TypeModel(int clientContactTypeID, String clientContactType, boolean isDeleted)
+    public ClientContactTypeModel(int clientContactTypeID, String clientContactType, boolean isDeleted)
     {
         this.clientContactTypeID = clientContactTypeID;
         this.clientContactType = clientContactType;

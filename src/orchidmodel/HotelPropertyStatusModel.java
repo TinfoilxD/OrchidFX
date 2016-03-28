@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/21/16.
  */
 
-public class Hotel_Property_StatusModel {
+public class HotelPropertyStatusModel
+{
     private int hotelPropertyStatusID;
     private String hotelPropertyStatus;
     private boolean isDeleted;
 
-    public Hotel_Property_StatusModel()
+    public HotelPropertyStatusModel()
     {
 
     }
 
-    public Hotel_Property_StatusModel(int hotelPropertyStatusID, String hotelPropertyStatus, boolean isDeleted)
+    public HotelPropertyStatusModel(int hotelPropertyStatusID, String hotelPropertyStatus, boolean isDeleted)
     {
         this.hotelPropertyStatusID = hotelPropertyStatusID;
         this.hotelPropertyStatus = hotelPropertyStatus;

@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/22/16.
  */
 
-public class Vendor_Contact_TypeModel {
+public class VendorContactTypeModel
+{
     private int vendorContactTypeID;
     private String vendorContactType;
     private boolean isDeleted;
 
-    public Vendor_Contact_TypeModel()
+    public VendorContactTypeModel()
     {
 
     }
 
-    public Vendor_Contact_TypeModel(int vendorContactTypeID, String vendorContactType, boolean isDeleted)
+    public VendorContactTypeModel(int vendorContactTypeID, String vendorContactType, boolean isDeleted)
     {
         this.vendorContactTypeID = vendorContactTypeID;
         this.vendorContactType = vendorContactType;

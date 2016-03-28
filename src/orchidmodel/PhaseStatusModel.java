@@ -2,17 +2,18 @@ package orchidmodel;/*
  * Written by Joshua Joseph on 3/21/16.
  */
 
-public class Phase_StatusModel {
+public class PhaseStatusModel
+{
     private int phaseStatusID;
     private String phaseStatus;
     private boolean isDeleted;
 
-    public Phase_StatusModel()
+    public PhaseStatusModel()
     {
 
     }
 
-    public Phase_StatusModel(int phaseStatusID, String phaseStatus, boolean isDeleted)
+    public PhaseStatusModel(int phaseStatusID, String phaseStatus, boolean isDeleted)
     {
         this.phaseStatusID = phaseStatusID;
         this.phaseStatus = phaseStatus;
