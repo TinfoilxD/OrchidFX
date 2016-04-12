@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.EmployeeController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.EditProjectController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -16,7 +16,7 @@
     <RowConstraints maxHeight="344.0" minHeight="10.0" prefHeight="305.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Edit Employee" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Project List" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <font>
             <Font size="24.0" />
          </font>
@@ -24,10 +24,13 @@
             <Insets />
          </GridPane.margin>
       </Label>
-      <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+      <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" fx:id="tableProjectTable">
         <columns>
-          <TableColumn prefWidth="185.0" text="Name" />
-          <TableColumn prefWidth="414.0" text="Department" />
+            <TableColumn prefWidth="150.0" text="Client First Name" />
+            <TableColumn prefWidth="150.0" text="Last Name" />
+            <TableColumn prefWidth="150.0" text="Hotel" />
+            <TableColumn prefWidth="100.0" text="Deadline" />
+            <TableColumn prefWidth="50.0" text="Status" />
         </columns>
       </TableView>
       <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">

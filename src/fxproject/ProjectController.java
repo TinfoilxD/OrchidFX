@@ -3,18 +3,24 @@ package fxproject;/*
  */
 
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import orchidmodel.ClientModel;
+import orchidmodel.ProjectTypeModel;
 
 public class ProjectController implements ClientChildTarget
 {
+    @FXML ComboBox<String> fxComboBoxProjectType;
+
     ClientModel clientModel;
 
     public static final String VIEWCONTROLLER_TITLE= "Project Input";
@@ -24,6 +30,31 @@ public class ProjectController implements ClientChildTarget
 
     }
 
+    @FXML
+    public void initialize()
+    {
+        //setFxComboBoxProjectType();
+    }
+
+    public void setFxComboBoxProjectType()
+    {
+        try
+        {
+            ObservableList<ProjectTypeModel> projectTypeList = new ProjectTypeProcedureSet().procSelectProjectType();
+            ObservableList<String> projectTypeNameList = FXCollections.observableArrayList();
+            for(ProjectTypeModel projectType : projectTypeList)
+            {
+                projectTypeNameList.add(projectType.getProjectType());
+                fxComboBoxProjectType.setItems(projectTypeNameList);
+                if(projectTypeNameList.size() > 0)
+                fxComboBoxProjectType.getSelectionModel().select(0);
+            }
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Error", e.toString());
+        }
+    }
     public NodeBundle loadBundle()
     {
         try

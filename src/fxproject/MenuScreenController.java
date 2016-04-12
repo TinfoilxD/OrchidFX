@@ -27,7 +27,7 @@ public class MenuScreenController
     @FXML
     protected void handleEmployeeEditEmployeeAction(ActionEvent event)
     {
-        RootStageContainer.getCurrentRootStageContainer().changeView(EditEmployeeController.VIEWCONTROLLER_TITLE);
+        RootStageContainer.getCurrentRootStageContainer().changeView(EditProjectController.VIEWCONTROLLER_TITLE);
     }
     @FXML
     protected void handleProjectNewProjectAction(ActionEvent event)

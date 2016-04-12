@@ -14,7 +14,7 @@ public class OrchidDataSource
     private final String databaseName = "OrchidDB"; //ANDREWSURFACE TestDB1
     private final String propertyValue = "user=Geralyn;password=testtest"; // integratedSecurity=true;   user=Geralyn;password=testtest
     private final String userName = "Tin";
-    private final String password = "DeveloperTestKey";
+    private final String password = "testkey1";
     private final String connectionString = String.format("%s:%s:%s:%s;%s;%s", driverType, dbmsType, hostname, portNumber, databaseName, propertyValue);
 
 
