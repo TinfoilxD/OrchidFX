@@ -149,22 +149,25 @@ public class CountryController
 
         try {
             Connection connection = getConnection();
-            String countryName = (String)comboboxcountryname.getEditor().getText();
-            System.out.println(countryName);
+            int index = comboboxcountryname.getSelectionModel().getSelectedIndex();
+           String countryName = comboboxcountryname.getEditor().getText();
+            if(!countryList.get(index).getCountryName().equals(countryName));
             CallableStatement cstm = connection.prepareCall("{call ExistingCountrySearch(?)}");
-            cstm.setString("countryName", countryName);
+            cstm.setInt("countryID", countryID);
 
-          ResultSet rset = cstm.executeQuery();
+            ResultSet rset = cstm.executeQuery();
 
-            System.out.println(rset);
-            if(rset.next()){
-                CallableStatement cstm2 = connection.prepareCall("{call UpdateCountry(?)}");
+            System.out.println();
+            if(rset.next())
+            {
+                System.out.println(rset.getInt(1));
+              //  CallableStatement cstm2 = connection.prepareCall("{call UpdateCountry(?)}");
 
             }
             else {
 
 
-                System.out.println("Inserting as a new value");
+                System.out.println("test2");
             }
             connection.close();
             cstm.close();
