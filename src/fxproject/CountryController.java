@@ -26,6 +26,8 @@ public class CountryController
 {
 
     Connection connection;
+    ObservableList<CountryModel> countryList;
+    int defaultIndex = 0;
 
     public static final String VIEWCONTROLLER_TITLE= "Country Input";
 
@@ -77,14 +79,17 @@ public class CountryController
         }
         return null;
     }
-
+    private Connection getConnection() throws SQLException
+    {
+        return OrchidDataSource.getCurrentDataSource().getConnection();
+    }
     public void setFxSelectCountry()
     {
         try
         {
-            ObservableList<CountryModel> countryList = new CountryProcedureSet().procSelectCountries(); //countryList has a list of all the Country Models
+            countryList = new CountryProcedureSet().procSelectCountries(); //countryList has a list of all the Country Models
             ObservableList<String> countryNameList = FXCollections.observableArrayList(); //countryNameList has the list of string Country Names
-            int defaultIndex = 0;
+
             for(int i = 0; i < countryList.size(); i++)
             {
                 CountryModel m = countryList.get(i);
@@ -114,8 +119,12 @@ public class CountryController
     public void fillFXAbbreviation()
     {
         try {
+            int i= comboboxcountryname.getSelectionModel().getSelectedIndex();
 
+            CountryModel c = countryList.get(i);
 
+            String countryAbbreviation = c.getCountryAbbreviation();
+            abbreviationtextfield.setText(countryAbbreviation);
 
 
 
@@ -129,6 +138,45 @@ public class CountryController
         }
     }
 
+    @FXML
+    private void handleNewUpdateAction(ActionEvent e)
+    {
+        newUpdateCountry();
+    }
+    @FXML
+    public void newUpdateCountry()
+    {
 
+        try {
+            Connection connection = getConnection();
+            String countryName = (String)comboboxcountryname.getEditor().getText();
+            System.out.println(countryName);
+            CallableStatement cstm = connection.prepareCall("{call ExistingCountrySearch(?)}");
+            cstm.setString("countryName", countryName);
+
+          ResultSet rset = cstm.executeQuery();
+
+            System.out.println(rset);
+            if(rset.next()){
+                CallableStatement cstm2 = connection.prepareCall("{call UpdateCountry(?)}");
+
+            }
+            else {
+
+
+                System.out.println("Inserting as a new value");
+            }
+            connection.close();
+            cstm.close();
+
+
+        }
+        catch (SQLException e) {
+
+           new OrchidAlertBox("Error", e.toString());
+        }
+
+
+    }
 
 }

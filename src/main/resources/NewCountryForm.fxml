@@ -50,7 +50,7 @@
 
                                        </children>
                                     </FlowPane>
-                                    <Button fx:id="newupdatecountrybutton" mnemonicParsing="false" text="New / Update" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Button fx:id="newupdatecountrybutton" onAction = '#handleNewUpdateAction' mnemonicParsing="false" text="New / Update" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
