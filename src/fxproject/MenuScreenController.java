@@ -184,4 +184,11 @@ public class MenuScreenController
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(VendorContactTypeController.VIEWCONTROLLER_TITLE);
     }
+    @FXML
+    protected void handleDeveloperCountryEditAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(CountryController.VIEWCONTROLLER_TITLE);
+    }
 }
+
+
