@@ -80,6 +80,9 @@
                                   <MenuItem text="New" onAction="#handleDeveloperContractorContactTypeNewContractorContactTypeAction"/>
                                   <MenuItem text="Edit"/>
                               </Menu>
+                              <Menu text="Country">
+                                  <MenuItem text="Open" onAction="#handleDeveloperCountryEditAction"/>
+                              </Menu>
                           </Menu>
                           <Menu mnemonicParsing="false" text="D-H">
                               <items>
