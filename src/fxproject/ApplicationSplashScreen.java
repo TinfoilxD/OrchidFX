@@ -37,7 +37,7 @@ public class ApplicationSplashScreen extends Application
 
         PauseTransition pause = new PauseTransition(Duration.millis(500));
         pause.setOnFinished(e -> {
-            new MainSystem();
+            loadDatabaseScreen();
             window.close();
         });
         pause.playFromStart();
@@ -49,7 +49,8 @@ public class ApplicationSplashScreen extends Application
     }
     private Scene loadView()
     {
-        try {
+        try
+        {
             Parent root = FXMLLoader.load(getClass().getResource("../main/resources/splashscreen.fxml"));
             Scene scene = new Scene(root);
             return scene;
@@ -64,9 +65,21 @@ public class ApplicationSplashScreen extends Application
         }
         return null;
     }
-    private void loadMainScreen()
+    private void loadDatabaseScreen()
     {
-        new MainSystem();
+        try
+        {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("../main/resources/DatabaseSettingsForm.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.sizeToScene();
+            stage.show();
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Error",e.toString());
+        }
     }
 
 

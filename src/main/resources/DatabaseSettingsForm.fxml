@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox fx:controller="fxproject.DataSettingsController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="300.0">
+         <children>
+            <TextField fx:id="fieldhostname" layoutX="20.0" layoutY="50.0" prefHeight="30.0" prefWidth="250.0" promptText="Hostname" />
+            <TextField fx:id="fieldportnumber" layoutX="20.0" layoutY="90.0" prefHeight="30.0" prefWidth="250.0" promptText="Port Number" />
+            <TextField fx:id="fielddatabasename" layoutX="20.0" layoutY="130.0" prefHeight="30.0" prefWidth="250.0" promptText="Database Name" />
+            <TextField fx:id="fieldusername" layoutX="20.0" layoutY="170.0" prefHeight="30.0" prefWidth="250.0" promptText="Username" />
+            <PasswordField fx:id="fieldpassword" layoutX="20.0" layoutY="210.0" prefHeight="27.0" prefWidth="250.0" promptText="Password" />
+            <Label layoutX="90.0" layoutY="21.0" prefHeight="17.0" prefWidth="238.0" text="Database Settings">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="297.0" layoutY="253.0" mnemonicParsing="false" text="Submit" onAction="#handleButtonSubmit" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
