@@ -20,90 +20,79 @@ import java.sql.SQLException;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import orchidmodel.CountryModel;
 
-public class CountryController
-{
+public class CountryController {
 
     Connection connection;
     ObservableList<CountryModel> countryList;
     int defaultIndex = 0;
 
-    public static final String VIEWCONTROLLER_TITLE= "Country Input";
+    public static final String VIEWCONTROLLER_TITLE = "Country Input";
 
 
     @FXML
     TextField abbreviationtextfield;
 
     @FXML
-    Button deletecountrybutton;
+    Button updatecountrybutton;
 
     @FXML
-    Button cancelcountrybutton;
+    Button closecountrybutton;
 
     @FXML
-    Button newupdatecountrybutton;
+    Button submitcountrybutton;
 
     @FXML
     ComboBox comboboxcountryname;
 
 
-
-    public CountryController()
-    {
+    public CountryController() {
 
     }
 
     @FXML
-    public void initialize()
-    {
+    public void initialize() {
         comboboxcountryname.setEditable(true);
         setFxSelectCountry();
     }
 
-    public NodeBundle loadBundle()
-    {
-        try
-        {
+    public NodeBundle loadBundle() {
+        try {
             FXMLLoader loader = new FXMLLoader();
             Parent node = loader.load(getClass().getResource("../main/resources/NewCountryForm.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
 
             e.printStackTrace();
 
         }
         return null;
     }
-    private Connection getConnection() throws SQLException
-    {
+
+    private Connection getConnection() throws SQLException {
         return OrchidDataSource.getCurrentDataSource().getConnection();
     }
-    public void setFxSelectCountry()
-    {
-        try
-        {
+
+    public void setFxSelectCountry() {
+        try {
             countryList = new CountryProcedureSet().procSelectCountries(); //countryList has a list of all the Country Models
             ObservableList<String> countryNameList = FXCollections.observableArrayList(); //countryNameList has the list of string Country Names
 
-            for(int i = 0; i < countryList.size(); i++)
-            {
+            for (int i = 0; i < countryList.size(); i++) {
                 CountryModel m = countryList.get(i);
                 String countryAbbreviation = m.getCountryAbbreviation();
-                if(countryAbbreviation.equals("USA"))
+                if (countryAbbreviation.equals("USA"))
                     defaultIndex = i;
                 countryNameList.add(m.getCountryName());
             }
 
             comboboxcountryname.setItems(countryNameList);
             comboboxcountryname.getSelectionModel().select(defaultIndex);
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             //System.out.println("An error has occured that doesn't actually do anything.");
         }
 
@@ -115,11 +104,9 @@ public class CountryController
     }
 
 
-
-    public void fillFXAbbreviation()
-    {
+    public void fillFXAbbreviation() {
         try {
-            int i= comboboxcountryname.getSelectionModel().getSelectedIndex();
+            int i = comboboxcountryname.getSelectionModel().getSelectedIndex();
 
             CountryModel c = countryList.get(i);
 
@@ -127,59 +114,46 @@ public class CountryController
             abbreviationtextfield.setText(countryAbbreviation);
 
 
-
-
-
-
-        }
-        catch(Exception e2)
-        {
+        } catch (Exception e) {
 
         }
     }
 
     @FXML
-    private void handleNewUpdateAction(ActionEvent e)
-    {
-        newUpdateCountry();
+    private void handleSubmitAction(ActionEvent e) {
+        newCountry();
     }
+
     @FXML
-    public void newUpdateCountry()
-    {
+    public void newCountry() {
 
         try {
-            Connection connection = getConnection();
-            int index = comboboxcountryname.getSelectionModel().getSelectedIndex();
-           String countryName = comboboxcountryname.getEditor().getText();
-            if(!countryList.get(index).getCountryName().equals(countryName));
-            CallableStatement cstm = connection.prepareCall("{call ExistingCountrySearch(?)}");
-            //cstm.setInt("countryID", countryID);
-
-            ResultSet rset = cstm.executeQuery();
-
-            System.out.println();
-            if(rset.next())
-            {
-                System.out.println(rset.getInt(1));
-              //  CallableStatement cstm2 = connection.prepareCall("{call UpdateCountry(?)}");
-
-            }
-            else {
+            CountryModel countryModel = new CountryModel();
+            countryModel.setCountryName(comboboxcountryname.getEditor().getText());
+            countryModel.setCountryAbbreviation(abbreviationtextfield.getText());
 
 
-                System.out.println("test2");
-            }
-            connection.close();
-            cstm.close();
+            new CountryProcedureSet().procInsertCountry(countryModel);
 
 
-        }
-        catch (SQLException e) {
+        } catch (Exception e) {
 
-           new OrchidAlertBox("Error", e.toString());
+            new OrchidAlertBox("Error", e.toString());
         }
 
 
     }
 
+    @FXML
+    private void handleUpdateAction(ActionEvent e) {
+
+        updateCountry();
+        
+    }
+
+    @FXML
+    public void updateCountry() {
+
+
+    }
 }

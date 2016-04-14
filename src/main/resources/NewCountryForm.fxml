@@ -46,11 +46,11 @@
                                     </Label>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                        <children>
-                                          <ComboBox fx:id="comboboxcountryname" onAction = "#handleComboBoxCountryAction" prefHeight="39.0" prefWidth="440.0" />
+                                          <ComboBox fx:id="comboboxcountryname" onAction="#handleComboBoxCountryAction" prefHeight="39.0" prefWidth="440.0" />
 
                                        </children>
                                     </FlowPane>
-                                    <Button fx:id="newupdatecountrybutton" onAction = '#handleNewUpdateAction' mnemonicParsing="false" text="New / Update" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Button fx:id="submitcountrybutton" mnemonicParsing="false" onAction="#handleSubmitAction" text="Add" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -58,21 +58,21 @@
                                           <Insets bottom="10.0" right="125.0" />
                                        </GridPane.margin>
                                     </Button>
-                                    <Button fx:id="cancelcountrybutton" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Button fx:id="closecountrybutton" mnemonicParsing="false" onAction="#handleCloseAction" text="Close" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                        <GridPane.margin>
-                                          <Insets bottom="10.0" right="75.0" />
+                                          <Insets bottom="10.0" right="125.0" />
                                        </GridPane.margin>
                                     </Button>
                                     <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <Button fx:id="deletecountrybutton" mnemonicParsing="false" text="Delete" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                    <Button fx:id="updatecountrybutton" mnemonicParsing="false" onAction="#handleUpdateAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                        <GridPane.margin>
-                                          <Insets bottom="10.0" />
+                                          <Insets bottom="10.0" right="125.0" />
                                        </GridPane.margin>
                                     </Button>
                                     <Label text="Abbreviation" GridPane.rowIndex="1">
