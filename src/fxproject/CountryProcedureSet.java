@@ -42,6 +42,7 @@ public class CountryProcedureSet
             return null;
         }
 
+
         ObservableList<CountryModel> countryList = FXCollections.observableArrayList();
 
         while(resultSet.next())

@@ -3,7 +3,6 @@ package fxproject;/*
  */
 
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -36,7 +35,7 @@ public class RootStageContainer
         mainStage.setResizable(false);
         initiateFileMap();
         mainStage.show();
-
+        changeView(EditProjectController.VIEWCONTROLLER_TITLE);
     }
     private Scene getSceneStructure()
     {
@@ -79,7 +78,7 @@ public class RootStageContainer
     {
         controllermap.put(ClientController.VIEWCONTROLLER_TITLE, new ClientController().loadBundle());
         controllermap.put(EmployeeController.VIEWCONTROLLER_TITLE, new EmployeeController().loadBundle());
-        controllermap.put(EditEmployeeController.VIEWCONTROLLER_TITLE, new EditEmployeeController().loadBundle());
+        controllermap.put(EditProjectController.VIEWCONTROLLER_TITLE, new EditProjectController().loadBundle());
         controllermap.put(ClientContactController.VIEWCONTROLLER_TITLE, new ClientContactController().loadBundle());
         controllermap.put(ClientContactTypeController.VIEWCONTROLLER_TITLE, new ClientContactTypeController().loadBundle());
         controllermap.put(ClientStatusController.VIEWCONTROLLER_TITLE, new ClientStatusController().loadBundle());

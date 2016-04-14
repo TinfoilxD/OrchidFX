@@ -132,6 +132,8 @@ public class ContractorController
             fxSelectState.setItems(stateNameList);
             fxSelectState.getSelectionModel().select(0);
 
+
+            /*
             ObservableList<String> countryNameList = FXCollections.observableArrayList();
             int defaultIndex = 0;
             for(int i = 0; i < countryList.size(); i++)
@@ -144,6 +146,8 @@ public class ContractorController
             }
             fxSelectCountry.setItems(countryNameList);
             fxSelectCountry.getSelectionModel().select(defaultIndex);
+
+            */
         }
         catch(Exception e)
         {
@@ -151,5 +155,6 @@ public class ContractorController
         }
 
     }
+
 
 }
