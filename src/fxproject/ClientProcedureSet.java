@@ -25,8 +25,15 @@ public class ClientProcedureSet
         Connection connection = getConnection();
         CallableStatement cstm = connection.prepareCall("{call InsertClient(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
         cstm.setInt("ClientStatusID", clientModel.getClientStatusID());
-        cstm.setInt("TradeShowID", clientModel.getTradeShowID());
-        cstm.setInt("ReferrerID", clientModel.getReferrerID());
+        if(clientModel.getTradeShowID() != 0)
+            cstm.setInt("TradeShowID", clientModel.getTradeShowID());
+        else
+            cstm.setObject("TradeShowID", null);
+
+        if(clientModel.getReferrerID() != 0)
+            cstm.setInt("ReferrerID", clientModel.getReferrerID());
+        else
+            cstm.setObject("ReferrerID",null);
         cstm.setString("ClientCompanyName", clientModel.getClientCompanyName());
         cstm.setString("ClientFirstName", clientModel.getClientFirstName());
         cstm.setString("ClientLastName", clientModel.getClientLastName());

@@ -196,17 +196,17 @@
                                           <fx:define>
                                              <ToggleGroup fx:id="radioGroupOrigin"/>
                                           </fx:define>
-                                          <RadioButton mnemonicParsing="false" text="Contact" toggleGroup="$radioGroupOrigin" onAction="#handleRadioContactAction">
+                                          <RadioButton fx:id="fxRadioContact" mnemonicParsing="false" text="Contact" toggleGroup="$radioGroupOrigin" onAction="#handleRadioContactAction">
                                              <FlowPane.margin>
                                                 <Insets />
                                              </FlowPane.margin>
                                           </RadioButton>
-                                          <RadioButton mnemonicParsing="false" text="Trade Show" toggleGroup="$radioGroupOrigin" onAction="#handleRadioTradeShowAction">
+                                          <RadioButton fx:id="fxRadioTradeShow" mnemonicParsing="false" text="Trade Show" toggleGroup="$radioGroupOrigin" onAction="#handleRadioTradeShowAction">
                                              <FlowPane.margin>
                                                 <Insets left="12.0" />
                                              </FlowPane.margin>
                                           </RadioButton>
-                                          <RadioButton mnemonicParsing="false" text="Referrer" toggleGroup="$radioGroupOrigin" onAction="#handleRadioReferrerAction">
+                                          <RadioButton fx:id="fxRadioReferrer" mnemonicParsing="false" text="Referrer" toggleGroup="$radioGroupOrigin" onAction="#handleRadioReferrerAction">
                                              <FlowPane.margin>
                                                 <Insets left="12.0" />
                                              </FlowPane.margin>
