@@ -8,11 +8,11 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ProjectController">
     <children>
-        <VBox prefHeight="600.0" prefWidth="800.0">
+        <VBox>
             <children>
-                <SplitPane dividerPositions="0.1147227533460803" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
+                <SplitPane dividerPositions="0.1147227533460803" orientation="VERTICAL">
                     <items>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #9FC131;">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="1200.0" style="-fx-background-color: #9FC131;">
                             <children>
                                 <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="250.0" text="New Project">
                                     <font>
@@ -21,11 +21,11 @@
                                 </Label>
                             </children>
                         </AnchorPane>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="493.0" prefWidth="798.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0">
                             <children>
-                                <ScrollPane prefHeight="525.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <ScrollPane prefHeight="550.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <content>
-                                        <GridPane prefHeight="506.0" prefWidth="787.0">
+                                        <GridPane prefHeight="550.0" prefWidth="1200.0">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="126.0" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="674.0" />
