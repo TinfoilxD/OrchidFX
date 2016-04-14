@@ -156,4 +156,9 @@ public class CountryController {
 
 
     }
+    @FXML
+    private void handleCloseAction(ActionEvent e) {
+
+
+    }
 }
