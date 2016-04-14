@@ -15,8 +15,8 @@ import java.util.HashMap;
 
 public class RootStageContainer
 {
-    private final int SCREEN_HEIGHT = 800;
-    private final int SCREEN_WIDTH = 600;
+    private final int SCREEN_HEIGHT = 1200;
+    private final int SCREEN_WIDTH = 800;
 
     HashMap<String, NodeBundle> controllermap;
     Stage mainStage;

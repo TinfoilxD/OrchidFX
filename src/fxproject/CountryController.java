@@ -138,48 +138,48 @@ public class CountryController
         }
     }
 
-    @FXML
-    private void handleNewUpdateAction(ActionEvent e)
-    {
-        newUpdateCountry();
-    }
-    @FXML
-    public void newUpdateCountry()
-    {
-
-        try {
-            Connection connection = getConnection();
-            int index = comboboxcountryname.getSelectionModel().getSelectedIndex();
-           String countryName = comboboxcountryname.getEditor().getText();
-            if(!countryList.get(index).getCountryName().equals(countryName));
-            CallableStatement cstm = connection.prepareCall("{call ExistingCountrySearch(?)}");
-            cstm.setInt("countryID", countryID);
-
-            ResultSet rset = cstm.executeQuery();
-
-            System.out.println();
-            if(rset.next())
-            {
-                System.out.println(rset.getInt(1));
-              //  CallableStatement cstm2 = connection.prepareCall("{call UpdateCountry(?)}");
-
-            }
-            else {
-
-
-                System.out.println("test2");
-            }
-            connection.close();
-            cstm.close();
-
-
-        }
-        catch (SQLException e) {
-
-           new OrchidAlertBox("Error", e.toString());
-        }
-
-
-    }
+  @FXML
+   private void handleNewUpdateAction(ActionEvent e)
+   {
+       //newUpdateCountry();
+   }
+//    @FXML
+//    public void newUpdateCountry()
+//    {
+//
+//        try {
+//            Connection connection = getConnection();
+//            int index = comboboxcountryname.getSelectionModel().getSelectedIndex();
+//           String countryName = comboboxcountryname.getEditor().getText();
+//            if(!countryList.get(index).getCountryName().equals(countryName));
+//            CallableStatement cstm = connection.prepareCall("{call ExistingCountrySearch(?)}");
+//            cstm.setInt("countryID", countryID);
+//
+//            ResultSet rset = cstm.executeQuery();
+//
+//            System.out.println();
+//            if(rset.next())
+//            {
+//                System.out.println(rset.getInt(1));
+//              //  CallableStatement cstm2 = connection.prepareCall("{call UpdateCountry(?)}");
+//
+//            }
+//            else {
+//
+//
+//                System.out.println("test2");
+//            }
+//            connection.close();
+//            cstm.close();
+//
+//
+//        }
+//        catch (SQLException e) {
+//
+//           new OrchidAlertBox("Error", e.toString());
+//        }
+//
+//
+//    }
 
 }

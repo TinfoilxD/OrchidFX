@@ -6,11 +6,11 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ClientChildController">
+<AnchorPane minHeight="2000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ClientChildController">
    <children>
-      <VBox prefHeight="600.0" prefWidth="800.0">
+      <VBox minHeight="2000.0" prefHeight="600.0" prefWidth="800.0">
          <children>
-            <SplitPane dividerPositions="0.1147227533460803" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
+            <SplitPane minHeight="2000.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #9FC131;">
                      <children>
@@ -21,306 +21,371 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="798.0">
-                     <children>
-                        <ScrollPane prefHeight="600.0" prefWidth="800.0">
-                           <content>
-                              <GridPane prefHeight="950.0" prefWidth="787.0">
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="126.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="674.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Label text="First Name*: ">
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Shipping:" GridPane.rowIndex="2">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <Label text="Primary Phone:" GridPane.rowIndex="13">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <TextField id="fieldStreetAddress" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Street Address, P.O. Box, etc" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Apt, Suite, etc." GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                                       <children>
-                                          <TextField id="fieldFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <Label text="Last Name*:">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                          </Label>
-                                          <TextField id="fieldLastName" prefHeight="25.0" prefWidth="250.0" promptText="Last Name">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                             <FlowPane.margin>
-                                                <Insets left="10.0" />
-                                             </FlowPane.margin>
-                                          </TextField>
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                                       <children>
-                                          <TextField prefHeight="30.0" prefWidth="200.0" promptText="City">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <TextField prefHeight="30.0" promptText="Zip Code" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
-                                       <children>
-                                          <TextField prefHeight="25.0" prefWidth="250.0" promptText="ex: Office">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <Label text="Ext.">
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField prefHeight="30.0" prefWidth="93.0" promptText="Ext.">
-                                             <FlowPane.margin>
-                                                <Insets left="10.0" />
-                                             </FlowPane.margin>
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                       </children>
-                                    </FlowPane>
-                                    <Button mnemonicParsing="false" onAction="#handleButtonAddAction" text="Submit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="17" GridPane.valignment="CENTER">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets bottom="10.0" right="125.0" />
-                                       </GridPane.margin>
-                                    </Button>
-                                    <Button mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="17" GridPane.valignment="CENTER">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets bottom="10.0" right="20.0" />
-                                       </GridPane.margin>
-                                    </Button>
-                                    <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="17" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Email:" GridPane.rowIndex="14">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
-                                       <children>
-                                          <TextField prefHeight="25.0" prefWidth="326.0" promptText="Email" />
-                                       </children>
-                                    </FlowPane>
-                                    <Label text="Company" GridPane.rowIndex="1">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                       <children>
-                                          <TextField prefHeight="25.0" prefWidth="289.0" promptText="Company" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="15">
-                                       <children>
-                                          <RadioButton mnemonicParsing="false" text="Contact">
-                                             <FlowPane.margin>
-                                                <Insets />
-                                             </FlowPane.margin>
-                                          </RadioButton>
-                                          <RadioButton mnemonicParsing="false" text="Trade Show">
-                                             <FlowPane.margin>
-                                                <Insets left="12.0" />
-                                             </FlowPane.margin>
-                                          </RadioButton>
-                                          <RadioButton mnemonicParsing="false" text="Referrer">
-                                             <FlowPane.margin>
-                                                <Insets left="12.0" />
-                                             </FlowPane.margin>
-                                          </RadioButton>
-                                       </children>
-                                    </FlowPane>
-                                    <Label text="Origin:" GridPane.rowIndex="15">
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="16">
-                                       <children>
-                                          <ChoiceBox prefWidth="150.0" />
-                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="37.0" text="+" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                                       <children>
-                                          <TextField prefHeight="27.0" prefWidth="400.0" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                                       <children>
-                                          <Label text="Country:">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <ChoiceBox prefWidth="150.0">
-                                             <FlowPane.margin>
-                                                <Insets left="10.0" />
-                                             </FlowPane.margin>
-                                          </ChoiceBox>
-                                          <Label text="State:">
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <ComboBox prefHeight="25.0" prefWidth="88.0">
-                                             <FlowPane.margin>
-                                                <Insets left="10.0" />
-                                             </FlowPane.margin>
-                                          </ComboBox>
-                                       </children>
-                                    </FlowPane>
-                                    <Label text="Billing:" GridPane.rowIndex="7">
-                                       <padding>
-                                          <Insets left="12.0" />
-                                       </padding>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
-                                       <children>
-                                          <CheckBox mnemonicParsing="false" text="Same as Shipping" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
-                                       <children>
-                                          <TextField prefHeight="27.0" prefWidth="405.0" promptText="Street Address, P.O. Box, etc" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
-                                       <children>
-                                          <TextField prefHeight="27.0" prefWidth="406.0" promptText="Apt, Suite, etc." />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
-                                       <children>
-                                          <TextField prefHeight="27.0" prefWidth="403.0" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
-                                       <children>
-                                          <TextField prefHeight="27.0" prefWidth="211.0" promptText="City" />
-                                          <TextField prefHeight="27.0" prefWidth="193.0" promptText="Zip Code" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
-                                       <children>
-                                          <Label text="Country:">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <ComboBox prefWidth="150.0">
-                                             <FlowPane.margin>
-                                                <Insets left="12.0" />
-                                             </FlowPane.margin>
-                                          </ComboBox>
-                                          <Label text="State:">
-                                             <FlowPane.margin>
-                                                <Insets left="12.0" />
-                                             </FlowPane.margin>
-                                          </Label>
-                                          <ComboBox prefHeight="27.0" prefWidth="83.0">
-                                             <FlowPane.margin>
-                                                <Insets left="12.0" />
-                                             </FlowPane.margin>
-                                          </ComboBox>
-                                       </children>
-                                    </FlowPane>
-                                 </children>
-                              </GridPane>
-                           </content>
-                        </ScrollPane>
-                     </children>
-                  </AnchorPane>
                </items>
             </SplitPane>
+         </children>
+      </VBox>
+      <VBox layoutY="63.0" prefHeight="758.0" prefWidth="798.0">
+         <children>
+            <ScrollPane prefHeight="612.0" prefWidth="798.0">
+               <content>
+                  <GridPane prefHeight="950.0" prefWidth="787.0">
+                     <children>
+                        <Label text="First Name*: " GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Shipping Address:" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Primary Phone:" GridPane.rowIndex="17">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField id="fieldStreetAddress" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Street Address, P.O. Box, etc" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Apt, Suite, etc." GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <TextField id="fieldFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="Last Name*:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextField id="fieldLastName" prefHeight="25.0" prefWidth="250.0" promptText="Last Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <children>
+                              <Label text="Country:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox prefHeight="25.0" prefWidth="200.0">
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </ComboBox>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="17">
+                           <children>
+                              <TextField prefHeight="25.0" prefWidth="250.0" promptText="Office, Cell, etc.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="Ext.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextField prefHeight="30.0" prefWidth="93.0" promptText="Ext.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <Button mnemonicParsing="false" onAction="#handleButtonAddAction" text="Submit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="21" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" right="125.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="21" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" right="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="21" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Email:" GridPane.rowIndex="18">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="18">
+                           <children>
+                              <TextField prefHeight="25.0" prefWidth="326.0" promptText="Email">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <Label text="Company" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <TextField prefHeight="25.0" prefWidth="250.0" promptText="Company">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="19">
+                           <children>
+                              <RadioButton mnemonicParsing="false" text="Contact">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets />
+                                 </FlowPane.margin>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Trade Show">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="12.0" />
+                                 </FlowPane.margin>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Referrer">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="12.0" />
+                                 </FlowPane.margin>
+                              </RadioButton>
+                           </children>
+                        </FlowPane>
+                        <Label text="Origin:" GridPane.rowIndex="19">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="20">
+                           <children>
+                              <ChoiceBox prefWidth="150.0" />
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <TextField prefHeight="27.0" prefWidth="400.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <children>
+                              <TextField prefHeight="30.0" prefWidth="200.0" promptText="City">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="State:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <ComboBox prefHeight="30.0" prefWidth="170.0">
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </ComboBox>
+                              <TextField prefHeight="30.0" prefWidth="170.0" promptText="Zip Code">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <FlowPane.margin>
+                                    <Insets left="20.0" />
+                                 </FlowPane.margin>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <Label text="Billing Address:" GridPane.rowIndex="10">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="Same as Shipping">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                           <children>
+                              <TextField prefHeight="27.0" prefWidth="400.0" promptText="Street Address, P.O. Box, etc">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                           <children>
+                              <TextField prefHeight="27.0" prefWidth="400.0" promptText="Apt, Suite, etc.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                           <children>
+                              <TextField prefHeight="27.0" prefWidth="400.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
+                           <children>
+                              <Label text="Country:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox prefHeight="25.0" prefWidth="200.0">
+                                 <FlowPane.margin>
+                                    <Insets left="12.0" />
+                                 </FlowPane.margin>
+                              </ComboBox>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="15">
+                           <children>
+                              <TextField prefHeight="30.0" prefWidth="200.0" promptText="City">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="State:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="12.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <ComboBox prefHeight="30.0" prefWidth="170.0">
+                                 <FlowPane.margin>
+                                    <Insets left="12.0" />
+                                 </FlowPane.margin>
+                              </ComboBox>
+                              <TextField prefHeight="30.0" prefWidth="170.0" promptText="Zip Code">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="20.0" />
+                                 </FlowPane.margin>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="130.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="658.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
          </children>
       </VBox>
    </children>
