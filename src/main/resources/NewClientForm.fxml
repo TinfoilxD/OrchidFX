@@ -125,7 +125,7 @@
                                     </FlowPane>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
                                        <children>
-                                          <TextField fx:id="fxFieldShippingcode" prefHeight="25.0" prefWidth="250.0" promptText="ex: Office">
+                                          <TextField fx:id="fxFieldPhone" prefHeight="25.0" prefWidth="250.0" promptText="ex: Office">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -148,7 +148,7 @@
                                           </TextField>
                                        </children>
                                     </FlowPane>
-                                    <Button mnemonicParsing="false" text="Submit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                                    <Button fx:id="fxButtonSubmit" onAction="#handleButtonSubmitAction" mnemonicParsing="false" text="Submit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="18" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -268,7 +268,7 @@
                                     </Label>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
                                        <children>
-                                          <CheckBox mnemonicParsing="false" text="Same as Shipping" />
+                                          <CheckBox fx:id="fxCheckBoxSameAs" mnemonicParsing="false" text="Same as Shipping" onAction="#handleCheckBoxSameAsAction"/>
                                        </children>
                                     </FlowPane>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">

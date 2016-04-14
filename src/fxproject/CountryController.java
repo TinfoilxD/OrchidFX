@@ -153,7 +153,7 @@ public class CountryController
            String countryName = comboboxcountryname.getEditor().getText();
             if(!countryList.get(index).getCountryName().equals(countryName));
             CallableStatement cstm = connection.prepareCall("{call ExistingCountrySearch(?)}");
-            cstm.setInt("countryID", countryID);
+            //cstm.setInt("countryID", countryID);
 
             ResultSet rset = cstm.executeQuery();
 

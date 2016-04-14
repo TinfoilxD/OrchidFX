@@ -9,9 +9,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import orchidmodel.*;
+
+import javax.swing.*;
 
 public class ClientController
 {
@@ -34,11 +38,32 @@ public class ClientController
     @FXML
     ComboBox fxComboBoxShippingState;
     @FXML
+    TextField fxFieldShippingCity;
+    @FXML
+    TextField fxFieldShippingZipCode;
+    @FXML
+    TextField fxFieldBillingAddress1;
+    @FXML
+    TextField fxFieldBillingAddress2;
+    @FXML
+    TextField fxFieldBillingAddress3;
+    @FXML
     ComboBox fxComboBoxBillingCountry;
     @FXML
     ComboBox fxComboBoxBillingState;
     @FXML
+    TextField fxFieldBillingCity;
+    @FXML
+    TextField fxFieldBillingZipCode;
+    @FXML
     ComboBox fxComboBoxOrigin;
+    @FXML
+    CheckBox fxCheckBoxSameAs;
+    @FXML
+    TextField fxTextFieldPhone;
+    @FXML
+    Button fxButtonSubmit;
+
 
 
     private ObservableList<CountryModel> countryList;
@@ -256,5 +281,33 @@ public class ClientController
         {
             new OrchidAlertBox("Error", ae.toString());
         }
+    }
+
+    @FXML
+    private void handleCheckBoxSameAsAction(ActionEvent e)
+    {
+        String shippingAddress1 = fxFieldShippingAddress1.getText().toString();
+        String shippingAddress2 = fxFieldShippingAddress2.getText().toString();
+        String shippingAddress3 = fxFieldShippingAddress3.getText().toString();
+        String shippingCity = fxFieldShippingCity.getText().toString();
+        String shippingZipCode = fxFieldShippingZipCode.getText().toString();
+        int shippingCountry = fxComboBoxShippingCountry.getSelectionModel().getSelectedIndex();
+        int shippingState = fxComboBoxShippingState.getSelectionModel().getSelectedIndex();
+        fxFieldBillingAddress1.setText(shippingAddress1);
+        fxFieldBillingAddress2.setText(shippingAddress2);
+        fxFieldBillingAddress3.setText(shippingAddress3);
+        fxFieldBillingCity.setText(shippingCity);
+        fxFieldBillingZipCode.setText(shippingZipCode);
+        fxComboBoxBillingCountry.getSelectionModel().select(shippingCountry);
+        fxComboBoxBillingState.getSelectionModel().select(shippingState);
+
+
+    }
+
+    @FXML
+    private void handleButtonSubmitAction(ActionEvent e)
+    {
+        ClientModel clientModel = new ClientModel();
+
     }
 }
