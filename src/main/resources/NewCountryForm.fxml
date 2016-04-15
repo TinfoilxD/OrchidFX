@@ -84,11 +84,6 @@
                                        </GridPane.margin>
                                     </Label>
                                     <TextField fx:id="fxFieldAbbreviation" maxWidth="-Infinity" prefHeight="39.0" prefWidth="84.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <ComboBox fx:id="fxComboBoxCountryID" prefWidth="150.0" visible="true" GridPane.rowIndex="2">
-                                       <GridPane.margin>
-                                          <Insets bottom="75.0" left="20.0" />
-                                       </GridPane.margin>
-                                    </ComboBox>
                                  </children>
                               </GridPane>
                            </content>
