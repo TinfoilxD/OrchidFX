@@ -37,6 +37,11 @@ public class MenuScreenController
 
 
 
+    @FXML
+    protected void handleReportAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(ReportController.VIEWCONTROLLER_TITLE);
+    }
 
 
 

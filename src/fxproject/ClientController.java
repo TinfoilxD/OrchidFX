@@ -98,13 +98,16 @@ public class ClientController
 
     public NodeBundle loadBundle()
     {
-        try {
+        try
+        {
             FXMLLoader loader = new FXMLLoader();
             Parent node = loader.load(getClass().getResource("../main/resources/NewClientForm.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);
-        } catch (Exception e) {
+
+        } catch (Exception e)
+        {
 
             e.printStackTrace();
 

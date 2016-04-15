@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import java.sql.Connection;
 
 public class DataSettingsController
 {
@@ -53,6 +54,9 @@ public class DataSettingsController
                     fieldhostname.getText(),
                     Integer.parseInt(fieldportnumber.getText()),
                     fielddatabasename.getText());
+
+            Connection connection = OrchidDataSource.getCurrentDataSource().getConnection();
+            connection.prepareStatement("{call SelectClientStatus()}").executeQuery(); ///low data query to test connection
             new MainSystem();
 
             Node  source = (Node)  e.getSource();
@@ -63,7 +67,7 @@ public class DataSettingsController
         }
         catch(Exception ae)
         {
-            new OrchidAlertBox("Error", ae.toString());
+            new OrchidAlertBox("Error", "Database cannot be reached.");
         }
     }
 

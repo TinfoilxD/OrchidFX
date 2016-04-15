@@ -5,6 +5,7 @@ package fxproject;/*
 import javafx.animation.PauseTransition;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,6 +13,9 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import javafx.util.Duration;
+
+import java.io.InputStream;
+import java.net.URL;
 
 public class ApplicationSplashScreen extends Application
 {
@@ -51,7 +55,9 @@ public class ApplicationSplashScreen extends Application
     {
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("../main/resources/splashscreen.fxml"));
+            //FXMLLoader loader = new FXMLLoader();
+            URL url = getClass().getResource("/main/resources/splashscreen.fxml");
+            Parent root = FXMLLoader.load(url);
             Scene scene = new Scene(root);
             return scene;
         }
