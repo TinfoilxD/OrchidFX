@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.CountryController">
+<AnchorPane maxHeight="480.0" maxWidth="640.0" minHeight="480.0" minWidth="640.0" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.CountryController">
    <children>
       <VBox prefHeight="600.0" prefWidth="800.0">
          <children>
@@ -32,11 +32,11 @@
                                 </columnConstraints>
                                 <rowConstraints>
                                   <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
                                     <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Label text="Country Name">
+                                    <Label text="Country Name:">
                                        <GridPane.margin>
                                           <Insets left="12.0" />
                                        </GridPane.margin>
@@ -46,36 +46,36 @@
                                     </Label>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                        <children>
-                                          <ComboBox fx:id="comboboxcountryname" onAction="#handleComboBoxCountryAction" prefHeight="39.0" prefWidth="440.0" />
+                                          <ComboBox fx:id="fxComboboxCountryName" onAction="#handleComboBoxCountryAction" prefHeight="39.0" prefWidth="306.0" />
 
                                        </children>
                                     </FlowPane>
-                                    <Button fx:id="submitcountrybutton" mnemonicParsing="false" onAction="#handleSubmitAction" text="Add" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Button fx:id="fxButtonAdd" mnemonicParsing="false" onAction="#handleAddAction" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                        <GridPane.margin>
-                                          <Insets bottom="10.0" right="125.0" />
+                                          <Insets bottom="135.0" right="425.0" />
                                        </GridPane.margin>
                                     </Button>
-                                    <Button fx:id="closecountrybutton" mnemonicParsing="false" onAction="#handleCloseAction" text="Close" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Button fx:id="fxButtonClose" mnemonicParsing="false" onAction="#handleCloseAction" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                        <GridPane.margin>
-                                          <Insets bottom="10.0" right="125.0" />
+                                          <Insets bottom="135.0" right="200.0" />
                                        </GridPane.margin>
                                     </Button>
                                     <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <Button fx:id="updatecountrybutton" mnemonicParsing="false" onAction="#handleUpdateAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                    <Button fx:id="fxButtonUpdate" mnemonicParsing="false" onAction="#handleUpdateAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                        <GridPane.margin>
-                                          <Insets bottom="10.0" right="125.0" />
+                                          <Insets bottom="135.0" right="310.0" />
                                        </GridPane.margin>
                                     </Button>
-                                    <Label text="Abbreviation" GridPane.rowIndex="1">
+                                    <Label text="Abbreviation:" GridPane.rowIndex="1">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -83,7 +83,12 @@
                                           <Insets left="12.0" />
                                        </GridPane.margin>
                                     </Label>
-                                    <TextField fx:id="abbreviationtextfield" maxWidth="-Infinity" prefHeight="39.0" prefWidth="84.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="fxFieldAbbreviation" maxWidth="-Infinity" prefHeight="39.0" prefWidth="84.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <ComboBox fx:id="fxComboBoxCountryID" prefWidth="150.0" visible="true" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets bottom="75.0" left="20.0" />
+                                       </GridPane.margin>
+                                    </ComboBox>
                                  </children>
                               </GridPane>
                            </content>

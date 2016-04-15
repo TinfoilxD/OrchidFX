@@ -33,19 +33,22 @@ public class CountryController {
 
 
     @FXML
-    TextField abbreviationtextfield;
+    TextField fxFieldAbbreviation;
 
     @FXML
-    Button updatecountrybutton;
+    Button fxButtonUpdate;
 
     @FXML
-    Button closecountrybutton;
+    Button fxButtonClose;
 
     @FXML
-    Button submitcountrybutton;
+    Button fxButtonAdd;
 
     @FXML
-    ComboBox comboboxcountryname;
+    ComboBox fxComboboxCountryName;
+
+    @FXML
+    ComboBox fxComboBoxCountryID;
 
 
     public CountryController() {
@@ -54,7 +57,7 @@ public class CountryController {
 
     @FXML
     public void initialize() {
-        comboboxcountryname.setEditable(true);
+        fxComboboxCountryName.setEditable(true);
         setFxSelectCountry();
     }
 
@@ -90,8 +93,8 @@ public class CountryController {
                 countryNameList.add(m.getCountryName());
             }
 
-            comboboxcountryname.setItems(countryNameList);
-            comboboxcountryname.getSelectionModel().select(defaultIndex);
+            fxComboboxCountryName.setItems(countryNameList);
+            fxComboboxCountryName.getSelectionModel().select(defaultIndex);
         } catch (Exception e) {
             //System.out.println("An error has occured that doesn't actually do anything.");
         }
@@ -106,12 +109,12 @@ public class CountryController {
 
     public void fillFXAbbreviation() {
         try {
-            int i = comboboxcountryname.getSelectionModel().getSelectedIndex();
+            int i = fxComboboxCountryName.getSelectionModel().getSelectedIndex();
 
             CountryModel c = countryList.get(i);
 
             String countryAbbreviation = c.getCountryAbbreviation();
-            abbreviationtextfield.setText(countryAbbreviation);
+            fxFieldAbbreviation.setText(countryAbbreviation);
 
 
         } catch (Exception e) {
@@ -120,7 +123,7 @@ public class CountryController {
     }
 
     @FXML
-    private void handleSubmitAction(ActionEvent e) {
+    private void handleAddAction(ActionEvent e) {
         newCountry();
     }
 
@@ -129,8 +132,8 @@ public class CountryController {
 
         try {
             CountryModel countryModel = new CountryModel();
-            countryModel.setCountryName(comboboxcountryname.getEditor().getText());
-            countryModel.setCountryAbbreviation(abbreviationtextfield.getText());
+            countryModel.setCountryName(fxComboboxCountryName.getEditor().getText());
+            countryModel.setCountryAbbreviation(fxFieldAbbreviation.getText());
 
 
             new CountryProcedureSet().procInsertCountry(countryModel);
