@@ -42,10 +42,41 @@ public class MenuScreenController
 
 
 
-    @FXML
-    protected void handleReportAction(ActionEvent event)
+    private void reportAction(String reportTitle, String procedure)
     {
-        RootStageContainer.getCurrentRootStageContainer().changeView(ReportController.VIEWCONTROLLER_TITLE);
+        try
+        {
+            Stage childStage = new Stage();
+            childStage.initModality(Modality.APPLICATION_MODAL);
+            FXMLLoader loader = new FXMLLoader();
+            Parent node = loader.load(getClass().getResource("../main/resources/ReportTable.fxml").openStream());
+            ReportController controller = (ReportController)loader.getController();
+            controller.setTableData(reportTitle, procedure);
+            childStage.setScene(new Scene(node));
+            childStage.setResizable(false);
+            childStage.show();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            new OrchidAlertBox("Loading Error",e.toString());
+        }
+    }
+    @FXML
+    protected void handleReportInitialLoadAction(ActionEvent event)
+    {
+        reportAction("Initial Load", "{call InitialLoad()}");
+    }
+    @FXML
+    protected void handleReportVendorAction(ActionEvent event)
+    {
+        reportAction("Vendor Report", "{call SelectAllVendor()}");
+
+    }
+    @FXML
+    protected void handleReportHotelByStatusAction(ActionEvent event)
+    {
+        reportAction("Hotel By Status", "{call SelectHotelByStatus}");
     }
 
 

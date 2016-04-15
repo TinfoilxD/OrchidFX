@@ -66,13 +66,8 @@ public class ReportController
         addProcedure("Projects by Employee", "{call SelectEmployeeProject}");
         addProcedure("Designers by Client", "{call SelectDesignerclient}");
         addProcedure("Delayed Projects", "{call SelectDelayedProject}");
-        addProcedure("", "{call }");
-        addProcedure("", "{call }");
-        addProcedure("", "{call }");
-        addProcedure("", "{call }");
-        addProcedure("", "{call }");
-        addProcedure("", "{call }");
-        addProcedure("", "{call }");
+        addProcedure("Completed Projects", "{call SelectCompleteProject}");
+
 
 
 
