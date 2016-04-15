@@ -49,7 +49,6 @@
                   </Menu>
                   <Menu mnemonicParsing="false" text="Report">
                       <items>
-                          <MenuItem text="Initial Load" onAction="#handleReportInitialLoadAction"/>
                           <MenuItem text="Vendor Report" onAction="#handleReportVendorAction"/>
                           <MenuItem text="Hotel by Status" onAction="#handleReportHotelByStatusAction"/>
                       </items>

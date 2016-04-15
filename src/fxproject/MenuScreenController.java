@@ -62,11 +62,7 @@ public class MenuScreenController
             new OrchidAlertBox("Loading Error",e.toString());
         }
     }
-    @FXML
-    protected void handleReportInitialLoadAction(ActionEvent event)
-    {
-        reportAction("Initial Load", "{call InitialLoad()}");
-    }
+
     @FXML
     protected void handleReportVendorAction(ActionEvent event)
     {
@@ -78,6 +74,7 @@ public class MenuScreenController
     {
         reportAction("Hotel By Status", "{call SelectHotelByStatus}");
     }
+
 
 
 

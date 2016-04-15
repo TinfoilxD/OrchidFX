@@ -67,6 +67,21 @@ public class ReportController
         addProcedure("Designers by Client", "{call SelectDesignerclient}");
         addProcedure("Delayed Projects", "{call SelectDelayedProject}");
         addProcedure("Completed Projects", "{call SelectCompleteProject}");
+        addProcedure("Projects by Contractor", "{call SelectProjectContractor}");
+        addProcedure("Projects by Client", "{call SelectClientProject}");
+        addProcedure("Contractor Contacts","{call SelectContractorContact}");
+        addProcedure("Contractor Report","{call SelectContractor}");
+        addProcedure("Employees by Status","{call SelectEmployeeStatus}");
+        addProcedure("Possible Renewals","{call SelectFiveYearProject}");
+        addProcedure("Projects by Type","{call SelectReportProjectType}");
+        addProcedure("Parent Brand Approvers","{call SelectReportParentBrand}");
+        addProcedure("Clients by Trade Show","{call SelectClientTradeShow}");
+        addProcedure("Client Primary Contacts","{call SelectReportClientContact}");
+        addProcedure("Employees by Location","{call SelectReportEmployeeLocation}");
+        addProcedure("Employees by Seniority","{call SelectEmployeeSEniority}");
+        addProcedure("Projects with Immediate Deadlines", "{call Select030Deadline}");
+        addProcedure("Phases by Project", "{call SelectReportProjectPhase}");
+        addProcedure("Overdue Projects", "{call SelectOverdueProject}");
 
 
 
@@ -119,6 +134,12 @@ public class ReportController
 
         tableReport.getColumns().clear();
         tableReport.getItems().clear();
+
+        for(int i = 0; i < procedureNameList.size(); i++)
+        {
+            if(title.equals(procedureNameList.get(i)))
+                fxComboBoxReport.getSelectionModel().select(i);
+        }
 
 
         try
