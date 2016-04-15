@@ -4,6 +4,11 @@ package fxproject;/*
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class MenuScreenController
 {
@@ -157,7 +162,22 @@ public class MenuScreenController
     @FXML
     protected void handleDeveloperStateNewStateAction(ActionEvent event)
     {
-        RootStageContainer.getCurrentRootStageContainer().changeView(StateController.VIEWCONTROLLER_TITLE);
+        //RootStageContainer.getCurrentRootStageContainer().changeView(StateController.VIEWCONTROLLER_TITLE);
+        try
+        {
+            Stage clientStage = new Stage();
+            //clientStage.initStyle(StageStyle.UNDECORATED);
+            clientStage.initModality(Modality.APPLICATION_MODAL);
+            FXMLLoader clientStageLoader = new FXMLLoader();
+            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewStateForm.fxml").openStream());
+            clientStage.setScene(new Scene(node));
+            clientStage.setResizable(false);
+            clientStage.show();
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Loading Error",e.toString());
+        }
     }
     @FXML
     protected void handleDeveloperTaskListNewTaskListAction(ActionEvent event)
@@ -193,6 +213,22 @@ public class MenuScreenController
     protected void handleDeveloperCountryEditAction(ActionEvent event)
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(CountryController.VIEWCONTROLLER_TITLE);
+        //RootStageContainer.getCurrentRootStageContainer().changeView(StateController.VIEWCONTROLLER_TITLE);
+        try
+        {
+            Stage clientStage = new Stage();
+            //clientStage.initStyle(StageStyle.UNDECORATED);
+            clientStage.initModality(Modality.APPLICATION_MODAL);
+            FXMLLoader clientStageLoader = new FXMLLoader();
+            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewCountryForm.fxml").openStream());
+            clientStage.setScene(new Scene(node));
+            clientStage.setResizable(false);
+            clientStage.show();
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Loading Error",e.toString());
+        }
     }
 }
 
