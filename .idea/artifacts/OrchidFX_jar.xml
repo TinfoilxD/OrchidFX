@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="OrchidFX:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/OrchidFX_jar</output-path>
+    <output-path>G:/Orchid</output-path>
     <root id="archive" name="OrchidFX.jar">
       <element id="module-output" name="OrchidFX" />
       <element id="extracted-dir" path="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/lib/sqljdbc4.jar" path-in-jar="/microsoft/sql/" />
