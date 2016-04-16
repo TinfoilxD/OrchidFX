@@ -16,6 +16,7 @@ public class CountryProcedureSet
 
 
     Connection connection;
+    int countryID;
     public CountryProcedureSet()
     {
 
@@ -24,6 +25,17 @@ public class CountryProcedureSet
     private Connection getConnection() throws SQLException
     {
         return OrchidDataSource.getCurrentDataSource().getConnection();
+    }
+
+    public void procUpdatecountry(CountryModel countryModel) throws SQLException
+    {
+        Connection connection = getConnection();
+        CallableStatement cstm = connection.prepareCall("{call UpdateCountry(?,?,?)}");
+        cstm.setInt("CountryID", countryModel.getCountryID());
+        cstm.setString("CountryName", countryModel.getCountryName());
+        cstm.setString("CountryAbbreviation", countryModel.getCountryAbbreviation());
+        cstm.execute();
+
     }
 
     public void procInsertCountry(CountryModel countryModel) throws SQLException
@@ -70,7 +82,7 @@ public class CountryProcedureSet
 
         while(resultSet.next())
         {
-            int countryID = resultSet.getInt("CountryID");
+            countryID = resultSet.getInt("CountryID");
             String countryName = resultSet.getString("CountryName");
             String countryAbbreviation = resultSet.getString("CountryAbbreviation");
 
