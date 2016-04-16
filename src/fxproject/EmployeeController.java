@@ -79,7 +79,7 @@ public class EmployeeController
         try
         {
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("/main/resources/newEmployee.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/NewEmployeeForm.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);

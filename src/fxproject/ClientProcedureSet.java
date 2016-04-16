@@ -1,4 +1,6 @@
-package fxproject;/*
+package fxproject;
+
+/*
  * Written by Tin Van on 2/29/16.
  */
 
