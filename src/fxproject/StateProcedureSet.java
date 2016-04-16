@@ -108,4 +108,26 @@ public class StateProcedureSet
         return countryList;
     }
 
+    public void procInsertState(StateModel stateModel) throws SQLException
+    {
+        Connection connection = getConnection();
+        CallableStatement cstm = connection.prepareCall("{call InsertState(?,?,?)}");
+        cstm.setInt("CountryID", stateModel.getCountryID());
+        cstm.setString("StateName", stateModel.getStateName());
+        cstm.setString("StateAbbreviation", stateModel.getStateAbbreviation());
+
+        cstm.execute();
+
+        if(cstm != null)
+            cstm.close();
+        if(connection != null)
+            connection.close();
+
+
+
+
+    }
+
+
+
 }

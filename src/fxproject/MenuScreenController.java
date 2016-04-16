@@ -207,7 +207,7 @@ public class MenuScreenController
     @FXML
     protected void handleDeveloperCountryEditAction(ActionEvent event)
     {
-        RootStageContainer.getCurrentRootStageContainer().changeView(CountryController.VIEWCONTROLLER_TITLE);
+
         //RootStageContainer.getCurrentRootStageContainer().changeView(StateController.VIEWCONTROLLER_TITLE);
         try
         {

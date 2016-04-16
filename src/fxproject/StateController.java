@@ -100,12 +100,27 @@ public class StateController
     @FXML
     private void handleAddAction(ActionEvent e) {
         newState();
-        setFxSelectState();
+//        setFxSelectState();
     }
 
     @FXML
     public void newState() {
 
+        try {
+            StateModel stateModel = new StateModel();
+            stateModel.setCountryID(countryID);
+            stateModel.setStateName(fxComboboxState.getEditor().getText());
+            stateModel.setStateAbbreviation(fxFieldStateAbbreviation.getText());
+
+          
+
+            new StateProcedureSet().procInsertState(stateModel);
+
+
+        } catch (Exception e) {
+
+            new OrchidAlertBox("Error", e.toString());
+        }
     }
 
     public void setFxSelectCountry() {

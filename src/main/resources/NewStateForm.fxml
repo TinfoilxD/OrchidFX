@@ -85,7 +85,7 @@
                                           <Insets right="175.0" />
                                        </GridPane.margin>
                                     </Button>
-                                    <Button fx:id="fxButtonAdd" mnemonicParsing="false"  text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                    <Button fx:id="fxButtonAdd" mnemonicParsing="false"  onAction="#handleAddAction" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
