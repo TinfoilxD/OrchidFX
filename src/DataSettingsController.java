@@ -1,32 +1,27 @@
-package fxproject;/*
- * Written by Tin Van on 2/20/16.
- */
-
-
+import fxproject.MainSystem;
+import fxproject.OrchidAlertBox;
+import fxproject.OrchidDataSource;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import java.sql.Connection;
 
 public class DataSettingsController
 {
-    public static final String VIEWCONTROLLER_TITLE= "DataSettings";
 
-    @FXML
-    TextField fieldhostname;
-    @FXML
-    TextField fieldportnumber;
-    @FXML
-    TextField fielddatabasename;
-    @FXML
-    TextField fieldusername;
-    @FXML
-    PasswordField fieldpassword;
+    @FXML private TextField fieldhostname;
+    @FXML private TextField fieldportnumber;
+    @FXML private TextField fielddatabasename;
+    @FXML private TextField fieldusername;
+    @FXML private PasswordField fieldpassword;
+    @FXML private Label fieldLoginError;
+    @FXML private Button fxButtonLogin;
+
+    public static final String VIEWCONTROLLER_TITLE= "DataSettings";
 
     public DataSettingsController()
     {
@@ -44,8 +39,9 @@ public class DataSettingsController
         fieldpassword.setText(dataSource.getPassword());
     }
     @FXML
-    protected void handleButtonSubmit(ActionEvent e)
+    public void handleButtonSubmit(ActionEvent e)
     {
+
         try
         {
             OrchidDataSource dataSource = new OrchidDataSource();
@@ -54,9 +50,6 @@ public class DataSettingsController
                     fieldhostname.getText(),
                     Integer.parseInt(fieldportnumber.getText()),
                     fielddatabasename.getText());
-
-            Connection connection = OrchidDataSource.getCurrentDataSource().getConnection();
-            connection.prepareStatement("{call SelectClientStatus()}").executeQuery(); ///low data query to test connection
             new MainSystem();
 
             Node  source = (Node)  e.getSource();
@@ -67,8 +60,10 @@ public class DataSettingsController
         }
         catch(Exception ae)
         {
-            new OrchidAlertBox("Error", "Database cannot be reached.");
+            new OrchidAlertBox("Error", ae.toString());
+
         }
+
     }
 
 

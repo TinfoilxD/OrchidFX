@@ -9,7 +9,7 @@ public class OrchidDataSource
 {
     private final String driverType = "jdbc";
     private final String dbmsType = "sqlserver";
-    private String hostname = "192.168.1.66"; //192.168.1.75  192.168.1.66
+    private String hostname = "192.168.1.173"; //"192.168.1.66";
     private int portNumber = 1433;
     private String databaseName = "OrchidDB"; //ANDREWSURFACE TestDB1
     private final String propertyValue = "user=Geralyn;password=testtest"; // integratedSecurity=true;   user=Geralyn;password=testtest

@@ -26,6 +26,29 @@ public class CountryProcedureSet
         return OrchidDataSource.getCurrentDataSource().getConnection();
     }
 
+    public void procInsertCountry(CountryModel countryModel) throws SQLException
+    {
+        Connection connection = getConnection();
+        CallableStatement cstm = connection.prepareCall("{call AddCountry(?,?)}");
+        cstm.setString("CountryName", countryModel.getCountryName());
+        cstm.setString("CountryAbbreviation", countryModel.getCountryAbbreviation());
+
+        cstm.execute();
+
+        if(cstm != null)
+            cstm.close();
+        if(connection != null)
+            connection.close();
+
+
+
+
+    }
+
+
+
+
+
     public ObservableList<CountryModel> procSelectCountries() throws SQLException
     {
         Connection connection = getConnection();

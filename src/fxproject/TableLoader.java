@@ -64,7 +64,10 @@ public class TableLoader
             ObservableList<String> row = FXCollections.observableArrayList();
             for(int i=1 ; i<=resultSet.getMetaData().getColumnCount(); i++)
             {
-                row.add(resultSet.getString(i));
+                if(resultSet.getString(i) != null)
+                    row.add(resultSet.getString(i));
+                else
+                    row.add("");
             }
             data.add(row);
 

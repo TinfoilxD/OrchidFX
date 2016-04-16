@@ -63,6 +63,7 @@ public class EditProjectController
         }
         catch(Exception e)
         {
+            new OrchidAlertBox("Error", "Database cannot be reached.");
             e.printStackTrace();
         }
 

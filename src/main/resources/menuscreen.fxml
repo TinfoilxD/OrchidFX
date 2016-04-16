@@ -47,6 +47,12 @@
                           </Menu>
                       </items>
                   </Menu>
+                  <Menu mnemonicParsing="false" text="Report">
+                      <items>
+                          <MenuItem text="Vendor Report" onAction="#handleReportVendorAction"/>
+                          <MenuItem text="Hotel by Status" onAction="#handleReportHotelByStatusAction"/>
+                      </items>
+                  </Menu>
                   <Menu mnemonicParsing="false" text="Developer">
                       <items>
                           <Menu mnemonicParsing="false" text="A-C">
