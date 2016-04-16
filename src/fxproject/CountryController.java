@@ -1,6 +1,4 @@
-package fxproject;/*
- * Written by Tin Van on 2/28/16.
- */
+package fxproject;
 
 
 import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
