@@ -116,6 +116,30 @@ public class StateProcedureSet
         cstm.setString("StateName", stateModel.getStateName());
         cstm.setString("StateAbbreviation", stateModel.getStateAbbreviation());
 
+        new OrchidAlertBox("", stateModel.getStateName().toString() + " has been added in the database.");
+        cstm.execute();
+
+        if(cstm != null)
+            cstm.close();
+        if(connection != null)
+            connection.close();
+
+
+
+
+    }
+
+    public void procUpdateState(StateModel stateModel) throws SQLException
+    {
+        Connection connection = getConnection();
+        CallableStatement cstm = connection.prepareCall("{call UpdateState(?,?,?,?)}");
+        cstm.setInt("StateID", stateModel.getStateID());
+        cstm.setInt("CountryID", stateModel.getCountryID());
+        cstm.setString("StateName", stateModel.getStateName());
+        cstm.setString("StateAbbreviation", stateModel.getStateAbbreviation());
+
+        new OrchidAlertBox("", stateModel.getStateName().toString() + " has been updated in the database.");
+
         cstm.execute();
 
         if(cstm != null)

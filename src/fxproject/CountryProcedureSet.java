@@ -16,7 +16,7 @@ public class CountryProcedureSet
 
 
     Connection connection;
-    int countryID;
+    private int countryID;
     public CountryProcedureSet()
     {
 
@@ -34,6 +34,7 @@ public class CountryProcedureSet
         cstm.setInt("CountryID", countryModel.getCountryID());
         cstm.setString("CountryName", countryModel.getCountryName());
         cstm.setString("CountryAbbreviation", countryModel.getCountryAbbreviation());
+        new OrchidAlertBox("", countryModel.getCountryName().toString() + " has been updated in the database.");
         cstm.execute();
 
     }
@@ -45,6 +46,7 @@ public class CountryProcedureSet
         cstm.setString("CountryName", countryModel.getCountryName());
         cstm.setString("CountryAbbreviation", countryModel.getCountryAbbreviation());
 
+        new OrchidAlertBox("", countryModel.getCountryName().toString() + " has been added in the database.");
         cstm.execute();
 
         if(cstm != null)

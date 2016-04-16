@@ -25,6 +25,7 @@ public class StateController
     ObservableList<StateModel> stateList;
     int defaultIndex = 0;
     private int countryID;
+    private int stateID;
     @FXML
     Button fxButtonUpdate;
 
@@ -95,6 +96,34 @@ public class StateController
     public void updateState() {
 
 
+
+        try {
+            int i = fxComboboxState.getSelectionModel().getSelectedIndex();
+            StateModel s = stateList.get(i);
+            stateID = s.getStateID();
+
+
+
+
+
+
+            StateModel stateModel = new StateModel();
+            stateModel.setStateID(stateID);
+            stateModel.setCountryID(countryID);
+            stateModel.setStateName(fxComboboxState.getEditor().getText());
+            stateModel.setStateAbbreviation(fxFieldStateAbbreviation.getText());
+            new StateProcedureSet().procUpdateState(stateModel);
+
+
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+
+
+
+
     }
 
     @FXML
@@ -112,7 +141,7 @@ public class StateController
             stateModel.setStateName(fxComboboxState.getEditor().getText());
             stateModel.setStateAbbreviation(fxFieldStateAbbreviation.getText());
 
-          
+
 
             new StateProcedureSet().procInsertState(stateModel);
 
@@ -127,6 +156,7 @@ public class StateController
         try {
             countryList = new CountryProcedureSet().procSelectCountries(); //countryList has a list of all the Country Models
             ObservableList<String> countryNameList = FXCollections.observableArrayList(); //countryNameList has the list of string Country Names
+
 
             for (int i = 0; i < countryList.size(); i++) {
                 CountryModel m = countryList.get(i);
@@ -153,6 +183,8 @@ public class StateController
     private void setFxSelectState() {
       try {
           int i = fxComboboxCountryName.getSelectionModel().getSelectedIndex();
+
+
 
           CountryModel c = countryList.get(i);
           countryID = c.getCountryID();
