@@ -114,7 +114,24 @@ public class ReportController
     {
         fxComboBoxReport.setItems(procedureNameList);
         fxComboBoxReport.getSelectionModel().select(0);
-        setTableData("Project List", ReportController.INITIAL_LOAD);
+
+        try
+        {
+            Thread t = new Thread(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    setTableData("Project List", ReportController.INITIAL_LOAD);
+                }
+            });
+            t.start();
+
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Interrupted Database Operations.", e.toString());
+        }
         if(target != null)
         {
             tableReport.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) ->
