@@ -28,6 +28,7 @@ public class CountryController {
     Connection connection;
     ObservableList<CountryModel> countryList;
     int defaultIndex = 0;
+    private int countryID;
 
     public static final String VIEWCONTROLLER_TITLE = "Country Input";
 
@@ -46,6 +47,7 @@ public class CountryController {
 
     @FXML
     ComboBox fxComboboxCountryName;
+
 
     @FXML
     ComboBox fxComboBoxCountryID;
@@ -85,16 +87,27 @@ public class CountryController {
             countryList = new CountryProcedureSet().procSelectCountries(); //countryList has a list of all the Country Models
             ObservableList<String> countryNameList = FXCollections.observableArrayList(); //countryNameList has the list of string Country Names
 
+
             for (int i = 0; i < countryList.size(); i++) {
                 CountryModel m = countryList.get(i);
+
                 String countryAbbreviation = m.getCountryAbbreviation();
-                if (countryAbbreviation.equals("USA"))
+
+                if (countryAbbreviation.equals("USA")){
                     defaultIndex = i;
+                    fxFieldAbbreviation.setText(countryAbbreviation);
+
+                }
+
                 countryNameList.add(m.getCountryName());
+
+
             }
 
             fxComboboxCountryName.setItems(countryNameList);
+
             fxComboboxCountryName.getSelectionModel().select(defaultIndex);
+
         } catch (Exception e) {
             //System.out.println("An error has occured that doesn't actually do anything.");
         }
@@ -106,7 +119,7 @@ public class CountryController {
         fillFXAbbreviation();
     }
 
-
+    @FXML
     public void fillFXAbbreviation() {
         try {
             int i = fxComboboxCountryName.getSelectionModel().getSelectedIndex();
@@ -114,6 +127,7 @@ public class CountryController {
             CountryModel c = countryList.get(i);
 
             String countryAbbreviation = c.getCountryAbbreviation();
+            countryID = c.getCountryID();
             fxFieldAbbreviation.setText(countryAbbreviation);
 
 
@@ -148,20 +162,27 @@ public class CountryController {
     }
 
     @FXML
-    private void handleUpdateAction(ActionEvent e) {
+    private void handleUpdateAction(ActionEvent e) throws SQLException {
 
         updateCountry();
         
     }
 
     @FXML
-    public void updateCountry() {
+    public void updateCountry() throws SQLException {
 
+        CountryModel countryModel = new CountryModel();
+        countryModel.setCountryID(countryID);
+        countryModel.setCountryName(fxComboboxCountryName.getEditor().getText());
+        countryModel.setCountryAbbreviation(fxFieldAbbreviation.getText());
+        new CountryProcedureSet().procUpdatecountry(countryModel);
 
     }
+
     @FXML
     private void handleCloseAction(ActionEvent e) {
 
-
+        Stage stage = (Stage) fxButtonClose.getScene().getWindow();
+        stage.close();
     }
 }
