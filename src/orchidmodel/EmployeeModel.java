@@ -4,7 +4,7 @@ package orchidmodel;/*
 
 public class EmployeeModel {
     private int employeeID;
-    private int userID;
+    private String userID;
     private String employeeFirstName;
     private String employeeLastName;
     private int departmentID;
@@ -19,7 +19,7 @@ public class EmployeeModel {
 
     }
 
-    public EmployeeModel(int employeeID, int userID, String employeeFirstName,
+    public EmployeeModel(int employeeID, String userID, String employeeFirstName,
                          String employeeLastName, int departmentID, int employeeStatusID,
                          String employeePhone, String employeeExtension, String employeeEmail,
                          boolean isDeleted)
@@ -44,11 +44,11 @@ public class EmployeeModel {
         this.employeeID = employeeID;
     }
 
-    public int getUserID() {
+    public String getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(String userID) {
         this.userID = userID;
     }
 

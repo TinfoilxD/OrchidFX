@@ -27,7 +27,21 @@ public class MenuScreenController
     @FXML
     protected void handleEmployeeNewEmployeeAction(ActionEvent event)
     {
-        RootStageContainer.getCurrentRootStageContainer().changeView(EmployeeController.VIEWCONTROLLER_TITLE);
+        try
+        {
+            Stage clientStage = new Stage();
+            //clientStage.initStyle(StageStyle.UNDECORATED);
+            clientStage.initModality(Modality.APPLICATION_MODAL);
+            FXMLLoader clientStageLoader = new FXMLLoader();
+            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewEmployeeForm.fxml").openStream());
+            clientStage.setScene(new Scene(node));
+            clientStage.setResizable(false);
+            clientStage.show();
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Loading Error",e.toString());
+        }
     }
     @FXML
     protected void handleEmployeeEditEmployeeAction(ActionEvent event)
@@ -40,6 +54,24 @@ public class MenuScreenController
         RootStageContainer.getCurrentRootStageContainer().changeView(ProjectController.VIEWCONTROLLER_TITLE);
     }
 
+    @FXML
+    protected void handleAdminEmployeeAction(ActionEvent event)
+    {
+        try
+        {
+            Stage childStage = new Stage();
+            childStage.initModality(Modality.APPLICATION_MODAL);
+            FXMLLoader clientStageLoader = new FXMLLoader();
+            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewEmployeeForm.fxml").openStream());
+            childStage.setScene(new Scene(node));
+            childStage.setResizable(false);
+            childStage.show();
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Loading Error",e.toString());
+        }
+    }
 
 
     private void reportAction(String reportTitle, String procedure)
@@ -61,11 +93,6 @@ public class MenuScreenController
             e.printStackTrace();
             new OrchidAlertBox("Loading Error",e.toString());
         }
-    }
-    @FXML
-    protected void handleReportInitialLoadAction(ActionEvent event)
-    {
-        reportAction("Initial Load", "{call InitialLoad()}");
     }
     @FXML
     protected void handleReportVendorAction(ActionEvent event)

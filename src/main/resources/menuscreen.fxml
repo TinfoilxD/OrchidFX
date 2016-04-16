@@ -8,6 +8,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
+<?import com.sun.javafx.webkit.theme.ContextMenuImpl.MenuImpl?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.MenuScreenController">
    <top>
       <VBox maxWidth="1200.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0">
@@ -39,6 +40,7 @@
                 </Menu>
                   <Menu mnemonicParsing="false" text="Admin">
                       <items>
+                          <MenuItem text="Employee" onAction="#handleAdminEmployeeAction"/>
                           <Menu mnemonicParsing="false" text="User">
                              <items>
                                  <MenuItem onAction="#handleAdminUserNewUserAction" text="New User" />
@@ -49,7 +51,6 @@
                   </Menu>
                   <Menu mnemonicParsing="false" text="Report">
                       <items>
-                          <MenuItem text="Initial Load" onAction="#handleReportInitialLoadAction"/>
                           <MenuItem text="Vendor Report" onAction="#handleReportVendorAction"/>
                           <MenuItem text="Hotel by Status" onAction="#handleReportHotelByStatusAction"/>
                       </items>
@@ -123,7 +124,7 @@
                                   </Menu>
                                   <Menu text="Employee">
                                      <items>
-                                         <MenuItem text="New" />
+                                         <MenuItem text="New" onAction="#handleEmployeeNewEmployeeAction"/>
                                          <MenuItem text="Edit" />
                                      </items>
                                   </Menu>
