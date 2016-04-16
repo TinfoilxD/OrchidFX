@@ -27,7 +27,21 @@ public class MenuScreenController
     @FXML
     protected void handleEmployeeNewEmployeeAction(ActionEvent event)
     {
-        RootStageContainer.getCurrentRootStageContainer().changeView(EmployeeController.VIEWCONTROLLER_TITLE);
+        try
+        {
+            Stage clientStage = new Stage();
+            //clientStage.initStyle(StageStyle.UNDECORATED);
+            clientStage.initModality(Modality.APPLICATION_MODAL);
+            FXMLLoader clientStageLoader = new FXMLLoader();
+            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewEmployeeForm.fxml").openStream());
+            clientStage.setScene(new Scene(node));
+            clientStage.setResizable(false);
+            clientStage.show();
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Loading Error",e.toString());
+        }
     }
     @FXML
     protected void handleEmployeeEditEmployeeAction(ActionEvent event)
@@ -40,6 +54,24 @@ public class MenuScreenController
         RootStageContainer.getCurrentRootStageContainer().changeView(ProjectController.VIEWCONTROLLER_TITLE);
     }
 
+    @FXML
+    protected void handleAdminEmployeeAction(ActionEvent event)
+    {
+        try
+        {
+            Stage childStage = new Stage();
+            childStage.initModality(Modality.APPLICATION_MODAL);
+            FXMLLoader clientStageLoader = new FXMLLoader();
+            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewEmployeeForm.fxml").openStream());
+            childStage.setScene(new Scene(node));
+            childStage.setResizable(false);
+            childStage.show();
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Loading Error",e.toString());
+        }
+    }
 
 
     private void reportAction(String reportTitle, String procedure)
@@ -49,7 +81,7 @@ public class MenuScreenController
             Stage childStage = new Stage();
             childStage.initModality(Modality.APPLICATION_MODAL);
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("/main/resources/ReportTable.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("../main/resources/ReportTable.fxml").openStream());
             ReportController controller = (ReportController)loader.getController();
             controller.setTableData(reportTitle, procedure);
             childStage.setScene(new Scene(node));
@@ -62,7 +94,6 @@ public class MenuScreenController
             new OrchidAlertBox("Loading Error",e.toString());
         }
     }
-
     @FXML
     protected void handleReportVendorAction(ActionEvent event)
     {
@@ -74,7 +105,6 @@ public class MenuScreenController
     {
         reportAction("Hotel By Status", "{call SelectHotelByStatus}");
     }
-
 
 
 
@@ -197,7 +227,7 @@ public class MenuScreenController
             //clientStage.initStyle(StageStyle.UNDECORATED);
             clientStage.initModality(Modality.APPLICATION_MODAL);
             FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("/main/resources/NewStateForm.fxml").openStream());
+            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewStateForm.fxml").openStream());
             clientStage.setScene(new Scene(node));
             clientStage.setResizable(false);
             clientStage.show();
@@ -248,7 +278,7 @@ public class MenuScreenController
             //clientStage.initStyle(StageStyle.UNDECORATED);
             clientStage.initModality(Modality.APPLICATION_MODAL);
             FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("/main/resources/NewCountryForm.fxml").openStream());
+            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewCountryForm.fxml").openStream());
             clientStage.setScene(new Scene(node));
             clientStage.setResizable(false);
             clientStage.show();

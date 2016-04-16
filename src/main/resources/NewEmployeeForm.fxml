@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.EmployeeController">
+   <children>
+      <VBox maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <SplitPane maxHeight="800.0" maxWidth="1200.0" minHeight="668.0" minWidth="798.0" orientation="VERTICAL" prefHeight="668.0" prefWidth="800.0">
+               <items>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="644.0" prefWidth="798.0" style="-fx-background-color: #9FC131;" SplitPane.resizableWithParent="false">
+                     <children>
+                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="250.0" text="Employee">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </VBox>
+      <VBox layoutY="63.0" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="758.0" prefWidth="798.0">
+         <children>
+            <ScrollPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="612.0" prefWidth="798.0">
+               <content>
+                  <GridPane prefHeight="598.0" prefWidth="781.0">
+                     <children>
+                        <Label text="First Name*: " GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Primary Phone:" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <TextField fx:id="fxFieldUserID" maxHeight="25.0" maxWidth="250.0" prefHeight="25.0" prefWidth="250.0" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <ComboBox fx:id="fxComboBoxDepartmentID" maxHeight="30.0" maxWidth="170.0" prefHeight="30.0" prefWidth="170.0">
+                                 <FlowPane.margin>
+                                    <Insets />
+                                 </FlowPane.margin>
+                              </ComboBox>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <TextField fx:id="fxFieldPrimaryPhone" prefHeight="25.0" prefWidth="250.0" promptText="Office, Cell, etc.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="Ext.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="fieldExtension" prefHeight="30.0" prefWidth="93.0" promptText="Ext.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" onAction="#handleButtonUpdateAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" right="115.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" right="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="fxButtonAdd" alignment="CENTER" maxHeight="39.0" maxWidth="83.0" minHeight="39.0" minWidth="83.0" mnemonicParsing="false" onAction="#handleButtonAddAction" prefHeight="39.0" prefWidth="83.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="335.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Email:" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <children>
+                              <TextField fx:id="fxFieldEmail" prefHeight="25.0" prefWidth="326.0" promptText="Email">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField id="fieldFirstName" fx:id="fxFieldFirstName" maxHeight="25.0" maxWidth="250.0" prefHeight="25.0" prefWidth="250.0" promptText="First Name" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label text="Last Name*:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets left="245.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField id="fieldLastName" fx:id="fxFieldLastName" maxHeight="25.0" maxWidth="250.0" prefHeight="25.0" prefWidth="250.0" promptText="Last Name" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="350.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label text="User ID*:" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Department ID:" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Employee Status ID:" GridPane.rowIndex="5">
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="fxComboBoxEmployeeStatusID" maxHeight="30.0" maxWidth="170.0" prefHeight="30.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="147.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="634.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="32.0" minHeight="0.0" prefHeight="12.666664123535156" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="231.0" minHeight="0.0" prefHeight="52.333335876464844" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="310.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="348.0" minHeight="0.0" prefHeight="7.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="424.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="424.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="488.0" minHeight="0.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="490.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints fillHeight="false" maxHeight="312.0" minHeight="10.0" prefHeight="239.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
