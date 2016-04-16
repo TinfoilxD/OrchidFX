@@ -10,8 +10,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import orchidmodel.CountryModel;
+import orchidmodel.StateModel;
 
 import java.sql.Connection;
 
@@ -20,7 +22,9 @@ public class StateController
 
     Connection connection;
     ObservableList<CountryModel> countryList;
+    ObservableList<StateModel> stateList;
     int defaultIndex = 0;
+    private int countryID;
     @FXML
     Button fxButtonUpdate;
 
@@ -35,6 +39,9 @@ public class StateController
 
     @FXML
     ComboBox fxComboboxState;
+
+    @FXML
+    TextField fxFieldStateAbbreviation;
 
 
 
@@ -64,7 +71,7 @@ public class StateController
         catch(Exception e)
         {
 
-            e.printStackTrace();
+
 
         }
         return null;
@@ -93,6 +100,7 @@ public class StateController
     @FXML
     private void handleAddAction(ActionEvent e) {
         newState();
+        setFxSelectState();
     }
 
     @FXML
@@ -107,6 +115,7 @@ public class StateController
 
             for (int i = 0; i < countryList.size(); i++) {
                 CountryModel m = countryList.get(i);
+                countryID = m.getCountryID();
                 String countryAbbreviation = m.getCountryAbbreviation();
                 if (countryAbbreviation.equals("USA"))
                     defaultIndex = i;
@@ -115,9 +124,63 @@ public class StateController
 
             fxComboboxCountryName.setItems(countryNameList);
             fxComboboxCountryName.getSelectionModel().select(defaultIndex);
+            setFxSelectState();
+
         } catch (Exception e) {
-            //System.out.println("An error has occured that doesn't actually do anything.");
         }
 
     }
-}
+    @FXML
+    private void handleComboBoxCountryAction(ActionEvent e) {
+        setFxSelectState();
+    }
+
+    private void setFxSelectState() {
+      try {
+          int i = fxComboboxCountryName.getSelectionModel().getSelectedIndex();
+
+          CountryModel c = countryList.get(i);
+          countryID = c.getCountryID();
+
+          stateList = new StateProcedureSet().procSelectState(countryID);
+          ObservableList<String> stateNameList = FXCollections.observableArrayList();
+          fxComboboxState.setItems(stateList);
+
+
+          String stateAbbreviation = fxComboboxState.getEditor().getText();
+
+          fxFieldStateAbbreviation.setText(stateAbbreviation);
+
+      }
+      catch (Exception e){
+
+      }
+    }
+        @FXML
+        private void handleComboBoxStateAction(ActionEvent e) {
+
+             setFxSelectStateAbbreviation();
+
+        }
+
+        private void setFxSelectStateAbbreviation(){
+            try {
+
+                int i = fxComboboxState.getSelectionModel().getSelectedIndex();
+
+                StateModel s = stateList.get(i);
+
+                String stateAbbreviation = s.getStateAbbreviation();
+//            countryID = s.getCountryID();
+
+                fxFieldStateAbbreviation.setText(stateAbbreviation);
+
+            }
+            catch (Exception e){
+
+            }
+
+    }
+
+    }
+

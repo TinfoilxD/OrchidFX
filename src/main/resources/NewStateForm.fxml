@@ -47,7 +47,7 @@
                                     </Label>
                                     <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <children>
-                                          <ComboBox fx:id = "fxComboboxState" editable="true" prefHeight="39.0" prefWidth="293.0" promptText="State Name" />
+                                          <ComboBox fx:id = "fxComboboxState" onAction="#handleComboBoxStateAction" editable="true" prefHeight="39.0" prefWidth="293.0" promptText="State Name" />
                                        </children>
                                     </FlowPane>
                                     <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -68,7 +68,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="fxComboboxCountryName" prefHeight="39.0" prefWidth="290.0" promptText="Select Country" GridPane.columnIndex="1" />
+                                    <ComboBox fx:id="fxComboboxCountryName" onAction="#handleComboBoxCountryAction" prefHeight="39.0" prefWidth="290.0" promptText="Select Country" GridPane.columnIndex="1" />
                                     <Button fx:id="fxButtonUpdate" mnemonicParsing="false"  text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
                                        <font>
                                           <Font size="18.0" />

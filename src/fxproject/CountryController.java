@@ -119,7 +119,7 @@ public class CountryController {
         fillFXAbbreviation();
     }
 
-
+    @FXML
     public void fillFXAbbreviation() {
         try {
             int i = fxComboboxCountryName.getSelectionModel().getSelectedIndex();
