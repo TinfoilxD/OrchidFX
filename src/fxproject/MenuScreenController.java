@@ -13,6 +13,25 @@ import javafx.stage.Stage;
 public class MenuScreenController
 {
 
+    public void openChildForm(String formName)
+    {
+        try
+        {
+            String path = "/main/resources/";
+            Stage childStage = new Stage();
+            childStage.initModality(Modality.APPLICATION_MODAL);
+            FXMLLoader clientStageLoader = new FXMLLoader();
+            Parent node = clientStageLoader.load(getClass().getResource(String.format("/main/resources/%s", formName)).openStream());
+            childStage.setScene(new Scene(node));
+            childStage.setResizable(false);
+            childStage.show();
+        }
+        catch(Exception e)
+        {
+            new OrchidAlertBox("Loading Error",e.toString());
+        }
+    }
+
     @FXML
     protected void handleFileCloseButtonAction(ActionEvent event)
     {
@@ -27,21 +46,7 @@ public class MenuScreenController
     @FXML
     protected void handleEmployeeNewEmployeeAction(ActionEvent event)
     {
-        try
-        {
-            Stage clientStage = new Stage();
-            //clientStage.initStyle(StageStyle.UNDECORATED);
-            clientStage.initModality(Modality.APPLICATION_MODAL);
-            FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewEmployeeForm.fxml").openStream());
-            clientStage.setScene(new Scene(node));
-            clientStage.setResizable(false);
-            clientStage.show();
-        }
-        catch(Exception e)
-        {
-            new OrchidAlertBox("Loading Error",e.toString());
-        }
+        openChildForm("NewEmployeeForm.fxml");
     }
     @FXML
     protected void handleEmployeeEditEmployeeAction(ActionEvent event)
@@ -57,20 +62,7 @@ public class MenuScreenController
     @FXML
     protected void handleAdminEmployeeAction(ActionEvent event)
     {
-        try
-        {
-            Stage childStage = new Stage();
-            childStage.initModality(Modality.APPLICATION_MODAL);
-            FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewEmployeeForm.fxml").openStream());
-            childStage.setScene(new Scene(node));
-            childStage.setResizable(false);
-            childStage.show();
-        }
-        catch(Exception e)
-        {
-            new OrchidAlertBox("Loading Error",e.toString());
-        }
+        openChildForm("NewEmployeeForm.fxml");
     }
 
 
@@ -81,7 +73,7 @@ public class MenuScreenController
             Stage childStage = new Stage();
             childStage.initModality(Modality.APPLICATION_MODAL);
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/ReportTable.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/ReportTable.fxml").openStream());
             ReportController controller = (ReportController)loader.getController();
             controller.setTableData(reportTitle, procedure);
             childStage.setScene(new Scene(node));
@@ -220,22 +212,7 @@ public class MenuScreenController
     @FXML
     protected void handleDeveloperStateNewStateAction(ActionEvent event)
     {
-        //RootStageContainer.getCurrentRootStageContainer().changeView(StateController.VIEWCONTROLLER_TITLE);
-        try
-        {
-            Stage clientStage = new Stage();
-            //clientStage.initStyle(StageStyle.UNDECORATED);
-            clientStage.initModality(Modality.APPLICATION_MODAL);
-            FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewStateForm.fxml").openStream());
-            clientStage.setScene(new Scene(node));
-            clientStage.setResizable(false);
-            clientStage.show();
-        }
-        catch(Exception e)
-        {
-            new OrchidAlertBox("Loading Error",e.toString());
-        }
+        openChildForm("NewStateForm.fxml");
     }
     @FXML
     protected void handleDeveloperTaskListNewTaskListAction(ActionEvent event)
@@ -271,22 +248,7 @@ public class MenuScreenController
     protected void handleDeveloperCountryEditAction(ActionEvent event)
     {
 
-        //RootStageContainer.getCurrentRootStageContainer().changeView(StateController.VIEWCONTROLLER_TITLE);
-        try
-        {
-            Stage clientStage = new Stage();
-            //clientStage.initStyle(StageStyle.UNDECORATED);
-            clientStage.initModality(Modality.APPLICATION_MODAL);
-            FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewCountryForm.fxml").openStream());
-            clientStage.setScene(new Scene(node));
-            clientStage.setResizable(false);
-            clientStage.show();
-        }
-        catch(Exception e)
-        {
-            new OrchidAlertBox("Loading Error",e.toString());
-        }
+        openChildForm("NewCountryForm.fxml");
     }
 }
 
