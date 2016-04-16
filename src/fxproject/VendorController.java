@@ -21,7 +21,7 @@ public class VendorController
         try
         {
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/NewVendorForm.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/NewVendorForm.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);

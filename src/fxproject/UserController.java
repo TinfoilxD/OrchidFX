@@ -20,7 +20,7 @@ public class UserController
         try
         {
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/NewUserForm.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/NewUserForm.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);

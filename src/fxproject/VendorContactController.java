@@ -21,7 +21,7 @@ public class VendorContactController
         try
         {
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/NewVendorContactForm.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/NewVendorContactForm.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);

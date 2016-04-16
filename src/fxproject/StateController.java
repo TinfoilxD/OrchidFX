@@ -56,7 +56,7 @@ public class StateController
         try
         {
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/NewStateForm.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/NewStateForm.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);

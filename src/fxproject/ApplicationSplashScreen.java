@@ -14,16 +14,15 @@ import javafx.stage.StageStyle;
 
 import javafx.util.Duration;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.net.URL;
 
 public class ApplicationSplashScreen extends Application
 {
 
-    /*
-
-
-     */
 
     Stage window;
     public static void main(String args[])
@@ -39,12 +38,9 @@ public class ApplicationSplashScreen extends Application
         window.sizeToScene();
         window.show();
 
-        PauseTransition pause = new PauseTransition(Duration.millis(500));
-        pause.setOnFinished(e -> {
-            loadDatabaseScreen();
-            window.close();
-        });
-        pause.playFromStart();
+
+        loadDatabaseScreen();
+        window.close();
 
 
 
@@ -71,12 +67,12 @@ public class ApplicationSplashScreen extends Application
         }
         return null;
     }
-    private void loadDatabaseScreen()
+    private void loadDatabaseScreen() throws IOException
     {
         try
         {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("../main/resources/DatabaseSettingsForm.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/main/resources/DatabaseSettingsForm.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.sizeToScene();
@@ -84,6 +80,10 @@ public class ApplicationSplashScreen extends Application
         }
         catch(Exception e)
         {
+//            FileWriter fw = new FileWriter ("/run.log", true);
+//            PrintWriter pw = new PrintWriter (fw);
+//            e.printStackTrace(pw);
+//            pw.close();
             new OrchidAlertBox("Error",e.toString());
         }
     }

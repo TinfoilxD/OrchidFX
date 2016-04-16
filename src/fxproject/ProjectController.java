@@ -88,7 +88,7 @@ public class ProjectController implements ClientChildTarget
             //clientStage.initStyle(StageStyle.UNDECORATED);
             clientStage.initModality(Modality.APPLICATION_MODAL);
             FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewClientChildForm.fxml").openStream());
+            Parent node = clientStageLoader.load(getClass().getResource("/main/resources/NewClientChildForm.fxml").openStream());
             ClientChildController childController = clientStageLoader.getController();
             childController.setTarget(this);
             clientStage.setScene(new Scene(node));
@@ -108,7 +108,7 @@ public class ProjectController implements ClientChildTarget
             //clientStage.initStyle(StageStyle.UNDECORATED);
             clientStage.initModality(Modality.APPLICATION_MODAL);
             FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/SearchClientForm.fxml").openStream());
+            Parent node = clientStageLoader.load(getClass().getResource("/main/resources/SearchClientForm.fxml").openStream());
            // ClientChildController childController = clientStageLoader.getController();
            // childController.setTarget(this);
             clientStage.setScene(new Scene(node));

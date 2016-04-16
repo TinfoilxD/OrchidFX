@@ -3,6 +3,7 @@ package fxproject;/*
  */
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -52,7 +53,7 @@ public class RootStageContainer
         Pane topContainer;
         try
         {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../main/resources/menuscreen.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/resources/menuscreen.fxml"));
             topContainer = loader.load();
             topContainer.layout();
             return topContainer;

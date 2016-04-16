@@ -21,7 +21,7 @@ public class PhaseStatusController
         try
         {
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/NewPhaseStatusForm.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/NewPhaseStatusForm.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);

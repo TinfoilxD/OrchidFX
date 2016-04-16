@@ -97,7 +97,7 @@ public class ReportController
     {
         try {
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/ReportTable.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/ReportTable.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);

@@ -46,7 +46,7 @@ public class CMVStatusController
         try {
 
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/NewCMVStatusForm.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/NewCMVStatusForm.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);

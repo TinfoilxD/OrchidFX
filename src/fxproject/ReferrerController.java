@@ -21,7 +21,7 @@ public class ReferrerController
         try
         {
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/NewReferrerForm.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/NewReferrerForm.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);

@@ -49,7 +49,7 @@ public class MenuScreenController
             Stage childStage = new Stage();
             childStage.initModality(Modality.APPLICATION_MODAL);
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/ReportTable.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/ReportTable.fxml").openStream());
             ReportController controller = (ReportController)loader.getController();
             controller.setTableData(reportTitle, procedure);
             childStage.setScene(new Scene(node));
@@ -197,7 +197,7 @@ public class MenuScreenController
             //clientStage.initStyle(StageStyle.UNDECORATED);
             clientStage.initModality(Modality.APPLICATION_MODAL);
             FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewStateForm.fxml").openStream());
+            Parent node = clientStageLoader.load(getClass().getResource("/main/resources/NewStateForm.fxml").openStream());
             clientStage.setScene(new Scene(node));
             clientStage.setResizable(false);
             clientStage.show();
@@ -248,7 +248,7 @@ public class MenuScreenController
             //clientStage.initStyle(StageStyle.UNDECORATED);
             clientStage.initModality(Modality.APPLICATION_MODAL);
             FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("../main/resources/NewCountryForm.fxml").openStream());
+            Parent node = clientStageLoader.load(getClass().getResource("/main/resources/NewCountryForm.fxml").openStream());
             clientStage.setScene(new Scene(node));
             clientStage.setResizable(false);
             clientStage.show();

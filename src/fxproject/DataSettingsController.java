@@ -63,7 +63,6 @@ public class DataSettingsController
             Stage stage  = (Stage) source.getScene().getWindow();
             stage.close();
 
-
         }
         catch(Exception ae)
         {

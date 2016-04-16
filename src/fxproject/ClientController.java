@@ -101,7 +101,7 @@ public class ClientController
         try
         {
             FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/NewClientForm.fxml").openStream());
+            Parent node = loader.load(getClass().getResource("/main/resources/NewClientForm.fxml").openStream());
             Object controller = loader.getController();
 
             return new NodeBundle(node, controller);
