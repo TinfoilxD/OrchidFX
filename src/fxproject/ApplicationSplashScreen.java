@@ -39,6 +39,7 @@ public class ApplicationSplashScreen extends Application
         window.show();
 
 
+
         loadDatabaseScreen();
         window.close();
 
