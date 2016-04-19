@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ContractorContactTypeController">
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.TaskListController">
    <children>
       <VBox prefHeight="600.0" prefWidth="800.0">
          <children>
@@ -14,7 +14,7 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #9FC131;">
                      <children>
-                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="426.0" text="New Task List">
+                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="426.0" text="Task List">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -27,49 +27,81 @@
                            <content>
                               <GridPane prefHeight="523.0" prefWidth="788.0">
                                 <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="221.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="567.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="152.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="672.0" />
                                 </columnConstraints>
                                 <rowConstraints>
                                   <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
                                     <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Label text="Task List*:">
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Phase*:" GridPane.valignment="BOTTOM">
                                        <GridPane.margin>
-                                          <Insets left="12.0" />
+                                          <Insets bottom="5.0" left="35.0" />
                                        </GridPane.margin>
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                    <FlowPane alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                                        <children>
-                                          <TextField id="fieldFirstName" prefHeight="25.0" prefWidth="400.0" promptText="Task List">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
+                                          <ComboBox fx:id="fxComboBoxPhase" prefWidth="150.0" />
+                                          <Button fx:id="fxButtonNewPhase" mnemonicParsing="false" text="+" />
                                        </children>
                                     </FlowPane>
-                                    <Button mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button fx:id="fxButtonAdd" mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                        <GridPane.margin>
-                                          <Insets bottom="10.0" right="125.0" />
+                                          <Insets bottom="70.0" right="215.0" />
+                                       </GridPane.margin>
+                                       <opaqueInsets>
+                                          <Insets right="300.0" />
+                                       </opaqueInsets>
+                                    </Button>
+                                    <Button fx:id="fxButtonCancel" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets right="110.0" />
+                                       </opaqueInsets>
+                                       <GridPane.margin>
+                                          <Insets bottom="70.0" right="41.0" />
                                        </GridPane.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Button fx:id="fxButtonUpdate" mnemonicParsing="false" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                        <GridPane.margin>
-                                          <Insets bottom="10.0" right="20.0" />
+                                          <Insets bottom="70.0" right="125.0" />
+                                       </GridPane.margin>
+                                       <opaqueInsets>
+                                          <Insets right="198.0" />
+                                       </opaqueInsets>
+                                    </Button>
+                                    <Label alignment="TOP_CENTER" text="Task*:" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                       <GridPane.margin>
+                                          <Insets top="15.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <ComboBox fx:id="fxComboBoxTask" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                       <GridPane.margin>
+                                          <Insets top="10.0" />
+                                       </GridPane.margin>
+                                    </ComboBox>
+                                    <Button fx:id="fxButtonNewTask" mnemonicParsing="false" text="+" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                       <GridPane.margin>
+                                          <Insets left="150.0" top="10.0" />
                                        </GridPane.margin>
                                     </Button>
-                                    <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <CheckBox fx:id="fxCheckBoxDelete" mnemonicParsing="false" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="100.0" />
+                                       </GridPane.margin>
+                                    </CheckBox>
                                  </children>
                               </GridPane>
                            </content>

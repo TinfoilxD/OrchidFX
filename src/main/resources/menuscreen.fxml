@@ -56,9 +56,56 @@
                       </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Developer">
+                      <MenuItem text="Associative Tables" onAction="#developerForm1"/>
+                      <MenuItem text="Client (Child)" onAction="#developerForm2"/>
+                      <MenuItem text="Client (Search)" onAction="#developerForm3"/>
+                      <MenuItem text="Client (Status)" onAction="#developerForm4"/>
+                      <MenuItem text="Client Contact" onAction="#developerForm5"/>
+                      <MenuItem text="Client Contact Type" onAction="#developerForm6"/>
+                      <MenuItem text="Client Contact Contact Type" onAction="#developerForm7"/>
+                      <MenuItem text="CMVStatus" onAction="#developerForm8"/>
+                      <MenuItem text="Contractor" onAction="#developerForm9"/>
+                      <MenuItem text="Contractor Contact" onAction="#developerForm10"/>
+                      <MenuItem text="Contractor Contact Type" onAction="#developerForm11"/>
+                      <MenuItem text="Country" onAction="#developerForm12"/>
+                      <MenuItem text="Department" onAction="#developerForm13"/>
+                      <MenuItem text="Employee" onAction="#developerForm14"/>
+                      <MenuItem text="Employee History" onAction="#developerForm15"/>
+                      <MenuItem text="Employee Status" onAction="#developerForm16"/>
+                      <MenuItem text="Hotel Approver" onAction="#developerForm17"/>
+                      <MenuItem text="Hotel Approver Type" onAction="#developerForm18"/>
+                      <MenuItem text="Hotel Brand" onAction="#developerForm19"/>
+                      <MenuItem text="Hotel Property" onAction="#developerForm20"/>
+                      <MenuItem text="Hotel Status" onAction="#developerForm21"/>
+                      <MenuItem text="Manufacturer" onAction="#developerForm22"/>
+                      <MenuItem text="Manufacturer Contact" onAction="#developerForm23"/>
+                      <MenuItem text="Manufacturer Contact Type" onAction="#developerForm24"/>
+                      <MenuItem text="Office Location" onAction="#developerForm25"/>
+                      <MenuItem text="Parent Brand" onAction="#developerForm26"/>
+                      <MenuItem text="Phase Lookup" onAction="#developerForm27"/>
+                      <MenuItem text="Phase Status" onAction="#developerForm28"/>
+                      <MenuItem text="Phase Task Status" onAction="#developerForm29"/>
+                      <MenuItem text="Project" onAction="#developerForm30"/>
+                      <MenuItem text="Project Adjustment" onAction="#developerForm31"/>
+                      <MenuItem text="Project Status" onAction="#developerForm32"/>
+                      <MenuItem text="Project Type" onAction="#developerForm33"/>
+                      <MenuItem text="Referrer" onAction="#developerForm34"/>
+                      <MenuItem text="Referrer Type" onAction="#developerForm35"/>
+                      <MenuItem text="State" onAction="#developerForm36"/>
+                      <MenuItem text="Subtask List" onAction="#developerForm37"/>
+                      <MenuItem text="Task List" onAction="#developerForm38"/>
+                      <MenuItem text="Task Status" onAction="#developerForm39"/>
+                      <MenuItem text="Trade Show" onAction="#developerForm40"/>
+                      <MenuItem text="User" onAction="#developerForm41"/>
+                      <MenuItem text="Vendor" onAction="#developerForm42"/>
+                      <MenuItem text="Vendor Contact" onAction="#developerForm43"/>
+                      <MenuItem text="Vendor Contact Type" onAction="#developerForm44"/>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Developer 2">
                       <items>
                           <Menu mnemonicParsing="false" text="A-C">
                              <items>
+                                 <MenuItem text="Associative Tables"/>
                                  <Menu text="Client">
                                     <items>
                                         <MenuItem onAction="#handleClientNewClientAction" text="New" />
@@ -76,7 +123,7 @@
                                         <MenuItem onAction="#handleDeveloperClientContactTypeNewClientContactTypeAction" text="New" />
                                         <MenuItem text="Edit" />
                                     </items>
-                                 </Menu>
+                                 </Menu>                                 <MenuItem text="Client Contact Contact Type"/>
                                  <Menu text="Client_Status">
                                     <items>
                                         <MenuItem onAction="#handleDeveloperClientStatusNewClientStatusAction" text="New" />

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.PhaseTaskStatusController">
+   <children>
+      <VBox maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <SplitPane maxHeight="800.0" maxWidth="1200.0" minHeight="668.0" minWidth="798.0" orientation="VERTICAL" prefHeight="668.0" prefWidth="800.0">
+               <items>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="644.0" prefWidth="798.0" style="-fx-background-color: #9FC131;" SplitPane.resizableWithParent="false">
+                     <children>
+                        <Label fx:id="fxComboProject" layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="250.0" text="Project Information">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </VBox>
+      <VBox layoutY="63.0" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="758.0" prefWidth="798.0">
+         <children>
+            <ScrollPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="612.0" prefWidth="798.0">
+               <content>
+                  <GridPane prefHeight="950.0" prefWidth="787.0">
+                     <children>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Update" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="105.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <GridPane GridPane.rowIndex="2">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.0" minWidth="10.0" prefWidth="87.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="649.0" minWidth="10.0" prefWidth="276.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="649.0" minWidth="10.0" prefWidth="73.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="649.0" minWidth="10.0" prefWidth="336.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Phase:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="12.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <ComboBox fx:id="fxComboPhase" prefHeight="25.0" prefWidth="249.0" GridPane.columnIndex="1" />
+                              <Label text="Task:" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="fxComboTask" prefHeight="25.0" prefWidth="293.0" GridPane.columnIndex="3" />
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="88.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.0" minWidth="10.0" prefWidth="686.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ComboBox fx:id="fxComboBoxProject" prefHeight="25.0" prefWidth="643.0" GridPane.columnIndex="1" />
+                              <Label text="Project:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="11.0" />
+                                 </GridPane.margin>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <Button fx:id="fxButtonAdd" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Add" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="196.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <GridPane GridPane.rowIndex="5">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="382.0" minWidth="10.0" prefWidth="16.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="758.0" minWidth="10.0" prefWidth="758.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TableView fx:id="fxTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1" />
+                                  <TableColumn prefWidth="75.0" text="C2" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                        <CheckBox fx:id="fxCheckBoxDelete" mnemonicParsing="false" text="Delete" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <Label text="SubTasks:" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <GridPane GridPane.rowIndex="3">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="260.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="76.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="368.0" minWidth="10.0" prefWidth="336.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Status:" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="fxFieldStatus" editable="false" maxWidth="-Infinity" prefHeight="25.0" prefWidth="294.0" GridPane.columnIndex="3" />
+                           </children>
+                        </GridPane>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="783.0" minWidth="10.0" prefWidth="774.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="4.0" prefWidth="13.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="3.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="244.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="533.0" minHeight="10.0" prefHeight="380.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="535.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="484.0" minHeight="10.0" prefHeight="366.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

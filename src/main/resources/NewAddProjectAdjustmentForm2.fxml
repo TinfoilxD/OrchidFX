@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.AddProjectNoteController">
+   <children>
+      <VBox maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <SplitPane maxHeight="800.0" maxWidth="1200.0" minHeight="668.0" minWidth="798.0" orientation="VERTICAL" prefHeight="668.0" prefWidth="800.0">
+               <items>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="644.0" prefWidth="798.0" style="-fx-background-color: #9FC131;" SplitPane.resizableWithParent="false">
+                     <children>
+                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="250.0" text="Add Project Note">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </VBox>
+      <VBox layoutY="63.0" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="758.0" prefWidth="798.0">
+         <children>
+            <ScrollPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="612.0" prefWidth="798.0">
+               <content>
+                  <GridPane prefHeight="950.0" prefWidth="787.0">
+                     <children>
+                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Update" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="105.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <GridPane GridPane.rowIndex="2">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="133.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="663.0" minWidth="10.0" prefWidth="277.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="126.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="663.0" minWidth="10.0" prefWidth="240.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Employee:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="12.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <ComboBox fx:id="fxComboBoxEmployee" prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="1" />
+                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                                 <children>
+                                    <DatePicker fx:id="fxDatePickerAddDate">
+                                       <FlowPane.margin>
+                                          <Insets top="11.0" />
+                                       </FlowPane.margin>
+                                    </DatePicker>
+                                 </children>
+                              </FlowPane>
+                              <Label text="Date:" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets left="12.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="133.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.0" minWidth="10.0" prefWidth="641.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ComboBox fx:id="fxComboBoxProject" prefHeight="25.0" prefWidth="531.0" GridPane.columnIndex="1" />
+                              <Label text="Project:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="11.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <CheckBox fx:id="fxCheckBoxDelete" mnemonicParsing="false" text="Delete" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="550.0" />
+                                 </GridPane.margin>
+                              </CheckBox>
+                           </children>
+                        </GridPane>
+                        <Button fx:id="fxButtonAdd" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Add" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="196.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <GridPane GridPane.rowIndex="4">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="382.0" minWidth="10.0" prefWidth="16.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="758.0" minWidth="10.0" prefWidth="758.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextArea fx:id="fxTextProjectNote" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="783.0" minWidth="10.0" prefWidth="774.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="4.0" prefWidth="13.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="3.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="244.0" minHeight="0.0" prefHeight="11.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="533.0" minHeight="10.0" prefHeight="347.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="535.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="484.0" minHeight="10.0" prefHeight="366.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
