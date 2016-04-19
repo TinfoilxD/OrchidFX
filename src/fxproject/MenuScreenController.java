@@ -97,11 +97,7 @@ public class MenuScreenController
     {
         reportAction("Hotel By Status", "{call SelectHotelByStatus}");
     }
-    @FXML
-    protected void handleAdminUserNewUserAction(ActionEvent event)
-    {
-        RootStageContainer.getCurrentRootStageContainer().changeView(UserController.VIEWCONTROLLER_TITLE);
-    }
+
     //    /*
 //    DEVELOPER  TAB ACTIONS GO HERE
 //     */
@@ -330,10 +326,10 @@ public class MenuScreenController
 
 
 
-//
-//    /*
-//    DEVELOPER2  TAB ACTIONS GO HERE
-//     */
+
+    /*
+    DEVELOPER2  TAB ACTIONS GO HERE
+     */
 
     @FXML
     protected void handleDeveloperClientNewAction(ActionEvent event)
@@ -455,7 +451,11 @@ public class MenuScreenController
     {
         RootStageContainer.getCurrentRootStageContainer().changeView(TradeShowController.VIEWCONTROLLER_TITLE);
     }
-
+    @FXML
+    protected void handleAdminUserNewUserAction(ActionEvent event)
+    {
+        RootStageContainer.getCurrentRootStageContainer().changeView(UserController.VIEWCONTROLLER_TITLE);
+    }
     @FXML
     protected void handleDeveloperVendorNewVendorAction(ActionEvent event)
     {
