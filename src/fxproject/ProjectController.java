@@ -69,7 +69,7 @@ public class ProjectController
         setFxComboBoxEmployee();
         setFxComboBoxProjectStatus();
         setFxComboBoxProject();
-        
+
     }
 
     private void setFxComboBoxProject()
@@ -82,8 +82,31 @@ public class ProjectController
             {
                 String hotelName = "";
                 String hotelLocation = "";
-                String designerName = "";
-                projectNameList.add(String.format("%s at %s - %s", hotelName, hotelLocation, designerName));
+                {
+                    int index = m.getHotelID();
+                    for(int i = 0; i < hotelPropertyList.size(); i++)
+                    {
+                        if(index == hotelPropertyList.get(i).getHotelPropertyID())
+                        {
+                            hotelName = hotelPropertyList.get(i).getHotelPropertyName();
+                            hotelLocation = hotelPropertyList.get(i).getHotelPropertyAddress1();
+                        }
+                    }
+                }
+                String clientName = "";
+                {
+                    int index = m.getClientID();
+                    for(int i = 0; i < clientList.size(); i++)
+                    {
+                        if(index ==clientList.get(i).getClientID())
+                        {
+                            clientName = clientList.get(i).getClientFirstName() + " " + clientList.get(i).getClientLastName();
+                        }
+                    }
+                }
+
+
+                projectNameList.add(String.format("%s at %s - %s", hotelName, hotelLocation, clientName));
             }
             fxComboBoxProject.setItems(projectNameList);
         }
