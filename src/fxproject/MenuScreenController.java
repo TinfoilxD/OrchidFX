@@ -56,7 +56,7 @@ public class MenuScreenController
     @FXML
     protected void handleProjectNewProjectAction(ActionEvent event)
     {
-        RootStageContainer.getCurrentRootStageContainer().changeView(ProjectController.VIEWCONTROLLER_TITLE);
+        openChildForm("NewProjectForm.fxml");
     }
 
     @FXML
