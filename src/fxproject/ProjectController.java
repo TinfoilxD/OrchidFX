@@ -63,12 +63,13 @@ public class ProjectController
     @FXML
     public void initialize()
     {
-        setFxComboBoxProject();
         setFxComboBoxHotelProperty();
         setFxComboBoxClient();
         setFxComboBoxProjectType();
         setFxComboBoxEmployee();
         setFxComboBoxProjectStatus();
+        setFxComboBoxProject();
+        
     }
 
     private void setFxComboBoxProject()
@@ -91,27 +92,98 @@ public class ProjectController
             e.printStackTrace();
         }
     }
-    private void setFxComboBoxHotelProperty()
+    private void setProject(ProjectModel model)
     {
 
     }
+    private void setFxComboBoxHotelProperty()
+    {
+        try
+        {
+            hotelPropertyList = new HotelPropertyProcedureSet().procLookUpHotelProperty();
+            ObservableList<String> hotelPropertyName = FXCollections.observableArrayList();
+            for(HotelPropertyModel model : hotelPropertyList)
+            {
+                hotelPropertyName.add(model.getHotelPropertyName() + " " + model.getHotelPropertyAddress1());
+            }
+            fxComboBoxHotelProperty.setItems(hotelPropertyName);
+        }
+        catch (Exception e)
+        {
+            //System.out.println("An error has occured that doesn't actually do anything");
+        }
+    }
     private void setFxComboBoxClient()
     {
+        try
+        {
+            clientList = new ClientProcedureSet().procSelectClient();
+            ObservableList<String> clientName = FXCollections.observableArrayList();
+            for(ClientModel model : clientList)
+            {
+                clientName.add(model.getClientFirstName() + " " +  model.getClientLastName());
+            }
+            fxComboBoxClient.setItems(clientName);
+        }
+        catch (Exception e)
+        {
+            //System.out.println("An error has occured that doesn't actually do anything");
+        }
 
     }
     private void setFxComboBoxProjectType()
     {
-
+        try
+        {
+            projectTypeList = new ProjectTypeProcedureSet().procSelectProjectType();
+            ObservableList<String> typeNameList = FXCollections.observableArrayList();
+            for(ProjectTypeModel model : projectTypeList)
+            {
+                typeNameList.add(model.getProjectType());
+            }
+            fxComboBoxProjectType.setItems(typeNameList);
+        }
+        catch (Exception e)
+        {
+            //System.out.println("An error has occured that doesn't actually do anything");
+        }
     }
     private void setFxComboBoxEmployee()
     {
+        try
+        {
+            employeeList = new EmployeeProcedureSet().procSelectEmployees();
+            ObservableList<String> employeeName = FXCollections.observableArrayList();
+            for(EmployeeModel model : employeeList)
+            {
+                employeeName.add(model.getUserID());
+            }
+            fxComboBoxEmployee.setItems(employeeName);
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
     }
     private void setFxComboBoxProjectStatus()
     {
-
+        try
+        {
+            projectStatusList = new ProjectProcedureSet().procLookUpProjectStatus();
+            ObservableList<String> projectStatusNameList = FXCollections.observableArrayList();
+            for(ProjectStatusModel model : projectStatusList)
+            {
+                projectStatusNameList.add(model.getProjectStatus());
+            }
+            fxComboBoxProjectStatus.setItems(projectStatusNameList);
+        }
+        catch (Exception e)
+        {
+            //System.out.println("An error has occured that doesn't actually do anything");
+        }
     }
 
+    @FXML
     protected void handleButtonAddAction(ActionEvent e)
     {
 

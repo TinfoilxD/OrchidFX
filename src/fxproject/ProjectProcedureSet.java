@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import orchidmodel.ClientModel;
 import orchidmodel.CountryModel;
 import orchidmodel.ProjectModel;
+import orchidmodel.ProjectStatusModel;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -106,5 +107,43 @@ public class ProjectProcedureSet
 
 
         return projectList;
+    }
+    public ObservableList<ProjectStatusModel> procLookUpProjectStatus() throws SQLException
+    {
+        Connection connection = getConnection();
+        CallableStatement cstm = connection.prepareCall("{call LookUpProjectStatus()}");
+
+        ResultSet resultSet = cstm.executeQuery();
+
+        if(!resultSet.isBeforeFirst())
+        {
+            return null;
+        }
+        if(resultSet == null)
+        {
+            return null;
+        }
+
+
+        ObservableList<ProjectStatusModel> statusList = FXCollections.observableArrayList();
+
+        while(resultSet.next())
+        {
+            ProjectStatusModel model = new ProjectStatusModel();
+            model.setStatusID(resultSet.getInt("StatusID"));
+            model.setProjectStatus(resultSet.getString("ProjectStatus"));
+            statusList.add(model);
+        }
+
+
+        if(resultSet != null)
+            resultSet.close();
+        if(cstm != null)
+            cstm.close();
+        if(connection != null)
+            connection.close();
+
+
+        return statusList;
     }
 }
