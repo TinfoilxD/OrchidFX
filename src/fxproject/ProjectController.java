@@ -5,135 +5,243 @@ package fxproject;/*
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import orchidmodel.ClientModel;
-import orchidmodel.ProjectTypeModel;
+import orchidmodel.*;
 
-public class ProjectController implements ClientChildTarget
+public class ProjectController
 {
-    @FXML ComboBox<String> fxComboBoxProjectType;
+    @FXML
+    ComboBox fxComboBoxProject;
+    @FXML
+    ComboBox fxComboBoxHotelProperty;
+    @FXML
+    ComboBox fxComboBoxClient;
+    @FXML
+    ComboBox fxComboBoxProjectType;
+    @FXML
+    ComboBox fxComboBoxEmployee;
+    @FXML
+    ComboBox fxComboBoxProjectStatus;
+    @FXML
+    DatePicker fxDateProjectedStart;
+    @FXML
+    DatePicker fxDateActualStart;
+    @FXML
+    TextField fxFieldProjectedDeadline;
+    @FXML
+    DatePicker fxDateActualDeadline;
+    @FXML
+    TextField fxFieldProcurementStart;
+    @FXML
+    DatePicker fxDateProcurementDeadline;
+    @FXML
+    DatePicker fxDateInitialDeposit;
+    @FXML
+    Button fxButtonAdd;
+    @FXML
+    Button fxButtonUpdate;
+    @FXML
+    Button fxButtonCancel;
+    @FXML
 
-    ClientModel clientModel;
+    ObservableList<ProjectModel> projectList;
+    ObservableList<HotelPropertyModel> hotelPropertyList;
+    ObservableList<ClientModel> clientList;
+    ObservableList<ProjectTypeModel> projectTypeList;
+    ObservableList<EmployeeModel> employeeList;
+    ObservableList<ProjectStatusModel> projectStatusList;
 
-    public static final String VIEWCONTROLLER_TITLE= "Project Input";
-
-    public ProjectController()
-    {
-
-    }
 
     @FXML
     public void initialize()
     {
-        //setFxComboBoxProjectType();
+        setFxComboBoxProject();
+        setFxComboBoxHotelProperty();
+        setFxComboBoxClient();
+        setFxComboBoxProjectType();
+        setFxComboBoxEmployee();
+        setFxComboBoxProjectStatus();
     }
 
-    public void setFxComboBoxProjectType()
+    private void setFxComboBoxProject()
     {
         try
         {
-            ObservableList<ProjectTypeModel> projectTypeList = new ProjectTypeProcedureSet().procSelectProjectType();
-            ObservableList<String> projectTypeNameList = FXCollections.observableArrayList();
-            for(ProjectTypeModel projectType : projectTypeList)
+            projectList = new ProjectProcedureSet().procLookUpProject();
+            ObservableList<String> projectNameList = FXCollections.observableArrayList();
+            for(ProjectModel m : projectList)
             {
-                projectTypeNameList.add(projectType.getProjectType());
-                fxComboBoxProjectType.setItems(projectTypeNameList);
-                if(projectTypeNameList.size() > 0)
-                fxComboBoxProjectType.getSelectionModel().select(0);
+                String hotelName = "";
+                String hotelLocation = "";
+                String designerName = "";
+                projectNameList.add(String.format("%s at %s - %s", hotelName, hotelLocation, designerName));
             }
+            fxComboBoxProject.setItems(projectNameList);
         }
         catch(Exception e)
         {
-            new OrchidAlertBox("Error", e.toString());
-        }
-    }
-    public NodeBundle loadBundle()
-    {
-        try
-        {
-            FXMLLoader loader = new FXMLLoader();
-            Parent node = loader.load(getClass().getResource("../main/resources/NewProjectForm.fxml").openStream());
-            Object controller = loader.getController();
-
-            return new NodeBundle(node, controller);
-        }
-        catch(Exception e)
-        {
-
             e.printStackTrace();
-
         }
-        return null;
     }
-
-    @FXML
-    protected void handleButtonChooseClientAction()
+    private void setFxComboBoxHotelProperty()
     {
 
     }
-    @FXML
-    protected void handleButtonNewClientAction()
+    private void setFxComboBoxClient()
     {
-        try
-        {
-            Stage clientStage = new Stage();
-            //clientStage.initStyle(StageStyle.UNDECORATED);
-            clientStage.initModality(Modality.APPLICATION_MODAL);
-            FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("/main/resources/NewClientChildForm.fxml").openStream());
-            ClientChildController childController = clientStageLoader.getController();
-            childController.setTarget(this);
-            clientStage.setScene(new Scene(node));
-            clientStage.show();
-        }
-        catch(Exception e)
-        {
-            new OrchidAlertBox("Loading Error",e.toString());
-        }
+
     }
-    @ FXML
-    protected void handleButtonSearchClientAction()
+    private void setFxComboBoxProjectType()
     {
-        try
-        {
-            Stage clientStage = new Stage();
-            //clientStage.initStyle(StageStyle.UNDECORATED);
-            clientStage.initModality(Modality.APPLICATION_MODAL);
-            FXMLLoader clientStageLoader = new FXMLLoader();
-            Parent node = clientStageLoader.load(getClass().getResource("/main/resources/SearchClientForm.fxml").openStream());
-           // ClientChildController childController = clientStageLoader.getController();
-           // childController.setTarget(this);
-            clientStage.setScene(new Scene(node));
-            clientStage.setResizable(false);
-            clientStage.show();
-        }
-        catch(Exception e)
-        {
-            new OrchidAlertBox("Loading Error",e.toString());
-        }
+
     }
-    @FXML
-    protected void handleButtonChooseHotelAction()
+    private void setFxComboBoxEmployee()
+    {
+
+    }
+    private void setFxComboBoxProjectStatus()
+    {
+
+    }
+
+    protected void handleButtonAddAction(ActionEvent e)
     {
 
     }
     @FXML
-    protected void handleButtonAddHotelAction()
+    protected void handleButtonUpdateAction(ActionEvent e)
     {
 
     }
-
-    @Override
-    public void setResultAndClose(ClientModel clientModel)
+    @FXML
+    protected void handleButtonCancelAction(ActionEvent e)
     {
-        this.clientModel = clientModel;
+        Stage stage = (Stage) fxButtonCancel.getScene().getWindow();
+        stage.close();
     }
 }
+//    @FXML ComboBox<String> fxComboBoxProjectType;
+//
+//    ClientModel clientModel;
+//
+//    public static final String VIEWCONTROLLER_TITLE= "Project Input";
+//
+//    public ProjectController()
+//    {
+//
+//    }
+//
+//    @FXML
+//    public void initialize()
+//    {
+//        //setFxComboBoxProjectType();
+//    }
+//
+//    public void setFxComboBoxProjectType()
+//    {
+//        try
+//        {
+//            ObservableList<ProjectTypeModel> projectTypeList = new ProjectTypeProcedureSet().procSelectProjectType();
+//            ObservableList<String> projectTypeNameList = FXCollections.observableArrayList();
+//            for(ProjectTypeModel projectType : projectTypeList)
+//            {
+//                projectTypeNameList.add(projectType.getProjectType());
+//                fxComboBoxProjectType.setItems(projectTypeNameList);
+//                if(projectTypeNameList.size() > 0)
+//                fxComboBoxProjectType.getSelectionModel().select(0);
+//            }
+//        }
+//        catch(Exception e)
+//        {
+//            new OrchidAlertBox("Error", e.toString());
+//        }
+//    }
+//    public NodeBundle loadBundle()
+//    {
+//        try
+//        {
+//            FXMLLoader loader = new FXMLLoader();
+//            Parent node = loader.load(getClass().getResource("/main/resources/NewProjectForm.fxml").openStream());
+//            Object controller = loader.getController();
+//
+//            return new NodeBundle(node, controller);
+//        }
+//        catch(Exception e)
+//        {
+//
+//            e.printStackTrace();
+//
+//        }
+//        return null;
+//    }
+//
+//    @FXML
+//    protected void handleButtonChooseClientAction()
+//    {
+//
+//    }
+//    @FXML
+//    protected void handleButtonNewClientAction()
+//    {
+//        try
+//        {
+//            Stage clientStage = new Stage();
+//            //clientStage.initStyle(StageStyle.UNDECORATED);
+//            clientStage.initModality(Modality.APPLICATION_MODAL);
+//            FXMLLoader clientStageLoader = new FXMLLoader();
+//            Parent node = clientStageLoader.load(getClass().getResource("/main/resources/NewClientChildForm.fxml").openStream());
+//            ClientChildController childController = clientStageLoader.getController();
+//            childController.setTarget(this);
+//            clientStage.setScene(new Scene(node));
+//            clientStage.show();
+//        }
+//        catch(Exception e)
+//        {
+//            new OrchidAlertBox("Loading Error",e.toString());
+//        }
+//    }
+//    @ FXML
+//    protected void handleButtonSearchClientAction()
+//    {
+//        try
+//        {
+//            Stage clientStage = new Stage();
+//            //clientStage.initStyle(StageStyle.UNDECORATED);
+//            clientStage.initModality(Modality.APPLICATION_MODAL);
+//            FXMLLoader clientStageLoader = new FXMLLoader();
+//            Parent node = clientStageLoader.load(getClass().getResource("/main/resources/SearchClientForm.fxml").openStream());
+//           // ClientChildController childController = clientStageLoader.getController();
+//           // childController.setTarget(this);
+//            clientStage.setScene(new Scene(node));
+//            clientStage.setResizable(false);
+//            clientStage.show();
+//        }
+//        catch(Exception e)
+//        {
+//            new OrchidAlertBox("Loading Error",e.toString());
+//        }
+//    }
+//    @FXML
+//    protected void handleButtonChooseHotelAction()
+//    {
+//
+//    }
+//    @FXML
+//    protected void handleButtonAddHotelAction()
+//    {
+//
+//    }
+//
+//    @Override
+//    public void setResultAndClose(ClientModel clientModel)
+//    {
+//        this.clientModel = clientModel;
+//    }

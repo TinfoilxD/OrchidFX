@@ -33,7 +33,7 @@
                      <children>
                          <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                              <children>
-                                 <ComboBox fx:id="fxComboBoxSelectClient" prefHeight="25.0" prefWidth="200.0" onAction="#handleComboBoxSelectClientAction"/>
+                                 <ComboBox fx:id="fxComboBoxSelectClient" prefHeight="25.0" prefWidth="200.0" onAction="#handleComboBoxSelectClientAction" promptText="Select Client"/>
                              </children>
                          </FlowPane>
 

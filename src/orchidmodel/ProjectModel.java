@@ -7,6 +7,7 @@ public class ProjectModel
     private int projectID;
     private int clientID;
     private int hotelID;
+    private String projectInitialDepositDate;
     private String projectProjectedStartDate;
     private String projectProjectedDeadlineDate;
     private String projectProcurementStartDate;
@@ -20,6 +21,16 @@ public class ProjectModel
     public ProjectModel()
     {
 
+    }
+
+    public String getProjectInitialDepositDate()
+    {
+        return projectInitialDepositDate;
+    }
+
+    public void setProjectInitialDepositDate(String projectInitialDepositDate)
+    {
+        this.projectInitialDepositDate = projectInitialDepositDate;
     }
 
     public ProjectModel(int projectID, int clientID, int hotelID,

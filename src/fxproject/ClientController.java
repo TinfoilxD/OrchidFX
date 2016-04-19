@@ -247,15 +247,70 @@ public class ClientController
                 clientName.add(model.getClientFirstName() + " " +  model.getClientLastName());
             }
             fxComboBoxSelectClient.setItems(clientName);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e)
+        {
+            //System.out.println("An error has occured that doesn't actually do anything");
         }
     }
+
 
 
     @FXML
     private void handleComboBoxSelectClientAction(ActionEvent e)
     {
+        int i = fxComboBoxSelectClient.getSelectionModel().getSelectedIndex();
+        ClientModel model = clientList.get(i);
+        clientID = model.getClientID();
+        fxFieldCompany.setText(model.getClientCompanyName());
+        fxFieldFirstName.setText(model.getClientFirstName());
+        fxFieldLastName.setText(model.getClientLastName());
+        fxFieldShippingAddress1.setText(model.getClientMailingAddress1());
+        fxFieldShippingAddress2.setText(model.getClientMailingAddress2());
+        fxFieldShippingAddress3.setText(model.getClientMailingAddress3());
+        fxFieldShippingCity.setText(model.getClientMailingCity());
+        fxFieldShippingZipCode.setText(model.getClientMailingZipCode());
+
+        for(int a = 0; a < countryList.size(); a++)
+        {
+            if(countryList.get(a).getCountryID() == model.getMailingCountryID())
+            {
+                fxComboBoxShippingCountry.getSelectionModel().select(a);
+            }
+        }
+
+        for(int a = 0; a < stateList.size(); a++)
+        {
+            if(stateList.get(a).getStateID() == model.getMailingStateID())
+            {
+                fxComboBoxShippingState.getSelectionModel().select(a);
+            }
+        }
+
+        fxFieldBillingAddress1.setText(model.getClientBillingAddress1());
+        fxFieldBillingAddress2.setText(model.getClientBillingAddress2());
+        fxFieldBillingAddress3.setText(model.getClientBillingAddress3());
+        fxFieldBillingCity.setText(model.getClientBillingCity());
+        fxFieldBillingZipCode.setText(model.getClientBillingZipCode());
+
+        for(int a = 0; a < countryList.size(); a++)
+        {
+            if(countryList.get(a).getCountryID() == model.getBillingCountryID())
+            {
+                fxComboBoxBillingCountry.getSelectionModel().select(a);
+            }
+        }
+
+        for(int a = 0; a < stateList.size(); a++)
+        {
+            if(stateList.get(a).getStateID() == model.getBillingStateID())
+            {
+                fxComboBoxBillingState.getSelectionModel().select(a);
+            }
+        }
+
+        fxFieldPhone.setText(model.getClientPhone());
+        fxFieldExt.setText(model.getClientExtension());
+        fxFieldEmail.setText(model.getClientEmail());
 
     }
     @FXML
@@ -321,11 +376,11 @@ public class ClientController
     @FXML
     private void handleCheckBoxSameAsAction(ActionEvent e)
     {
-        String shippingAddress1 = fxFieldShippingAddress1.getText().toString();
-        String shippingAddress2 = fxFieldShippingAddress2.getText().toString();
-        String shippingAddress3 = fxFieldShippingAddress3.getText().toString();
-        String shippingCity = fxFieldShippingCity.getText().toString();
-        String shippingZipCode = fxFieldShippingZipCode.getText().toString();
+        String shippingAddress1 = fxFieldShippingAddress1.getText();
+        String shippingAddress2 = fxFieldShippingAddress2.getText();
+        String shippingAddress3 = fxFieldShippingAddress3.getText();
+        String shippingCity = fxFieldShippingCity.getText();
+        String shippingZipCode = fxFieldShippingZipCode.getText();
         int shippingCountry = fxComboBoxShippingCountry.getSelectionModel().getSelectedIndex();
         int shippingState = fxComboBoxShippingState.getSelectionModel().getSelectedIndex();
         fxFieldBillingAddress1.setText(shippingAddress1);
@@ -362,13 +417,13 @@ public class ClientController
                 clientModel.setReferrerID(referrerList.get(i).getReferrerID());
             }
 
-            clientModel.setClientCompanyName(fxFieldCompany.getText().toString());
-            clientModel.setClientFirstName(fxFieldFirstName.getText().toString());
-            clientModel.setClientLastName(fxFieldLastName.getText().toString());
-            clientModel.setClientMailingAddress1(fxFieldShippingAddress1.getText().toString());
-            clientModel.setClientMailingAddress2(fxFieldShippingAddress2.getText().toString());
-            clientModel.setClientMailingAddress3(fxFieldShippingAddress3.getText().toString());
-            clientModel.setClientMailingCity(fxFieldShippingCity.getText().toString());
+            clientModel.setClientCompanyName(fxFieldCompany.getText());
+            clientModel.setClientFirstName(fxFieldFirstName.getText());
+            clientModel.setClientLastName(fxFieldLastName.getText());
+            clientModel.setClientMailingAddress1(fxFieldShippingAddress1.getText());
+            clientModel.setClientMailingAddress2(fxFieldShippingAddress2.getText());
+            clientModel.setClientMailingAddress3(fxFieldShippingAddress3.getText());
+            clientModel.setClientMailingCity(fxFieldShippingCity.getText());
 
             if(!fxComboBoxShippingState.getSelectionModel().isEmpty())
             {
@@ -376,17 +431,17 @@ public class ClientController
                 clientModel.setMailingStateID(stateList.get(i).getStateID());
             }
 
-            clientModel.setClientMailingZipCode(fxFieldShippingZipCode.getText().toString());
+            clientModel.setClientMailingZipCode(fxFieldShippingZipCode.getText());
 
             {
                 int i = fxComboBoxShippingCountry.getSelectionModel().getSelectedIndex();
                 clientModel.setMailingCountryID(countryList.get(i).getCountryID());
             }
 
-            clientModel.setClientBillingAddress1(fxFieldBillingAddress1.getText().toString());
-            clientModel.setClientBillingAddress2(fxFieldBillingAddress2.getText().toString());
-            clientModel.setClientBillingAddress3(fxFieldBillingAddress3.getText().toString());
-            clientModel.setClientBillingCity(fxFieldBillingCity.getText().toString());
+            clientModel.setClientBillingAddress1(fxFieldBillingAddress1.getText());
+            clientModel.setClientBillingAddress2(fxFieldBillingAddress2.getText());
+            clientModel.setClientBillingAddress3(fxFieldBillingAddress3.getText());
+            clientModel.setClientBillingCity(fxFieldBillingCity.getText());
 
             if(!fxComboBoxBillingState.getSelectionModel().isEmpty())
             {
@@ -394,14 +449,14 @@ public class ClientController
                 clientModel.setBillingStateID(stateList.get(i).getStateID());
             }
 
-            clientModel.setClientBillingZipCode(fxFieldBillingZipCode.getText().toString());
+            clientModel.setClientBillingZipCode(fxFieldBillingZipCode.getText());
             {
                 int i = fxComboBoxBillingCountry.getSelectionModel().getSelectedIndex();
                 clientModel.setBillingCountryID(countryList.get(i).getCountryID());
             }
-            clientModel.setClientPhone(fxFieldPhone.getText().toString());
-            clientModel.setClientExtension(fxFieldExt.getText().toString());
-            clientModel.setClientEmail(fxFieldEmail.getText().toString());
+            clientModel.setClientPhone(fxFieldPhone.getText());
+            clientModel.setClientExtension(fxFieldExt.getText());
+            clientModel.setClientEmail(fxFieldEmail.getText());
 
             new ClientProcedureSet().procInsertClient(clientModel);
             new OrchidAlertBox("New Client", "Client has been added.");
@@ -425,7 +480,10 @@ public class ClientController
     {
         try
         {
+
             ClientModel clientModel = new ClientModel();
+
+            clientModel.setClientID(clientID);
             {
                 int i = fxComboBoxClientStatus.getSelectionModel().getSelectedIndex();
                 clientModel.setClientStatusID(clientStatusList.get(i).getClientStatusID());
@@ -443,13 +501,13 @@ public class ClientController
                 clientModel.setReferrerID(referrerList.get(i).getReferrerID());
             }
 
-            clientModel.setClientCompanyName(fxFieldCompany.getText().toString());
-            clientModel.setClientFirstName(fxFieldFirstName.getText().toString());
-            clientModel.setClientLastName(fxFieldLastName.getText().toString());
-            clientModel.setClientMailingAddress1(fxFieldShippingAddress1.getText().toString());
-            clientModel.setClientMailingAddress2(fxFieldShippingAddress2.getText().toString());
-            clientModel.setClientMailingAddress3(fxFieldShippingAddress3.getText().toString());
-            clientModel.setClientMailingCity(fxFieldShippingCity.getText().toString());
+            clientModel.setClientCompanyName(fxFieldCompany.getText());
+            clientModel.setClientFirstName(fxFieldFirstName.getText());
+            clientModel.setClientLastName(fxFieldLastName.getText());
+            clientModel.setClientMailingAddress1(fxFieldShippingAddress1.getText());
+            clientModel.setClientMailingAddress2(fxFieldShippingAddress2.getText());
+            clientModel.setClientMailingAddress3(fxFieldShippingAddress3.getText());
+            clientModel.setClientMailingCity(fxFieldShippingCity.getText());
 
             if(!fxComboBoxShippingState.getSelectionModel().isEmpty())
             {
@@ -457,17 +515,17 @@ public class ClientController
                 clientModel.setMailingStateID(stateList.get(i).getStateID());
             }
 
-            clientModel.setClientMailingZipCode(fxFieldShippingZipCode.getText().toString());
+            clientModel.setClientMailingZipCode(fxFieldShippingZipCode.getText());
 
             {
                 int i = fxComboBoxShippingCountry.getSelectionModel().getSelectedIndex();
                 clientModel.setMailingCountryID(countryList.get(i).getCountryID());
             }
 
-            clientModel.setClientBillingAddress1(fxFieldBillingAddress1.getText().toString());
-            clientModel.setClientBillingAddress2(fxFieldBillingAddress2.getText().toString());
-            clientModel.setClientBillingAddress3(fxFieldBillingAddress3.getText().toString());
-            clientModel.setClientBillingCity(fxFieldBillingCity.getText().toString());
+            clientModel.setClientBillingAddress1(fxFieldBillingAddress1.getText());
+            clientModel.setClientBillingAddress2(fxFieldBillingAddress2.getText());
+            clientModel.setClientBillingAddress3(fxFieldBillingAddress3.getText());
+            clientModel.setClientBillingCity(fxFieldBillingCity.getText());
 
             if(!fxComboBoxBillingState.getSelectionModel().isEmpty())
             {
@@ -475,14 +533,14 @@ public class ClientController
                 clientModel.setBillingStateID(stateList.get(i).getStateID());
             }
 
-            clientModel.setClientBillingZipCode(fxFieldBillingZipCode.getText().toString());
+            clientModel.setClientBillingZipCode(fxFieldBillingZipCode.getText());
             {
                 int i = fxComboBoxBillingCountry.getSelectionModel().getSelectedIndex();
                 clientModel.setBillingCountryID(countryList.get(i).getCountryID());
             }
-            clientModel.setClientPhone(fxFieldPhone.getText().toString());
-            clientModel.setClientExtension(fxFieldExt.getText().toString());
-            clientModel.setClientEmail(fxFieldEmail.getText().toString());
+            clientModel.setClientPhone(fxFieldPhone.getText());
+            clientModel.setClientExtension(fxFieldExt.getText());
+            clientModel.setClientEmail(fxFieldEmail.getText());
 
             new ClientProcedureSet().procInsertClient(clientModel);
             new OrchidAlertBox("Updated Client", "Client has been updated.");

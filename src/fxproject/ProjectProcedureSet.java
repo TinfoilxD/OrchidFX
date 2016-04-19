@@ -4,6 +4,7 @@ package fxproject;/*
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import orchidmodel.ClientModel;
 import orchidmodel.CountryModel;
 import orchidmodel.ProjectModel;
 
@@ -56,5 +57,54 @@ public class ProjectProcedureSet
         if (connection != null)
             connection.close();
         return resultSet;
+    }
+
+    public ObservableList<ProjectModel> procLookUpProject() throws SQLException
+    {
+        Connection connection = getConnection();
+        CallableStatement cstm = connection.prepareCall("{call LookUpProject()}");
+
+        ResultSet resultSet = cstm.executeQuery();
+
+        if(!resultSet.isBeforeFirst())
+        {
+            return null;
+        }
+        if(resultSet == null)
+        {
+            return null;
+        }
+
+
+        ObservableList<ProjectModel> projectList = FXCollections.observableArrayList();
+
+        while(resultSet.next())
+        {
+            ProjectModel model = new ProjectModel();
+            model.setProjectID(resultSet.getInt("ProjectID"));
+            model.setClientID(resultSet.getInt("ClientID"));
+            model.setHotelID(resultSet.getInt("HotelPropertyID"));
+            model.setProjectInitialDepositDate(resultSet.getString("InitialDepositDate"));
+            model.setProjectProjectedStartDate(resultSet.getString("ProjectProjectedStartDate"));
+            model.setProjectProjectedDeadlineDate(resultSet.getString("ProjectProjectedDeadlineDate"));
+            model.setProjectProcurementStartDate(resultSet.getString("ProjectProcurementStartDate"));
+            model.setProjectProcurementDeadlineDate(resultSet.getString("ProjectProcurementDeadlineDate"));
+            model.setProjectActualStartDate(resultSet.getString("ProjectActualStartDate"));
+            model.setProjectActualDeadlineDate(resultSet.getString("ProjectActualDeadlineDate"));
+            model.setProjectTypeID(resultSet.getInt("ProjectTypeID"));
+            model.setProjectStatusID(resultSet.getInt("ProjectStatusID"));
+            projectList.add(model);
+        }
+
+
+        if(resultSet != null)
+            resultSet.close();
+        if(cstm != null)
+            cstm.close();
+        if(connection != null)
+            connection.close();
+
+
+        return projectList;
     }
 }

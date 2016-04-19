@@ -96,7 +96,6 @@ public class RootStageContainer
         controllermap.put(ParentBrandController.VIEWCONTROLLER_TITLE, new ParentBrandController().loadBundle());
         controllermap.put(PhaseLookupController.VIEWCONTROLLER_TITLE, new PhaseLookupController().loadBundle());
         controllermap.put(PhaseStatusController.VIEWCONTROLLER_TITLE, new PhaseStatusController().loadBundle());
-        controllermap.put(ProjectController.VIEWCONTROLLER_TITLE, new ProjectController().loadBundle());
         controllermap.put(ProjectStatusController.VIEWCONTROLLER_TITLE, new ProjectStatusController().loadBundle());
         controllermap.put(ProjectTypeController.VIEWCONTROLLER_TITLE, new ProjectTypeController().loadBundle());
         controllermap.put(ReferrerController.VIEWCONTROLLER_TITLE, new ReferrerController().loadBundle());
