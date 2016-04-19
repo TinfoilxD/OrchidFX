@@ -98,8 +98,7 @@
                       <MenuItem text="Trade Show" onAction="#developerForm40"/>
                       <MenuItem text="User" onAction="#developerForm41"/>
                       <MenuItem text="Vendor" onAction="#developerForm42"/>
-                      <MenuItem text="Vendor Contact" onAction="#developerForm43"/>
-                      <MenuItem text="Vendor Contact Type" onAction="#developerForm44"/>
+                      <MenuItem text="Vendor Contact Type" onAction="#developerForm43"/>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Developer 2">
                       <items>

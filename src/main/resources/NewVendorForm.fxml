@@ -97,7 +97,7 @@
                               </TextField>
                            </children>
                         </FlowPane>
-                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" onAction="#handleButtonUpdateAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" text="Update" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="19" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -105,7 +105,7 @@
                               <Insets left="434.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="fxButtonCancel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonCancelAction" prefHeight="35.0" prefWidth="87.0" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonCancel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="87.0" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="19" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -270,7 +270,7 @@
                               </ComboBox>
                            </children>
                         </FlowPane>
-                        <Button fx:id="fxButtonAdd" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Add" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonAdd" mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="19" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>

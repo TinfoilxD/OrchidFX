@@ -129,7 +129,7 @@
                               </TextField>
                            </children>
                         </FlowPane>
-                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="21" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="21" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>

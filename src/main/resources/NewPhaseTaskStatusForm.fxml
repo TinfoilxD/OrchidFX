@@ -32,7 +32,7 @@
                   <GridPane prefHeight="950.0" prefWidth="787.0">
                      <children>
                         <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Update" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" text="Update" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -40,7 +40,7 @@
                               <Insets right="105.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" text="Cancel" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -100,7 +100,7 @@
                               </Label>
                            </children>
                         </GridPane>
-                        <Button fx:id="fxButtonAdd" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Add" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonAdd" mnemonicParsing="false" text="Add" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
