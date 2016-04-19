@@ -9,13 +9,11 @@ public class OrchidDataSource
 {
     private final String driverType = "jdbc";
     private final String dbmsType = "sqlserver";
-    private String hostname = "192.168.1.66"; //"192.168.1.66";
+    private String hostname = "192.168.1.66"; // COT-CIS3365-04
     private int portNumber = 1433;
-    private String databaseName = "OrchidDB"; //ANDREWSURFACE TestDB1
-    private final String propertyValue = "user=Geralyn;password=testtest"; // integratedSecurity=true;   user=Geralyn;password=testtest
-    private String username = "Tin";
-    private String password = "testkey1";
-    private final String connectionString = String.format("%s:%s:%s:%s;%s;%s", driverType, dbmsType, hostname, portNumber, databaseName, propertyValue);
+    private String databaseName = "OrchidDB";
+    private String username = "Tin"; // andrew
+    private String password = "testkey1"; // test
 
     public String getHostname()
     {

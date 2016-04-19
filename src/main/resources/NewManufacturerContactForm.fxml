@@ -6,163 +6,181 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ContractorContactController">
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ManufacturerContactController">
    <children>
-      <VBox prefHeight="600.0" prefWidth="800.0">
+      <VBox maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0">
          <children>
-            <SplitPane dividerPositions="0.1147227533460803" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #9FC131;">
+            <SplitPane maxHeight="800.0" maxWidth="1200.0" minHeight="668.0" minWidth="798.0" orientation="VERTICAL" prefHeight="668.0" prefWidth="800.0">
+               <items>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="644.0" prefWidth="798.0" style="-fx-background-color: #9FC131;" SplitPane.resizableWithParent="false">
                      <children>
-                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="344.0" text="New Manufacturer Contact">
+                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="250.0" text="Manufacturer Contact">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                     <children>
-                        <ScrollPane prefHeight="526.0" prefWidth="798.0">
-                           <content>
-                              <GridPane prefHeight="523.0" prefWidth="788.0">
-                                <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="126.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="674.0" />
-                                </columnConstraints>
-                                <rowConstraints>
-                                    <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-                                  <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                </rowConstraints>
-                                 <children>
-                                    <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="102.0" text="First Name*: " GridPane.rowIndex="1">
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <Label alignment="CENTER_RIGHT" text="Primary Phone:" GridPane.rowIndex="2">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                       <children>
-                                          <TextField id="fieldFirstName" prefHeight="30.0" prefWidth="288.0" promptText="First Name">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <Label text="Last Name*:">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                          </Label>
-                                          <TextField id="fieldLastName" prefHeight="25.0" prefWidth="250.0" promptText="Last Name">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                             <FlowPane.margin>
-                                                <Insets left="10.0" />
-                                             </FlowPane.margin>
-                                          </TextField>
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                       <children>
-                                          <TextField prefHeight="30.0" prefWidth="288.0" promptText="ex: Office">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="96.0" text="Ext.">
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField prefHeight="30.0" prefWidth="249.0" promptText="Ext.">
-                                             <FlowPane.margin>
-                                                <Insets left="10.0" />
-                                             </FlowPane.margin>
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                       </children>
-                                    </FlowPane>
-                                    <Button mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets bottom="10.0" right="125.0" />
-                                       </GridPane.margin>
-                                    </Button>
-                                    <Button mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets bottom="10.0" right="20.0" />
-                                       </GridPane.margin>
-                                    </Button>
-                                    <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="20.0" prefWidth="98.0" text="Email:" GridPane.rowIndex="3">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                       <children>
-                                          <TextField prefHeight="31.0" prefWidth="289.0" promptText="Email" />
-                                       </children>
-                                    </FlowPane>
-                                    <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="100.0" text="Manufacturer">
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <ChoiceBox prefHeight="31.0" prefWidth="288.0" GridPane.columnIndex="1" />
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                                       <children>
-                                          <CheckBox mnemonicParsing="false" text="Sample Type (Loaded Programatically)" />
-                                       </children>
-                                    </FlowPane>
-                                    <Label text="Contact Type" GridPane.rowIndex="4">
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                 </children>
-                              </GridPane>
-                           </content>
-                        </ScrollPane>
-                     </children>
-                  </AnchorPane>
-              </items>
+               </items>
             </SplitPane>
+         </children>
+      </VBox>
+      <VBox layoutY="63.0" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="758.0" prefWidth="798.0">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="612.0" prefWidth="798.0">
+               <content>
+                  <GridPane prefHeight="950.0" prefWidth="787.0">
+                     <children>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <ComboBox fx:id="fxComboBoxContactType" prefWidth="250.0" />
+                              <Button fx:id="fxButtonNewContactType" mnemonicParsing="false" text="+" />
+                           </children>
+                        </FlowPane>
+                        <Label text="Manufacturer Name:" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Primary Phone:" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <ComboBox fx:id="fxComboBoxManufacturerName" prefWidth="300.0" />
+                              <Button fx:id="fxButtonNewManufacturerName" mnemonicParsing="false" text="+" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <TextField fx:id="fxFieldPrimaryPhone" prefHeight="25.0" prefWidth="250.0" promptText="Office, Cell, etc.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="Ext.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="fxFieldExtension" prefHeight="30.0" prefWidth="93.0" promptText="Ext.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="95.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Email:" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <TextField fx:id="fxFieldEmail" prefHeight="25.0" prefWidth="326.0" promptText="Email">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <CheckBox fx:id="fxCheckBoxDelete" mnemonicParsing="false" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="14.0" />
+                           </font></CheckBox>
+                        <Label text="Contact Type:" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Button fx:id="fxButtonAdd" mnemonicParsing="false" prefHeight="39.0" prefWidth="81.0" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+                           <GridPane.margin>
+                              <Insets right="187.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="268.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="94.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="287.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Last Name:" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="fxFieldContactFirstName" maxWidth="-Infinity" prefWidth="250.0" promptText="Contact First Name" />
+                              <TextField fx:id="fxFieldContactLastName" maxWidth="-Infinity" prefWidth="250.0" promptText="Contact Last Name" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Label text="First Name:" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="149.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="649.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
          </children>
       </VBox>
    </children>

@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ProjectStatusController">
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ClientContactContactTypeController">
    <children>
       <VBox prefHeight="600.0" prefWidth="800.0">
          <children>
@@ -14,7 +14,7 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #9FC131;">
                      <children>
-                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="426.0" text="Project Status">
+                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="426.0" text="Client Contact Contact Type">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -35,7 +35,7 @@
                                     <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Project Status*:" GridPane.valignment="BOTTOM">
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Contact Type*:" GridPane.valignment="BOTTOM">
                                        <GridPane.margin>
                                           <Insets bottom="5.0" left="35.0" />
                                        </GridPane.margin>
@@ -45,8 +45,8 @@
                                     </Label>
                                     <FlowPane alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                                        <children>
-                                          <ComboBox fx:id="fxComboProjectStatus" prefWidth="150.0" />
-                                          <Button fx:id="fxButtonNewProjectStatus" mnemonicParsing="false" text="+">
+                                          <ComboBox fx:id="fxComboBoxContactType" prefWidth="150.0" />
+                                          <Button fx:id="fxButtonNewContactType" mnemonicParsing="false" text="+">
                                              <opaqueInsets>
                                                 <Insets />
                                              </opaqueInsets>
@@ -54,7 +54,7 @@
                                                 <Insets />
                                              </FlowPane.margin>
                                           </Button>
-                                          <CheckBox fx:id="fxCheckBoxDeleteProjectStatus" mnemonicParsing="false" prefHeight="0.0" prefWidth="74.0" text="Delete" textAlignment="CENTER">
+                                          <CheckBox fx:id="fxCheckBoxDelete" mnemonicParsing="false" prefHeight="0.0" prefWidth="74.0" text="Delete" textAlignment="CENTER">
                                              <padding>
                                                 <Insets bottom="15.0" left="10.0" />
                                              </padding>
@@ -69,7 +69,7 @@
                                           <Font size="18.0" />
                                        </font>
                                        <GridPane.margin>
-                                          <Insets bottom="10.0" right="215.0" />
+                                          <Insets bottom="70.0" right="215.0" />
                                        </GridPane.margin>
                                        <opaqueInsets>
                                           <Insets right="300.0" />
@@ -83,7 +83,7 @@
                                           <Insets right="110.0" />
                                        </opaqueInsets>
                                        <GridPane.margin>
-                                          <Insets bottom="10.0" right="41.0" />
+                                          <Insets bottom="70.0" right="41.0" />
                                        </GridPane.margin>
                                     </Button>
                                     <Button fx:id="fxButtonUpdate" mnemonicParsing="false" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
@@ -91,7 +91,7 @@
                                           <Font size="18.0" />
                                        </font>
                                        <GridPane.margin>
-                                          <Insets bottom="10.0" right="125.0" />
+                                          <Insets bottom="70.0" right="125.0" />
                                        </GridPane.margin>
                                        <opaqueInsets>
                                           <Insets right="198.0" />
