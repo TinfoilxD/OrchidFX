@@ -50,6 +50,11 @@
                         <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
                               <TextField fx:id="fxFieldUserID" maxHeight="25.0" maxWidth="250.0" prefHeight="25.0" prefWidth="250.0" />
+                              <ComboBox fx:id="fxComboBoxUserID" prefWidth="150.0" onAction="#handleComboBoxSelectEmployeeAction">
+                                 <FlowPane.margin>
+                                    <Insets left="20.0" />
+                                 </FlowPane.margin>
+                              </ComboBox>
                            </children>
                         </FlowPane>
                         <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">

@@ -5,7 +5,10 @@ package fxproject;/*
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import orchidmodel.DepartmentModel;
 import orchidmodel.EmployeeModel;
+import orchidmodel.EmployeeStatusModel;
+
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -25,7 +28,7 @@ public class EmployeeProcedureSet
     public void procInsertEmployee(EmployeeModel employeeModel) throws SQLException
     {
         Connection connection = getConnection();
-        CallableStatement cstm = connection.prepareCall("{call AddEmployee(?,?,?,?,?,?,?,?)}");
+        CallableStatement cstm = connection.prepareCall("{call InsertEmployee(?,?,?,?,?,?,?,?)}");
         cstm.setString("UserID", employeeModel.getUserID());
         cstm.setString("EmployeeFirstName", employeeModel.getEmployeeFirstName());
         cstm.setString("EmployeeLastName", employeeModel.getEmployeeLastName());
@@ -35,6 +38,7 @@ public class EmployeeProcedureSet
         cstm.setString("EmployeeExtension", employeeModel.getEmployeeExtension());
         cstm.setString("EmployeeEmail", employeeModel.getEmployeeEmail());
 
+        System.out.println(String.format("%s, %s, %s", employeeModel.getEmployeeID(), employeeModel.getEmployeeFirstName(),employeeModel.getEmployeeLastName()));
 
         cstm.execute();
 
@@ -43,14 +47,31 @@ public class EmployeeProcedureSet
         if(connection != null)
             connection.close();
 
-
-
-
+    }
+    public void procUpdateEmployee(EmployeeModel employeeModel) throws SQLException
+    {
+        Connection connection = getConnection();
+        CallableStatement cstm = connection.prepareCall("{call UpdateEmployee(?,?,?,?,?,?,?,?,?)}");
+        cstm.setInt("EmployeeID", employeeModel.getEmployeeID());
+        cstm.setString("UserID", employeeModel.getUserID());
+        cstm.setString("EmployeeFirstName", employeeModel.getEmployeeFirstName());
+        cstm.setString("EmployeeLastName", employeeModel.getEmployeeLastName());
+        cstm.setInt("DepartmentID", employeeModel.getDepartmentID());
+        cstm.setInt("EmployeeStatusID", employeeModel.getEmployeeStatusID());
+        cstm.setString("EmployeePhone", employeeModel.getEmployeePhone());
+        cstm.setString("EmployeeExtension", employeeModel.getEmployeeExtension());
+        cstm.setString("EmployeeEmail", employeeModel.getEmployeeEmail());
+        cstm.execute();
+        if(cstm != null)
+            cstm.close();
+        if(connection != null)
+            connection.close();
+        System.out.println(String.format("%s, %s, %s", employeeModel.getEmployeeID(), employeeModel.getEmployeeFirstName(),employeeModel.getEmployeeLastName()));
     }
     public ObservableList<EmployeeModel> procSelectEmployees() throws SQLException
     {
         Connection connection = getConnection();
-        CallableStatement cstm = connection.prepareCall("{call SelectEmployee()}");
+        CallableStatement cstm = connection.prepareCall("{call SelectEmployeeLookup()}");
 
         ResultSet resultSet = cstm.executeQuery();
 
@@ -94,5 +115,46 @@ public class EmployeeProcedureSet
 
         return employeeList;
     }
+
+    public ObservableList<EmployeeStatusModel> procSelectEmployeeStatus() throws SQLException
+    {
+        Connection connection = getConnection();
+        CallableStatement cstm = connection.prepareCall("{call SelectEmployeeStatusID()}");
+
+        ResultSet resultSet = cstm.executeQuery();
+
+        if(!resultSet.isBeforeFirst())
+        {
+            return null;
+        }
+        if(resultSet == null)
+        {
+            return null;
+        }
+
+
+        ObservableList<EmployeeStatusModel> employeeStatusList = FXCollections.observableArrayList();
+
+        while(resultSet.next())
+        {
+            int employeeStatusID = resultSet.getInt("EmployeeStatusID");
+            String employeeStatus = resultSet.getString("EmployeeStatus");
+            boolean isDeleted = resultSet.getBoolean("IsDeleted");
+
+            employeeStatusList.add(new EmployeeStatusModel(employeeStatusID, employeeStatus, isDeleted));
+        }
+
+
+        if(resultSet != null)
+            resultSet.close();
+        if(cstm != null)
+            cstm.close();
+        if(connection != null)
+            connection.close();
+
+
+        return employeeStatusList;
+    }
+
 
 }
