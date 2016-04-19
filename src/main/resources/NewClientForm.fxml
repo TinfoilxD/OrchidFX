@@ -6,333 +6,429 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ClientController">
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxproject.ClientController">
    <children>
-      <VBox>
+      <VBox maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0">
          <children>
-            <SplitPane dividerPositions="0.1147227533460803" orientation="VERTICAL">
+            <SplitPane maxHeight="800.0" maxWidth="1200.0" minHeight="600.0" minWidth="800.0" orientation="VERTICAL" prefHeight="668.0" prefWidth="800.0">
                <items>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="1200.0" style="-fx-background-color: #9FC131;">
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="644.0" prefWidth="798.0" style="-fx-background-color: #9FC131;" SplitPane.resizableWithParent="false">
                      <children>
-                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="250.0" text="New Client">
+                        <Label layoutX="19.0" layoutY="12.0" prefHeight="45.0" prefWidth="250.0" text="Client">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane minHeight="0.0" minWidth="0.0">
-                     <children>
-                        <ScrollPane prefHeight="550.0" prefWidth="1200.0">
-                           <content>
-                              <GridPane prefHeight="950.0" prefWidth="787.0">
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="126.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="674.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                    <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Label text="First Name*: ">
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Shipping:" GridPane.rowIndex="3">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <Label text="Primary Phone:" GridPane.rowIndex="14">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <TextField id="fieldStreetAddress" fx:id="fxFieldShippingAddress1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Street Address, P.O. Box, etc" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="fxFieldShippingAddress2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Apt, Suite, etc." GridPane.columnIndex="1" GridPane.rowIndex="4">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                                       <children>
-                                          <TextField id="fieldFirstName" fx:id="fxFieldFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <Label text="Last Name*:">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                          </Label>
-                                          <TextField id="fieldLastName" fx:id="fxFieldLastName" prefHeight="25.0" prefWidth="250.0" promptText="Last Name">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                             <FlowPane.margin>
-                                                <Insets left="10.0" />
-                                             </FlowPane.margin>
-                                          </TextField>
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                                       <children>
-                                          <TextField fx:id="fxFieldShippingCity" prefHeight="30.0" prefWidth="200.0" promptText="City">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <TextField fx:id="fxFieldShippingZipCode" prefHeight="30.0" promptText="Zip Code" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
-                                       <children>
-                                          <TextField fx:id="fxFieldPhone" prefHeight="25.0" prefWidth="250.0" promptText="ex: Office">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                          <Label text="Ext.">
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField fx:id="fxFieldExt" prefHeight="30.0" prefWidth="93.0" promptText="Ext.">
-                                             <FlowPane.margin>
-                                                <Insets left="10.0" />
-                                             </FlowPane.margin>
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </TextField>
-                                       </children>
-                                    </FlowPane>
-                                    <Button fx:id="fxButtonSubmit" onAction="#handleButtonSubmitAction" mnemonicParsing="false" text="Submit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="18" GridPane.valignment="CENTER">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets bottom="10.0" right="125.0" />
-                                       </GridPane.margin>
-                                    </Button>
-                                    <Button mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="18" GridPane.valignment="CENTER">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets bottom="10.0" right="20.0" />
-                                       </GridPane.margin>
-                                    </Button>
-                                    <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="18" />
-                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Email:" GridPane.rowIndex="15">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="15">
-                                       <children>
-                                          <TextField fx:id="fxFieldEmail" prefHeight="25.0" prefWidth="326.0" promptText="Email" />
-                                       </children>
-                                    </FlowPane>
-                                    <Label text="Company" GridPane.rowIndex="1">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                       <children>
-                                          <TextField fx:id="fxFieldCompany" prefHeight="25.0" prefWidth="289.0" promptText="Company" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="16">
-                                       <children>
-                                          <fx:define>
-                                             <ToggleGroup fx:id="radioGroupOrigin"/>
-                                          </fx:define>
-                                          <RadioButton fx:id="fxRadioContact" mnemonicParsing="false" text="Contact" toggleGroup="$radioGroupOrigin" onAction="#handleRadioContactAction">
-                                             <FlowPane.margin>
-                                                <Insets />
-                                             </FlowPane.margin>
-                                          </RadioButton>
-                                          <RadioButton fx:id="fxRadioTradeShow" mnemonicParsing="false" text="Trade Show" toggleGroup="$radioGroupOrigin" onAction="#handleRadioTradeShowAction">
-                                             <FlowPane.margin>
-                                                <Insets left="12.0" />
-                                             </FlowPane.margin>
-                                          </RadioButton>
-                                          <RadioButton fx:id="fxRadioReferrer" mnemonicParsing="false" text="Referrer" toggleGroup="$radioGroupOrigin" onAction="#handleRadioReferrerAction">
-                                             <FlowPane.margin>
-                                                <Insets left="12.0" />
-                                             </FlowPane.margin>
-                                          </RadioButton>
-                                       </children>
-                                    </FlowPane>
-                                    <Label text="Origin:" GridPane.rowIndex="16">
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="17">
-                                       <children>
-                                          <ComboBox fx:id="fxComboBoxOrigin" prefWidth="150.0" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                                       <children>
-                                          <TextField fx:id="fxFieldShippingAddress3" prefHeight="27.0" prefWidth="400.0" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
-                                       <children>
-                                          <Label text="Country:">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <ComboBox fx:id="fxComboBoxShippingCountry" prefWidth="150.0" onAction="#handleComboBoxShippingCountryAction">
-                                             <FlowPane.margin>
-                                                <Insets left="10.0" />
-                                             </FlowPane.margin>
-                                          </ComboBox>
-                                          <Label text="State:">
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <ComboBox fx:id="fxComboBoxShippingState" prefHeight="25.0" prefWidth="88.0">
-                                             <FlowPane.margin>
-                                                <Insets left="10.0" />
-                                             </FlowPane.margin>
-                                          </ComboBox>
-                                       </children>
-                                    </FlowPane>
-                                    <Label text="Billing:" GridPane.rowIndex="8">
-                                       <padding>
-                                          <Insets left="12.0" />
-                                       </padding>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
-                                       <children>
-                                          <CheckBox fx:id="fxCheckBoxSameAs" mnemonicParsing="false" text="Same as Shipping" onAction="#handleCheckBoxSameAsAction"/>
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
-                                       <children>
-                                          <TextField fx:id="fxFieldBillingAddress1" prefHeight="27.0" prefWidth="405.0" promptText="Street Address, P.O. Box, etc" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
-                                       <children>
-                                          <TextField fx:id="fxFieldBillingAddress2" prefHeight="27.0" prefWidth="406.0" promptText="Apt, Suite, etc." />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
-                                       <children>
-                                          <TextField fx:id="fxFieldBillingAddress3" prefHeight="27.0" prefWidth="403.0" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
-                                       <children>
-                                          <TextField fx:id="fxFieldBillingCity" prefHeight="27.0" prefWidth="211.0" promptText="City" />
-                                          <TextField fx:id="fxFieldBillingZipCode" prefHeight="27.0" prefWidth="193.0" promptText="Zip Code" />
-                                       </children>
-                                    </FlowPane>
-                                    <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
-                                       <children>
-                                          <Label text="Country:">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <ComboBox fx:id="fxComboBoxBillingCountry" prefWidth="150.0" onAction="#handleComboBoxBillingCountryAction">
-                                             <FlowPane.margin>
-                                                <Insets left="12.0" />
-                                             </FlowPane.margin>
-                                          </ComboBox>
-                                          <Label text="State:">
-                                             <FlowPane.margin>
-                                                <Insets left="12.0" />
-                                             </FlowPane.margin>
-                                          </Label>
-                                          <ComboBox fx:id="fxComboBoxBillingState" prefHeight="27.0" prefWidth="83.0">
-                                             <FlowPane.margin>
-                                                <Insets left="12.0" />
-                                             </FlowPane.margin>
-                                          </ComboBox>
-                                       </children>
-                                    </FlowPane>
-                                    <ComboBox fx:id="fxComboBoxClientStatus" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <Label text="Status" GridPane.rowIndex="2">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <GridPane.margin>
-                                          <Insets left="12.0" />
-                                       </GridPane.margin>
-                                    </Label>
-                                 </children>
-                              </GridPane>
-                           </content>
-                        </ScrollPane>
-                     </children>
-                  </AnchorPane>
                </items>
             </SplitPane>
+         </children>
+      </VBox>
+      <VBox layoutY="63.0" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="758.0" prefWidth="798.0">
+         <children>
+            <ScrollPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="612.0" prefWidth="798.0">
+               <content>
+                  <GridPane prefHeight="950.0" prefWidth="787.0">
+                     <children>
+                         <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                             <children>
+                                 <ComboBox fx:id="fxComboBoxSelectClient" prefHeight="25.0" prefWidth="200.0" onAction="#handleComboBoxSelectClientAction"/>
+                             </children>
+                         </FlowPane>
+
+                         <Label text="First Name*: " GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Shipping Address:" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Primary Phone:" GridPane.rowIndex="18">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField id="fieldStreetAddress" fx:id="fxFieldShippingAddress1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Street Address, P.O. Box, etc" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="fxFieldShippingAddress2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Apt, Suite, etc." GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <TextField id="FieldFirstName" fx:id="fxFieldFirstName" prefHeight="25.0" prefWidth="250.0" promptText="First Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="Last Name*:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextField id="FieldLastName" fx:id="fxFieldLastName" prefHeight="25.0" prefWidth="250.0" promptText="Last Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <children>
+                              <Label text="Country:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="fxComboBoxShippingCountry" prefHeight="25.0" prefWidth="200.0" onAction="#handleComboBoxShippingCountryAction">
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </ComboBox>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="18">
+                           <children>
+                              <TextField fx:id="fxFieldPhone" prefHeight="25.0" prefWidth="250.0" promptText="Office, Cell, etc.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="Ext.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="fxFieldExt" prefHeight="30.0" prefWidth="93.0" promptText="Ext.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" onAction="#handleButtonUpdateAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="22" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" right="105.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="22" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" right="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="fxButtonAdd" alignment="CENTER" maxHeight="39.0" maxWidth="83.0" minHeight="39.0" minWidth="83.0" mnemonicParsing="false" onAction="#handleButtonAddAction" prefHeight="39.0" prefWidth="83.0" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="22">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="340.0" right="196.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label id="lblError" prefHeight="17.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="22" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Email:" GridPane.rowIndex="19">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="19">
+                           <children>
+                              <TextField fx:id="fxFieldEmail" prefHeight="25.0" prefWidth="326.0" promptText="Email">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <Label text="Company" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <TextField fx:id="fxFieldCompany" prefHeight="25.0" prefWidth="250.0" promptText="Company">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <ComboBox fx:id="fxComboBoxClientStatus" prefHeight="30.0" prefWidth="195.0" promptText="Status">
+                                 <FlowPane.margin>
+                                    <Insets left="20.0" />
+                                 </FlowPane.margin>
+                              </ComboBox>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="20">
+                           <fx:define>
+                              <ToggleGroup fx:id="OriginToggle"/>
+                           </fx:define>
+                           <children>
+                              <RadioButton fx:id="fxRadioContact" mnemonicParsing="false" text="Contact" onAction="#handleRadioContactAction" toggleGroup="$OriginToggle">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets />
+                                 </FlowPane.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="fxRadioTradeShow" mnemonicParsing="false" text="Trade Show" onAction="#handleRadioTradeShowAction" toggleGroup="$OriginToggle">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="12.0" />
+                                 </FlowPane.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="fxRadioReferrer" mnemonicParsing="false" text="Referrer" onAction="#handleRadioReferrerAction" toggleGroup="$OriginToggle">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="12.0" />
+                                 </FlowPane.margin>
+                              </RadioButton>
+                              <ComboBox fx:id="fxComboBoxOrigin" prefHeight="30.0" prefWidth="195.0" promptText="Select an Origin">
+                                 <FlowPane.margin>
+                                    <Insets left="12.0" />
+                                 </FlowPane.margin>
+                              </ComboBox>
+                              <Button fx:id="fxButtonAddOrigin" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="+" />
+                           </children>
+                        </FlowPane>
+                        <Label text="Origin:" GridPane.rowIndex="20">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="21" />
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <children>
+                              <TextField fx:id="fxFieldShippingAddress3" prefHeight="27.0" prefWidth="400.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <children>
+                              <TextField fx:id="fxFieldShippingCity" prefHeight="30.0" prefWidth="200.0" promptText="City">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="State:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <ComboBox fx:id="fxComboBoxShippingState" prefHeight="30.0" prefWidth="170.0">
+                                 <FlowPane.margin>
+                                    <Insets left="10.0" />
+                                 </FlowPane.margin>
+                              </ComboBox>
+                           </children>
+                        </FlowPane>
+                        <Label text="Billing Address:" GridPane.rowIndex="11">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                           <children>
+                              <CheckBox fx:id="fxCheckBoxSameAs" mnemonicParsing="false" text="Same as Shipping" onAction="#handleCheckBoxSameAsAction">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                           <children>
+                              <TextField fx:id="fxFieldBillingAddress1" prefHeight="27.0" prefWidth="400.0" promptText="Street Address, P.O. Box, etc">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                           <children>
+                              <TextField fx:id="fxFieldBillingAddress2" prefHeight="27.0" prefWidth="400.0" promptText="Apt, Suite, etc.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
+                           <children>
+                              <TextField fx:id="fxFieldBillingAddress3" prefHeight="27.0" prefWidth="400.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="15">
+                           <children>
+                              <Label text="Country:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="fxComboBoxBillingCountry" prefHeight="25.0" prefWidth="200.0" onAction="#handleComboBoxBillingCountryAction">
+                                 <FlowPane.margin>
+                                    <Insets left="12.0" />
+                                 </FlowPane.margin>
+                              </ComboBox>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="16">
+                           <children>
+                              <TextField fx:id="fxFieldBillingCity" prefHeight="30.0" prefWidth="200.0" promptText="City">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label text="State:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets left="12.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <ComboBox fx:id="fxComboBoxBillingState" prefHeight="30.0" prefWidth="170.0">
+                                 <FlowPane.margin>
+                                    <Insets left="12.0" />
+                                 </FlowPane.margin>
+                              </ComboBox>
+                           </children>
+                        </FlowPane>
+                        <Label text="City:" GridPane.rowIndex="9">
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Zip Code:" GridPane.rowIndex="10">
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="fxFieldShippingZipCode" maxWidth="200.0" minWidth="25.0" prefHeight="30.0" prefWidth="200.0" promptText="Zip Code" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextField>
+                        <Label text="City:" GridPane.rowIndex="16">
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Zip Code:" GridPane.rowIndex="17">
+                           <GridPane.margin>
+                              <Insets left="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="fxFieldBillingZipCode" maxWidth="200.0" prefHeight="30.0" prefWidth="200.0" promptText="Zip Code" GridPane.columnIndex="1" GridPane.rowIndex="17">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <CheckBox fx:id="fxCheckBoxDeleteClient" mnemonicParsing="false" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="22">
+                           <GridPane.margin>
+                              <Insets top="-10.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="130.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="658.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="25.0" minHeight="15.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="231.0" minHeight="15.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
          </children>
       </VBox>
    </children>

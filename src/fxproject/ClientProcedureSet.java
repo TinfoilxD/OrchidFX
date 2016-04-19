@@ -4,10 +4,14 @@ package fxproject;
  * Written by Tin Van on 2/29/16.
  */
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import orchidmodel.ClientModel;
+import orchidmodel.EmployeeModel;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ClientProcedureSet
@@ -64,4 +68,45 @@ public class ClientProcedureSet
             connection.close();
     }
 
+
+    public ObservableList<ClientModel> procSelectClient() throws SQLException
+    {
+        Connection connection = getConnection();
+        CallableStatement cstm = connection.prepareCall("{call SelectClient()}");
+
+        ResultSet resultSet = cstm.executeQuery();
+
+        if(!resultSet.isBeforeFirst())
+        {
+            return null;
+        }
+        if(resultSet == null)
+        {
+            return null;
+        }
+
+
+        ObservableList<ClientModel> clientList = FXCollections.observableArrayList();
+
+        while(resultSet.next())
+        {
+            ClientModel model = new ClientModel();
+            model.setClientID(resultSet.getInt("ClientID"));
+
+
+            
+            clientList.add(new ClientModel());
+        }
+
+
+        if(resultSet != null)
+            resultSet.close();
+        if(cstm != null)
+            cstm.close();
+        if(connection != null)
+            connection.close();
+
+
+        return clientList;
+    }
 }

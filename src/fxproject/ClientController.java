@@ -10,12 +10,18 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 import orchidmodel.*;
 
 import javax.swing.*;
 
 public class ClientController
 {
+    private int clientID;
+
+
+    @FXML
+    ComboBox fxComboBoxSelectClient;
     @FXML
     TextField fxFieldFirstName;
     @FXML
@@ -63,7 +69,9 @@ public class ClientController
     @FXML
     TextField fxFieldEmail;
     @FXML
-    Button fxButtonSubmit;
+    Button fxButtonAdd;
+    @FXML
+    Button fxButtonCancel;
     @FXML
     RadioButton fxRadioContact;
     @FXML
@@ -72,7 +80,7 @@ public class ClientController
     RadioButton fxRadioReferrer;
 
 
-
+    private ObservableList<ClientModel> clientList;
     private ObservableList<CountryModel> countryList;
     private ObservableList<ClientStatusModel> clientStatusList;
     private ObservableList<StateModel> stateList;
@@ -88,6 +96,7 @@ public class ClientController
         setFXComboBoxShippingCountry();
         setFXComboBoxShippingState();
         setFXComboBoxBillingState();
+        setFXComboBoxSelectClient();
     }
 
 
@@ -115,17 +124,12 @@ public class ClientController
         return null;
     }
 
-    @FXML
-    protected void handleButtonCancelAction(ActionEvent e)
-    {
-
-    }
 
     private void setFXComboBoxClientStatus()
     {
         try {
-            clientStatusList = new ClientStatusProcedureSet().procSelectClientStatus(); //countryList has a list of all the Country Models
-            ObservableList<String> clientStatusStringList = FXCollections.observableArrayList(); //countryNameList has the list of string Country Names
+            clientStatusList = new ClientStatusProcedureSet().procSelectClientStatus();
+            ObservableList<String> clientStatusStringList = FXCollections.observableArrayList();
             int defaultIndex = 0;
             for (int i = 0; i < clientStatusList.size(); i++) {
                 ClientStatusModel m = clientStatusList.get(i);
@@ -232,7 +236,28 @@ public class ClientController
         }
     }
 
+    private void setFXComboBoxSelectClient()
+    {
+        try
+        {
+            clientList = new ClientProcedureSet().procSelectClient();
+            ObservableList<String> clientName = FXCollections.observableArrayList();
+            for(ClientModel model : clientList)
+            {
+                clientName.add(model.getClientFirstName() + " " +  model.getClientLastName());
+            }
+            fxComboBoxSelectClient.setItems(clientName);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
+
+    @FXML
+    private void handleComboBoxSelectClientAction(ActionEvent e)
+    {
+
+    }
     @FXML
     private void handleRadioContactAction(ActionEvent e)
     {
@@ -315,7 +340,7 @@ public class ClientController
     }
 
     @FXML
-    private void handleButtonSubmitAction(ActionEvent e)
+    private void handleButtonAddAction(ActionEvent e)
     {
         try
         {
@@ -379,6 +404,7 @@ public class ClientController
             clientModel.setClientEmail(fxFieldEmail.getText().toString());
 
             new ClientProcedureSet().procInsertClient(clientModel);
+            new OrchidAlertBox("New Client", "Client has been added.");
         }
         catch(Exception ae)
         {
@@ -386,5 +412,85 @@ public class ClientController
             new OrchidAlertBox("Error", ae.toString());
         }
 
+    }
+    @FXML
+    protected void handleButtonCancelAction(ActionEvent e)
+    {
+        Stage stage = (Stage) fxButtonCancel.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    protected void handleButtonUpdateAction(ActionEvent e)
+    {
+        try
+        {
+            ClientModel clientModel = new ClientModel();
+            {
+                int i = fxComboBoxClientStatus.getSelectionModel().getSelectedIndex();
+                clientModel.setClientStatusID(clientStatusList.get(i).getClientStatusID());
+            }
+
+
+            if(fxRadioTradeShow.isSelected())
+            {
+                int i = fxComboBoxOrigin.getSelectionModel().getSelectedIndex();
+                clientModel.setTradeShowID(tradeShowList.get(i).getTradeShowID());
+            }
+            if(fxRadioReferrer.isSelected())
+            {
+                int i = fxComboBoxOrigin.getSelectionModel().getSelectedIndex();
+                clientModel.setReferrerID(referrerList.get(i).getReferrerID());
+            }
+
+            clientModel.setClientCompanyName(fxFieldCompany.getText().toString());
+            clientModel.setClientFirstName(fxFieldFirstName.getText().toString());
+            clientModel.setClientLastName(fxFieldLastName.getText().toString());
+            clientModel.setClientMailingAddress1(fxFieldShippingAddress1.getText().toString());
+            clientModel.setClientMailingAddress2(fxFieldShippingAddress2.getText().toString());
+            clientModel.setClientMailingAddress3(fxFieldShippingAddress3.getText().toString());
+            clientModel.setClientMailingCity(fxFieldShippingCity.getText().toString());
+
+            if(!fxComboBoxShippingState.getSelectionModel().isEmpty())
+            {
+                int i = fxComboBoxShippingState.getSelectionModel().getSelectedIndex();
+                clientModel.setMailingStateID(stateList.get(i).getStateID());
+            }
+
+            clientModel.setClientMailingZipCode(fxFieldShippingZipCode.getText().toString());
+
+            {
+                int i = fxComboBoxShippingCountry.getSelectionModel().getSelectedIndex();
+                clientModel.setMailingCountryID(countryList.get(i).getCountryID());
+            }
+
+            clientModel.setClientBillingAddress1(fxFieldBillingAddress1.getText().toString());
+            clientModel.setClientBillingAddress2(fxFieldBillingAddress2.getText().toString());
+            clientModel.setClientBillingAddress3(fxFieldBillingAddress3.getText().toString());
+            clientModel.setClientBillingCity(fxFieldBillingCity.getText().toString());
+
+            if(!fxComboBoxBillingState.getSelectionModel().isEmpty())
+            {
+                int i = fxComboBoxBillingState.getSelectionModel().getSelectedIndex();
+                clientModel.setBillingStateID(stateList.get(i).getStateID());
+            }
+
+            clientModel.setClientBillingZipCode(fxFieldBillingZipCode.getText().toString());
+            {
+                int i = fxComboBoxBillingCountry.getSelectionModel().getSelectedIndex();
+                clientModel.setBillingCountryID(countryList.get(i).getCountryID());
+            }
+            clientModel.setClientPhone(fxFieldPhone.getText().toString());
+            clientModel.setClientExtension(fxFieldExt.getText().toString());
+            clientModel.setClientEmail(fxFieldEmail.getText().toString());
+
+            new ClientProcedureSet().procInsertClient(clientModel);
+            new OrchidAlertBox("Updated Client", "Client has been updated.");
+        }
+        catch(Exception ae)
+        {
+            ae.printStackTrace();
+            new OrchidAlertBox("Error", ae.toString());
+        }
     }
 }

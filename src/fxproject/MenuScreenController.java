@@ -41,7 +41,7 @@ public class MenuScreenController
     protected void handleClientNewClientAction(ActionEvent event)
     {
 
-        RootStageContainer.getCurrentRootStageContainer().changeView(ClientController.VIEWCONTROLLER_TITLE);
+        openChildForm("NewClientForm.fxml");
     }
     @FXML
     protected void handleEmployeeNewEmployeeAction(ActionEvent event)

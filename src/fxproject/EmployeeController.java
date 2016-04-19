@@ -34,7 +34,6 @@ public class EmployeeController
     private ObservableList<DepartmentModel> departmentList;
 
     int defaultIndex = 0;
-
     public static final String VIEWCONTROLLER_TITLE= "Employee Input";
 
 
@@ -106,7 +105,6 @@ public class EmployeeController
     }
     private void setFxComboBoxDepartmentID()
     {
-
         try
         {
             departmentList = new DepartmentProcedureSet().procSelectDepartment();
@@ -157,7 +155,8 @@ public class EmployeeController
         }
         return null;
     }
-    private Connection getConnection() throws SQLException {
+    private Connection getConnection() throws SQLException
+    {
         return OrchidDataSource.getCurrentDataSource().getConnection();
     }
 
