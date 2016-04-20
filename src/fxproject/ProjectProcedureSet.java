@@ -4,10 +4,7 @@ package fxproject;/*
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import orchidmodel.ClientModel;
-import orchidmodel.CountryModel;
-import orchidmodel.ProjectModel;
-import orchidmodel.ProjectStatusModel;
+import orchidmodel.*;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -29,10 +26,6 @@ public class ProjectProcedureSet
         return OrchidDataSource.getCurrentDataSource().getConnection();
     }
 
-    public void procInsertProject(ProjectModel projectModel) throws SQLException
-    {
-
-    }
 
     public ResultSet procSelectAllProjects() throws SQLException
     {
@@ -145,5 +138,21 @@ public class ProjectProcedureSet
 
 
         return statusList;
+    }
+    public void procInsertProject(ProjectModel project) throws SQLException
+    {
+        Connection connection = getConnection();
+        CallableStatement cstm = connection.prepareCall("{call InsertProject(?,?,?,?)}");
+        cstm.setInt("HotelPropertyID", project.getHotelID());
+        cstm.setInt("ClientID", project.getClientID());
+        cstm.setInt("ProjectTypeID", project.getProjectTypeID());
+        cstm.setInt("ProjectStatusID", project.getProjectStatusID());
+        cstm.execute();
+
+        if(cstm != null)
+            cstm.close();
+        if(connection != null)
+            connection.close();
+
     }
 }

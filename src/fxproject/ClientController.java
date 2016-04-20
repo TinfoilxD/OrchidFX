@@ -96,7 +96,7 @@ public class ClientController
         setFXComboBoxShippingCountry();
         setFXComboBoxShippingState();
         setFXComboBoxBillingState();
-        //setFXComboBoxSelectClient();
+        setFXComboBoxSelectClient();
     }
 
 

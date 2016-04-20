@@ -209,12 +209,38 @@ public class ProjectController
     @FXML
     protected void handleButtonAddAction(ActionEvent e)
     {
+        try
+        {
+            ProjectModel projectModel = new ProjectModel();
+            {
+                int i = fxComboBoxHotelProperty.getSelectionModel().getSelectedIndex();
+                projectModel.setHotelID(hotelPropertyList.get(i).getHotelPropertyID());
+            }
+            {
+                int i = fxComboBoxClient.getSelectionModel().getSelectedIndex();
+                projectModel.setClientID(clientList.get(i).getClientID());
+            }
+            {
+                int i = fxComboBoxProjectType.getSelectionModel().getSelectedIndex();
+                projectModel.setProjectTypeID(projectTypeList.get(i).getProjectTypeID());
+            }
+            {
+                int i = fxComboBoxProjectStatus.getSelectionModel().getSelectedIndex();
+                projectModel.setProjectStatusID(projectStatusList.get(i).getStatusID());
+            }
 
+            new ProjectProcedureSet().procInsertProject(projectModel);
+            new OrchidAlertBox("New Project", "Project has been added.");
+        }
+        catch (Exception ae)
+        {
+            new OrchidAlertBox("Error", ae.toString());
+        }
     }
     @FXML
     protected void handleButtonUpdateAction(ActionEvent e)
     {
-
+        new OrchidAlertBox("Update Project", "Project has been updated.");
     }
     @FXML
     protected void handleButtonCancelAction(ActionEvent e)
