@@ -29,9 +29,9 @@
       <Label layoutX="14.0" layoutY="14.0" opacity="0.0" text="Hostname:" />
       <Label layoutX="14.0" layoutY="41.0" opacity="0.0" text="Port Number:" />
       <Label layoutX="14.0" layoutY="70.0" opacity="0.0" text="Database Name:" />
-      <TextField fx:id="fieldhostname" layoutX="111.0" layoutY="10.0" opacity="0.0" />
-      <TextField fx:id="fieldportnumber" layoutX="111.0" layoutY="37.0" opacity="0.0" />
-      <TextField fx:id="fielddatabasename" layoutX="111.0" layoutY="66.0" opacity="0.0" />
+      <TextField fx:id="fieldhostname" layoutX="111.0" layoutY="10.0" opacity="100.0" />
+      <TextField fx:id="fieldportnumber" layoutX="111.0" layoutY="37.0" opacity="100.0" />
+      <TextField fx:id="fielddatabasename" layoutX="111.0" layoutY="66.0" opacity="100.0" />
       <Label fx:id="fieldLoginError" layoutX="170.0" layoutY="289.0" textFill="#e11414" />
       <Button fx:id="fxButtonLogin" layoutX="282.0" layoutY="224.0" mnemonicParsing="false" onAction="#handleButtonSubmit" prefHeight="53.0" prefWidth="87.0" text="Login">
          <font>

@@ -10,9 +10,16 @@ import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+/*
+Controller for the main menu.
+
+ */
 public class MenuScreenController
 {
-
+    /*
+    void method for opening up a new child form and takes a fxml form filename as the parameter.
+     All fxm forms must be under main -> resources
+     */
     public void openChildForm(String formName)
     {
         try
@@ -66,6 +73,9 @@ public class MenuScreenController
     }
 
 
+    /*
+    void method that opens up a child reporttable with the stored procedure parameter.
+     */
     private void reportAction(String reportTitle, String procedure)
     {
         try
@@ -474,7 +484,6 @@ public class MenuScreenController
     @FXML
     protected void handleDeveloperCountryEditAction(ActionEvent event)
     {
-
         openChildForm("NewCountryForm.fxml");
     }
 }

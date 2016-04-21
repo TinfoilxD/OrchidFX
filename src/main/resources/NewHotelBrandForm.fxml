@@ -109,7 +109,7 @@
                               </TextField>
                            </children>
                         </FlowPane>
-                        <Button fx:id="fxbuttonUpdate" mnemonicParsing="false" onAction="#handleButtonUpdateAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                        <Button fx:id="fxbuttonUpdate" mnemonicParsing="false"  text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -117,7 +117,7 @@
                               <Insets bottom="60.0" right="120.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="fxbuttonCancel" mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                        <Button fx:id="fxbuttonCancel" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -125,7 +125,7 @@
                               <Insets bottom="60.0" right="36.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="fxbuttonAdd" alignment="CENTER" maxHeight="50.0" maxWidth="60.0" minHeight="39.0" minWidth="48.0" mnemonicParsing="false" onAction="#handleButtonAddAction" prefHeight="39.0" prefWidth="48.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                        <Button fx:id="fxbuttonAdd" alignment="CENTER" maxHeight="50.0" maxWidth="60.0" minHeight="39.0" minWidth="48.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="48.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="13">
                            <GridPane.margin>
                               <Insets bottom="60.0" left="388.0" />
                            </GridPane.margin>

@@ -16,15 +16,24 @@ import java.util.HashMap;
 
 public class RootStageContainer
 {
-    private final int SCREEN_HEIGHT = 1200;
+    private final int SCREEN_HEIGHT = 1200; //main application layout parameters
     private final int SCREEN_WIDTH = 800;
 
+    /*
+    The controllermap has references to the views and controllers so they exist in memory upon load. This is done to reduce
+    the procesing requirements of loading a new stage.
+     */
     HashMap<String, NodeBundle> controllermap;
-    Stage mainStage;
 
-    private Pane topContainer;
-    private Pane bottomContainer;
-    private static RootStageContainer currentRootStageContainer;
+
+    Stage mainStage; //high level container
+
+    private Pane topContainer; //container to contain the menuscreen since there is only one menuscreen
+    private Pane bottomContainer; //container to contain the layout of the current screen
+    private static RootStageContainer currentRootStageContainer; //reference to an instance of rootstage container so any class can call its methods
+
+
+
     public RootStageContainer()
     {
         setCurrentRootStageContainer(this);
@@ -36,8 +45,10 @@ public class RootStageContainer
         mainStage.setResizable(false);
         initiateFileMap();
         mainStage.show();
-        changeView(EditProjectController.VIEWCONTROLLER_TITLE);
+        changeView(EditProjectController.VIEWCONTROLLER_TITLE); //set defaultview
     }
+
+
     private Scene getSceneStructure()
     {
         VBox viewComponents = new VBox();

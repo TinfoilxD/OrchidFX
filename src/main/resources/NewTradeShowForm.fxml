@@ -97,7 +97,7 @@
                               </TextField>
                            </children>
                         </FlowPane>
-                        <Button fx:id="fxButtonUpdate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonUpdate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -105,7 +105,7 @@
                               <Insets bottom="10.0" right="105.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -182,7 +182,7 @@
                               <Insets left="70.0" />
                            </GridPane.margin>
                         </TextField>
-                        <Button fx:id="fxButtonAdd" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                        <Button fx:id="fxButtonAdd" mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="10">
                            <font>
                               <Font size="18.0" />
                            </font>

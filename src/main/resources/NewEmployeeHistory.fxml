@@ -65,7 +65,7 @@
                               <Button fx:id="fxButtonNewOfficeLocation" mnemonicParsing="false" text="+" />
                            </children>
                         </FlowPane>
-                        <Button fx:id="fxButtonSubmit" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonSubmit" mnemonicParsing="false" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -73,7 +73,7 @@
                               <Insets right="95.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>

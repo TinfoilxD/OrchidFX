@@ -1,4 +1,6 @@
-package fxproject;/*
+package fxproject;
+
+/*
  * Written by Tin Van on 2/20/16.
  */
 
@@ -11,7 +13,15 @@ import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.sql.Connection;
+
+
+/*
+Controller for DataSettingsForm.fxml which handles creating the OrchidDataSource and getting the parameters from the
+form. Upon submit, it creates the main system.
+ */
 
 public class DataSettingsController
 {

@@ -123,7 +123,7 @@
                               </TextField>
                            </children>
                         </FlowPane>
-                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" onAction="#handleButtonUpdateAction" text="Update" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="20" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonUpdate" mnemonicParsing="false" text="Update" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="20" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -131,7 +131,7 @@
                               <Insets left="440.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" onAction="#handleButtonCancelAction" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="20" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonCancel" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="20" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -290,7 +290,7 @@
                               </TextField>
                            </children>
                         </FlowPane>
-                        <Button fx:id="fxButtonAdd" mnemonicParsing="false" onAction="#handleButtonAddAction" text="Add" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="20" GridPane.valignment="CENTER">
+                        <Button fx:id="fxButtonAdd" mnemonicParsing="false" text="Add" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="20" GridPane.valignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>

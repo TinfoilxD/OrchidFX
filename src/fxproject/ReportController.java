@@ -50,7 +50,7 @@ public class ReportController
         addProcedure("Manufacturer Report", "{call SelectManufacturer}");
         addProcedure("General Project Report", "{call SelectProject}");
         addProcedure("Projects by Hotel Brand", "{call SelectProjectHotelBrand}");
-        addProcedure("Employee Report", "{call SelectEmployee}");
+        addProcedure("Employee Report", "{call SelectReportEmployee}");
         addProcedure("Properties with Multiple Projects", "{call SelectProjectHotelProperty}");
         addProcedure("Referrer Trade Show", "{call SelectReferrerTradeShow}");
         addProcedure("Idle Clients", "{call SelectIdleClient}");
@@ -72,7 +72,7 @@ public class ReportController
         addProcedure("Contractor Contacts","{call SelectContractorContact}");
         addProcedure("Contractor Report","{call SelectContractor}");
         addProcedure("Employees by Status","{call SelectEmployeeStatus}");
-        addProcedure("Possible Renewals","{call SelectFiveYearProject}");
+        addProcedure("Possible Renewals","{call SelectThreeYearProject}");
         addProcedure("Projects by Type","{call SelectReportProjectType}");
         addProcedure("Parent Brand Approvers","{call SelectReportParentBrand}");
         addProcedure("Clients by Trade Show","{call SelectClientTradeShow}");
